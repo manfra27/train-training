@@ -1,35 +1,90 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { db } from "./db.jsx";
+import "./App.css";
+import Train from "./Train";
+import Settings from "./Settings";
+import Guide from "./Guide";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedTopics, setSelectedTopics] = useState([]);
+  const modes = ["explain term", "find term"];
+  const [trainingMode, setTrainingMode] = useState("explain key");
+
+  const handleModeSelection = (mode) => {
+    setTrainingMode(mode);
+  };
+
+  const toggleTopicSelection = (topicName) => {
+    setSelectedTopics((prev) =>
+      prev.includes(topicName)
+        ? prev.filter((topic) => topic !== topicName)
+        : [...prev, topicName]
+    );
+  };
+
+  const [selectedDirectory, setSelectedDirectory] = useState("setting");
+  const renderContent = () => {
+    if (selectedDirectory === "train") {
+      return (
+        <Train
+          selectedTopics={selectedTopics}
+          db={db}
+          trainingMode={trainingMode}
+        />
+      );
+    }
+    if (selectedDirectory === "setting") {
+      return (
+        <Settings
+          topics={db.map((topic) => topic.topicName)}
+          selectedTopics={selectedTopics}
+          toggleTopicSelection={toggleTopicSelection}
+          modes={modes}
+          handleModeSelection={handleModeSelection}
+          trainingMode={trainingMode}
+        />
+      );
+    }
+    if (selectedDirectory === "guide") {
+      return <Guide />;
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <div className="body">
+        {renderContent()}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <footer className="footer">
+        <div className="button">
+          <button
+            className={selectedDirectory === "train"
+              ? "directory-buttons-active"
+              : "directory-buttons"}
+            onClick={() => setSelectedDirectory("train")}
+          >
+            train
+          </button>
+          <button
+            className={selectedDirectory === "setting"
+              ? "directory-buttons-active"
+              : "directory-buttons"}
+            onClick={() => setSelectedDirectory("setting")}
+          >
+            setting
+          </button>
+          <button
+            className={selectedDirectory === "guide"
+              ? "directory-buttons-active"
+              : "directory-buttons"}
+            onClick={() => setSelectedDirectory("guide")}
+          >
+            guide
+          </button>
+        </div>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
