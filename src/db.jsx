@@ -1083,6 +1083,21 @@ export const db = [
             },
         ],
     },
+    /* add if not existent
+    git config pull.rebase false
+    git config --global pull.rebase false
+    git config pull.rebase true
+    git config --global pull.rebase true
+    git config pull.ff only
+    git config --global pull.ff only
+    git pull --no-rebase origin main
+    git pull --rebase origin main
+    git pull --ff-only origin main
+    */
+
+
+
+
     {
         topicName: "Git Setting Up a Repository",
         entries: [
