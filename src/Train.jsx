@@ -4,7 +4,6 @@ const mapTopicsAndEntries = (db) => {
     return db.map((topic) => ({
         topicName: topic.topicName,
         entries: topic.entries.map((entry) => ({
-            id: entry.id,
             term: entry.term,
             explanation: entry.explanation,
             question: entry.question,
@@ -15,7 +14,7 @@ const mapTopicsAndEntries = (db) => {
 };
 
 const ToggleItem = (
-    { id, term, explanation, question, answerType, options, trainingMode },
+    { term, explanation, question, answerType, options, trainingMode },
 ) => {
     const [Resolve, setResolve] = useState(false);
 
@@ -26,13 +25,26 @@ const ToggleItem = (
                 : <div className="item-question">q: {question}</div>}
 
             {Resolve && trainingMode === "explain term"
-                ? <div className="item-answer">e: {explanation}</div>
+                ? <div className="item-answer">
+                    {explanation.split('\n').map((line, index) => (
+                        <React.Fragment key={index}>
+                            e: {line}
+                            <br />
+                        </React.Fragment>
+                    ))}
+                </div>
                 : (
                     ""
                 )}
 
             {Resolve && trainingMode === "find term"
-                ? <div className="item-answer">e: {explanation}<br />t: {term} </div>
+                ? <div className="item-answer">
+                    {explanation.split('\n').map((line, index) => (
+                        <React.Fragment key={index}>
+                            e: {line}
+                            <br />
+                        </React.Fragment>
+                    ))}<br />t: {term} </div>
                 : (
                     ""
                 )}
@@ -56,8 +68,7 @@ const Train = ({ selectedTopics, db, trainingMode }) => {
                     <ul>
                         {shuffledEntries.map((entry) => (
                             <ToggleItem
-                                key={entry.id}
-                                id={entry.id}
+                                key={entry.term}
                                 term={entry.term}
                                 explanation={entry.explanation}
                                 question={entry.question}

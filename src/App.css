@@ -76,10 +76,12 @@
 }
 .item-question {
   margin-top: 10px;
+  white-space: pre;
 }
 .item-answer {
   color: rgb(0, 255, 0);
   margin-top: 10px;
+  white-space: pre-wrap;
 }
 .topic {
   margin: 0;
