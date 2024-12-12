@@ -112,7 +112,11 @@ ul {
   font-weight: 400;
   font-style: bolder;
 }
-
+.topics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .settings {
     display: flex;
@@ -126,11 +130,9 @@ ul {
 }
 
 .section-title {
-  margin-top: 10px;
-    flex: 0 0 130px; 
+    flex: 0 0 80px; 
     text-align: right; 
-    margin-right: 20px; 
-    font-style: bolder;
+    margin-right: 10px; 
 }
 
 .modes-container,

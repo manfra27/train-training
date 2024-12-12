@@ -47,7 +47,7 @@ const Settings = ({
                 </div>
             </div>
             <div className="section">
-                <div className="section-title">selectAll()</div>
+                <div className="section-title">all()</div>
                 <div
                     onClick={handleSelectAllToggle}
                     className={allSelected ? "item-answer" : "item-question"}
@@ -56,7 +56,7 @@ const Settings = ({
                 </div>
             </div>
             <div className="section">
-                <div className="section-title">selectTopics()</div>
+                <div className="section-title">topics()</div>
                 <ul className="topics-list">
                     {topics.map((topicName) => (
                         <li
@@ -67,7 +67,7 @@ const Settings = ({
                                 }`}
                             onClick={() => toggleTopicSelection(topicName)}
                         >
-                            {topicName}
+                            {topicName}< br />
                         </li>
                     ))}
                 </ul>
