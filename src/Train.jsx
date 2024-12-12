@@ -14,51 +14,84 @@ const mapTopicsAndEntries = (db) => {
 };
 
 const ToggleItem = (
-    { term, explanation, question, answerType, options, trainingMode },
+    { term, explanation, question, trainingMode, onAnswer },
 ) => {
     const [Resolve, setResolve] = useState(false);
+    const [Reflected, setReflected] = useState(false);
+
+    const handleAnswer = (isCorrect) => {
+        onAnswer(isCorrect);
+        setReflected(true);
+    };
 
     return (
-        <div onClick={() => setResolve(!Resolve)} className="item">
-            {trainingMode === "explain term"
-                ? <div className="item-question">t: {term}</div>
-                : <div className="item-question">q: {question}</div>}
+        <div>
+            {
+                Reflected === false ? (
+                    <div onClick={() => setResolve(true)} className="item" >
+                        {trainingMode === "explanation"
+                            ? <div className="item-question">
+                                t: {term}
+                            </div>
+                            : <div className="item-question">
+                                q: {question}
+                            </div>}
 
-            {Resolve && trainingMode === "explain term"
-                ? <div className="item-answer">
-                    {explanation.split('\n').map((line, index) => (
-                        <React.Fragment key={index}>
-                            e: {line}
-                            <br />
-                        </React.Fragment>
-                    ))}
-                </div>
-                : (
-                    ""
-                )}
+                        {
+                            Resolve && trainingMode === "explanation"
+                                ? <div className="item-answer">
+                                    {explanation.split('\n').map((line, index) => (
+                                        <React.Fragment key={index}>
+                                            e: {line}
+                                            <br />
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+                                : (
+                                    ""
+                                )
+                        }
 
-            {Resolve && trainingMode === "find term"
-                ? <div className="item-answer">
-                    {explanation.split('\n').map((line, index) => (
-                        <React.Fragment key={index}>
-                            e: {line}
-                            <br />
-                        </React.Fragment>
-                    ))}<br />t: {term} </div>
-                : (
-                    ""
-                )}
+                        {
+                            Resolve && trainingMode === "term"
+                                ? <div className="item-answer">
+                                    {explanation.split('\n').map((line, index) => (
+                                        <React.Fragment key={index}>
+                                            e: {line}
+                                        </React.Fragment>
+                                    ))}<br />t: {term} </div>
+                                : (
+                                    ""
+                                )
+                        }
+                        {
+                            Resolve ?
+                                (<div className="answer">
+                                    r:
+                                    <div onClick={() => handleAnswer(true)}>correct</div>
+                                    <div onClick={() => handleAnswer(false)}>again</div>
+                                </div>) : (<div className={onAnswer ? "item-answer" : "item-question"}></div>)
+                        }
+                    </div >
+                ) : (
+                    <div></div>)
+            }
         </div>
     );
 };
 
-const Train = ({ selectedTopics, db, trainingMode }) => {
+const Train = ({ selectedTopics, db, trainingMode, updateCounts }) => {
     const mappedData = mapTopicsAndEntries(db).filter((topic) =>
         selectedTopics.includes(topic.topicName)
     );
 
     const allEntries = mappedData.flatMap((topic) => topic.entries);
+
     const shuffledEntries = allEntries.sort(() => Math.random() - 0.5);
+
+    const handleAnswer = (isCorrect) => {
+        updateCounts(isCorrect);
+    };
 
     return (
         <div className="train">
@@ -75,6 +108,7 @@ const Train = ({ selectedTopics, db, trainingMode }) => {
                                 answerTypes={entry.answerTypes}
                                 options={entry.options}
                                 trainingMode={trainingMode}
+                                onAnswer={handleAnswer}
                             />
                         ))}
                     </ul>

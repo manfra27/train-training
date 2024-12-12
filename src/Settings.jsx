@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Settings = ({
     topics,
@@ -8,41 +8,75 @@ const Settings = ({
     handleModeSelection,
     trainingMode,
 }) => {
+    const [allSelected, setAllSelected] = useState(false);
+
+    const handleSelectAllToggle = () => {
+        if (allSelected) {
+            topics.forEach((topic) => {
+                if (selectedTopics.includes(topic)) {
+                    toggleTopicSelection(topic);
+                }
+            });
+        } else {
+            topics.forEach((topic) => {
+                if (!selectedTopics.includes(topic)) {
+                    toggleTopicSelection(topic);
+                }
+            });
+        }
+        setAllSelected(!allSelected);
+    };
+
     return (
         <div className="settings">
-            <h3>select mode HORSY DA GANSTA</h3>
-            <ul>
-                {modes.map((mode) => (
-                    <li
-                        key={mode}
-                        onClick={() => handleModeSelection(mode)}
-                        style={{
-                            cursor: "pointer",
-                            color: trainingMode.includes(mode) ? "green" : "grey",
-                        }}
-                    >
-                        {mode}
-                    </li>
-                ))}
-            </ul>
-
-            <h3>select topics</h3>
-            <ul className="topics-list">
-                {topics.map((topicName) => (
-                    <li
-                        key={topicName}
-                        className={`topic-item ${selectedTopics.includes(topicName)
-                            ? "item-answer"
-                            : "item-question"
-                            }`}
-                        onClick={() => toggleTopicSelection(topicName)}
-                    >
-                        {topicName}
-                    </li>
-                ))}
-            </ul>
+            <div className="section">
+                <div className="section-title">find()</div>
+                <div className="modes-container">
+                    {modes.map((mode) => (
+                        <ul
+                            key={mode}
+                            onClick={() => handleModeSelection(mode)}
+                            className={` ${trainingMode.includes(mode)
+                                ? "item-answer"
+                                : "item-question"
+                                }`}
+                        >
+                            {mode}
+                        </ul>
+                    ))}
+                </div>
+            </div>
+            <div className="section">
+                <div className="section-title">selectAll()</div>
+                <div
+                    onClick={handleSelectAllToggle}
+                    className={allSelected ? "item-answer" : "item-question"}
+                >
+                    {allSelected ? "true" : "false"}
+                </div>
+            </div>
+            <div className="section">
+                <div className="section-title">selectTopics()</div>
+                <ul className="topics-list">
+                    {topics.map((topicName) => (
+                        <li
+                            key={topicName}
+                            className={`topic-item ${selectedTopics.includes(topicName)
+                                ? "item-answer"
+                                : "item-question"
+                                }`}
+                            onClick={() => toggleTopicSelection(topicName)}
+                        >
+                            {topicName}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
 
 export default Settings;
+
+
+

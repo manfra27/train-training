@@ -6,9 +6,20 @@ import Settings from "./Settings";
 import Guide from "./Guide";
 
 function App() {
+  const [selectedDirectory, setSelectedDirectory] = useState("setting");
   const [selectedTopics, setSelectedTopics] = useState([]);
-  const modes = ["explain term", "find term"];
-  const [trainingMode, setTrainingMode] = useState("explain key");
+  const modes = ["term", "explanation"];
+  const [trainingMode, setTrainingMode] = useState("term");
+  const [trueCount, setTrueCount] = useState(0);
+  const [falseCount, setFalseCount] = useState(0);
+
+  const updateCounts = (isCorrect) => {
+    if (isCorrect) {
+      setTrueCount((prev) => prev + 1);
+    } else {
+      setFalseCount((prev) => prev + 1);
+    }
+  };
 
   const handleModeSelection = (mode) => {
     setTrainingMode(mode);
@@ -22,7 +33,13 @@ function App() {
     );
   };
 
-  const [selectedDirectory, setSelectedDirectory] = useState("setting");
+  const handleDirectory = (newDirectory) => {
+    setSelectedDirectory(newDirectory);
+    setTrueCount(0);
+    setFalseCount(0);
+  };
+
+
   const renderContent = () => {
     if (selectedDirectory === "train") {
       return (
@@ -30,6 +47,7 @@ function App() {
           selectedTopics={selectedTopics}
           db={db}
           trainingMode={trainingMode}
+          updateCounts={updateCounts}
         />
       );
     }
@@ -56,31 +74,36 @@ function App() {
         {renderContent()}
       </div>
       <footer className="footer">
-        <div className="button">
-          <button
+        {selectedDirectory === "train" ? (
+          <div className="menu">
+            <div>{trueCount}-{Math.round(100 / (trueCount + falseCount) * trueCount)}%-{falseCount}  </div>
+          </div>
+        ) : ("")}
+        <div className="menu">
+          <div
             className={selectedDirectory === "train"
-              ? "directory-buttons-active"
-              : "directory-buttons"}
-            onClick={() => setSelectedDirectory("train")}
+              ? "item-answer"
+              : "item-question"}
+            onClick={() => handleDirectory("train")}
           >
-            train
-          </button>
-          <button
+            Train
+          </div>
+          <div
             className={selectedDirectory === "setting"
-              ? "directory-buttons-active"
-              : "directory-buttons"}
-            onClick={() => setSelectedDirectory("setting")}
+              ? "item-answer"
+              : "item-question"}
+            onClick={() => handleDirectory("setting")}
           >
-            setting
-          </button>
-          <button
+            Settings
+          </div>
+          <div
             className={selectedDirectory === "guide"
-              ? "directory-buttons-active"
-              : "directory-buttons"}
-            onClick={() => setSelectedDirectory("guide")}
+              ? "item-answer"
+              : "item-question"}
+            onClick={() => handleDirectory("guide")}
           >
-            guide
-          </button>
+            Guide
+          </div>
         </div>
       </footer>
     </div>

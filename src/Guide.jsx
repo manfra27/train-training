@@ -6,8 +6,8 @@ const Guide = () => {
             <h1>Guide</h1>
             <h5>Only nerds read a guide for such a simple app.</h5>
             <div>q: question</div>
-            <div>t: term / command / key</div>
-            <div>o: options</div>
+            <div>t: term</div>
+            <div>r: reflection</div>
             <div>e: explanations</div>
         </div>
     );
