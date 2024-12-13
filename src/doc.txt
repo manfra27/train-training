@@ -5,7 +5,14 @@ Inapp documentation
 
 UML
 {topicName, entries {term, explanation, question}}
-constraints = topicName is unique, term is unique, entries not null, 
+constraints = 
+> topicName is unique, term is unique, entries not null, 
+
+new
+{mainTopic{subTopic, entries {term, explanation, question}}}
+constraints = 
+> unique: mainTopic, mainTopic + subTopic, mainTopic + subTopic + term
+
 
 
 Dictionary
