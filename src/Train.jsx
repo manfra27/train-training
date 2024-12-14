@@ -31,55 +31,55 @@ const ToggleItem = (
                     <div onClick={() => setResolve(true)} className="item" >
                         {trainingMode === "explanation"
                             ? <div className="item-question">
+                                <br />
                                 {term.split('\n').map((line, index) => (
-                                    <React.Fragment key={index}>
-                                        t: {line}
-                                        <br />
-                                    </React.Fragment>
+                                    <div key={index}>{line}</div>
                                 ))}
                             </div>
                             : <div className="item-question">
                                 {question.split('\n').map((line, index) => (
-                                    <React.Fragment key={index}>
-                                        q: {line}
-                                        <br />
-                                    </React.Fragment>
+                                    <div key={index}>{line}</div>
                                 ))}
                             </div>}
                         {
                             Resolve && trainingMode === "explanation"
                                 ? <div className="item-answer">
+                                    <br />
                                     {explanation.split('\n').map((line, index) => (
-                                        <React.Fragment key={index}>
-                                            e: {line}
-                                            <br />
-                                        </React.Fragment>
+                                        <div key={index}>{line}</div>
                                     ))}
                                 </div>
                                 : (
                                     ""
                                 )
                         }
-
                         {
                             Resolve && trainingMode === "term"
                                 ? <div className="item-answer">
+                                    <br />
+                                    {term.split('\n').map((line, index) => (
+                                        <div key={index}>{line}</div>
+                                    ))}
+                                    <br />
                                     {explanation.split('\n').map((line, index) => (
-                                        <React.Fragment key={index}>
-                                            e: {line}
-                                        </React.Fragment>
-                                    ))}<br />t: {term} </div>
+                                        <div key={index}>{line}</div>
+                                    ))}
+
+                                </div>
                                 : (
                                     ""
                                 )
                         }
                         {
                             Resolve ?
-                                (<div className="answer">
-                                    r:
-                                    <div onClick={() => handleAnswer(true)}>correct</div>
-                                    <div onClick={() => handleAnswer(false)}>again</div>
-                                </div>) : (<div className={onAnswer ? "item-answer" : "item-question"}></div>)
+                                (<>
+                                    <br />
+                                    <div className="answer">
+                                        <div onClick={() => handleAnswer(true)}>correct</div>
+                                        <div onClick={() => handleAnswer(false)}>again</div>
+                                    </div>
+                                </>) : (<div className={onAnswer ? "item-answer" : "item-question"}></div>
+                                )
                         }
                     </div >
                 ) : (
