@@ -31,12 +31,21 @@ const ToggleItem = (
                     <div onClick={() => setResolve(true)} className="item" >
                         {trainingMode === "explanation"
                             ? <div className="item-question">
-                                t: {term}
+                                {term.split('\n').map((line, index) => (
+                                    <React.Fragment key={index}>
+                                        t: {line}
+                                        <br />
+                                    </React.Fragment>
+                                ))}
                             </div>
                             : <div className="item-question">
-                                q: {question}
+                                {question.split('\n').map((line, index) => (
+                                    <React.Fragment key={index}>
+                                        q: {line}
+                                        <br />
+                                    </React.Fragment>
+                                ))}
                             </div>}
-
                         {
                             Resolve && trainingMode === "explanation"
                                 ? <div className="item-answer">
