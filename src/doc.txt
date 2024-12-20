@@ -28,14 +28,20 @@ Features    (open) = not jet implemented
 > > display entries if selected
 > > display default advice if null entries
 > > (open) count correct and false for whole displayd list
+> > display celebration graphic if all questions answered / revealed...
 > setting
 > > display selectable topics
 > > (open) select all selectable topics
 > > (open) unselect all selectable topics
 > > choose mode find term or explain term
 > > (open) repeat (5) entries untill all correct.
+> > (open) set shuffle or keep order of entries.
 > guide
 > > display guide content
 > menue
 > > display option train, setting, guide
 > > (open) add MIT copyright .. reserved...& email?
+
+
+Bugs & content 
+> Remove git commands like (git add) and keep specified ones like (git add . and git add <filename>)
