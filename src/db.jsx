@@ -112,7 +112,6 @@ export const db = [
         ],
     },
 
-
     {
         topicName: "Java Random",
         entries: [
@@ -251,7 +250,7 @@ export const db = [
             { "term": "Keyword: public", "explanation": "Java public keyword is an access modifier that allows access from anywhere.", "question": "What is the public keyword used for in Java?" },
             { "term": "Keyword: return", "explanation": "Java return keyword exits from a method and optionally returns a value.", "question": "What is the return keyword used for in Java?" },
             { "term": "Keyword: short", "explanation": "Java short keyword is used to declare a variable that can hold a 16-bit integer.", "question": "What is the short keyword used for in Java?" },
-            { "term": "Keyword: static", "explanation": "Java static keyword indicates that a variable or method belongs to the class rather than an instance.", "question": "What is the purpose of the static keyword in Java?" },
+            { "term": "Keyword: static", "explanation": "Java static keyword indicates that a variable or method belongs to the class rather than an instance.\n\nStatic variables are shared across all instances of a class and are initialized once when the class is loaded.\n\nStatic methods belong to the class and can be invoked without creating an object, but they cannot directly access instance members.\n\nStatic blocks are executed when the class is loaded and are typically used for initializing static variables or performing class-level setup.\n\nStatic nested classes are associated with their outer class but can be used independently without requiring an instance of the outer class.", "question": "What is the purpose of the static keyword in Java?" },
             { "term": "Keyword: strictfp", "explanation": "Java strictfp keyword restricts floating-point calculations to ensure portability.", "question": "What does the strictfp keyword do in Java?" },
             { "term": "Keyword: super", "explanation": "Java super keyword refers to parent class objects and is used to invoke the immediate parent class method.", "question": "What is the role of the super keyword in Java?" },
             { "term": "Keyword: switch", "explanation": "Java switch keyword executes code based on the test value in a switch statement.", "question": "What is the switch keyword used for in Java?" },
@@ -271,7 +270,7 @@ export const db = [
         entries: []
     },
     {
-        topicName: "Java Oject class",
+        topicName: "Java Object class",
         entries: []
     },
     {
@@ -339,9 +338,6 @@ export const db = [
         topicName: "Java JDBC",
         entries: []
     },
-
-
-
     {
         topicName: "Java collections",
         entries: [
