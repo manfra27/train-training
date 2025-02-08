@@ -108,7 +108,7 @@ function App() {
               : "item-question"}
             onClick={() => handleDirectory("train")}
           >
-            Train
+            !!!
           </div>
           <div
             className={selectedDirectory === "setting"
@@ -116,7 +116,7 @@ function App() {
               : "item-question"}
             onClick={() => handleDirectory("setting")}
           >
-            Settings
+            ?
           </div>
           <div
             className={selectedDirectory === "guide"
@@ -124,7 +124,7 @@ function App() {
               : "item-question"}
             onClick={() => handleDirectory("guide")}
           >
-            Guide
+            ¿
           </div>
         </div>
       </footer>
