@@ -82,7 +82,8 @@
   overflow: visible;
 }
 
-.input-field {
+.input-field, textarea {
+  font-size: 16px;
   color: rgb(0, 255, 0);
   background-color: black;
   border-color: white;
