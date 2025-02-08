@@ -1,31 +1,15 @@
 import React, { useState } from "react";
 
 const Settings = ({
-    topics,
+    data,
     selectedTopics,
+    selectedCategories,
     toggleTopicSelection,
+    toogleCategorySelection,
     modes,
     handleModeSelection,
     trainingMode,
 }) => {
-    const [allSelected, setAllSelected] = useState(false);
-
-    const handleSelectAllToggle = () => {
-        if (allSelected) {
-            topics.forEach((topic) => {
-                if (selectedTopics.includes(topic)) {
-                    toggleTopicSelection(topic);
-                }
-            });
-        } else {
-            topics.forEach((topic) => {
-                if (!selectedTopics.includes(topic)) {
-                    toggleTopicSelection(topic);
-                }
-            });
-        }
-        setAllSelected(!allSelected);
-    };
 
     return (
         <div className="settings">
@@ -47,30 +31,32 @@ const Settings = ({
                 </div>
             </div>
             <div className="section">
-                <div className="section-title">all()</div>
-                <div
-                    onClick={handleSelectAllToggle}
-                    className={allSelected ? "item-answer" : "item-question"}
-                >
-                    {allSelected ? "true" : "false"}
-                </div>
-            </div>
-            <div className="section">
                 <div className="section-title">topics()</div>
-                <ul className="topics-list">
-                    {topics.map((topicName) => (
-                        <li
-                            key={topicName}
-                            className={`topic-item ${selectedTopics.includes(topicName)
-                                ? "item-answer"
-                                : "item-question"
-                                }`}
-                            onClick={() => toggleTopicSelection(topicName)}
-                        >
-                            {topicName}< br />
+
+                <ul className="category-list">
+                    {data.map((category) => (
+                        <li key={category.category} >
+                            <span
+                                className={`topic-item ${selectedCategories.includes(category.category) ? "item-answer" : "item-question"
+                                    }`}
+                                onClick={() => toogleCategorySelection(category.category)}
+                            >
+                                < br />
+                                {category.category}
+                            </span>
+                            <ul className="subcategory-list">
+                                {category.subcategories.map((subcategory) => (
+                                    <li key={subcategory.topicName}
+                                        className={`topic-item ${selectedTopics.includes(subcategory.topicName) ? "item-answer" : "item-question"}`}
+                                        onClick={() => toggleTopicSelection(subcategory.topicName)}>
+                                        <span>{subcategory.topicName}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </li>
                     ))}
                 </ul>
+
             </div>
         </div>
     );
@@ -79,4 +65,20 @@ const Settings = ({
 export default Settings;
 
 
+
+
+/*
+{data.map((categoryName) => (
+                        <li
+                            key={categoryName}
+                            className={`topic-item ${selectedCategories.includes(categoryName)
+                                ? "item-answer"
+                                : "item-question"
+                                }`}
+                            onClick={() => toogleCategorySelection(categoryName)}
+                        >
+                            {categoryName}< br />
+                        </li>
+                    ))}
+                    */
 

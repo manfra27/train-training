@@ -8,6 +8,7 @@ import Guide from "./Guide";
 function App() {
   const [selectedDirectory, setSelectedDirectory] = useState("setting");
   const [selectedTopics, setSelectedTopics] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState([]);
   const modes = ["term", "explanation"];
   const [trainingMode, setTrainingMode] = useState("term");
   const [trueCount, setTrueCount] = useState(0);
@@ -33,6 +34,25 @@ function App() {
     );
   };
 
+  const toggleCategorySelection = (categoryName) => {
+    setSelectedCategories((prevCategories) =>
+      prevCategories.includes(categoryName)
+        ? prevCategories.filter((category) => category !== categoryName)
+        : [...prevCategories, categoryName]
+    );
+
+    const category = db.find((cat) => cat.category === categoryName);
+    if (category) {
+      const categoryTopics = category.subcategories.map((sub) => sub.topicName);
+
+      setSelectedTopics((prevTopics) =>
+        selectedCategories.includes(categoryName)
+          ? prevTopics.filter((topic) => !categoryTopics.includes(topic))
+          : [...new Set([...prevTopics, ...categoryTopics])]
+      );
+    }
+  };
+
   const handleDirectory = (newDirectory) => {
     setSelectedDirectory(newDirectory);
     setTrueCount(0);
@@ -54,9 +74,11 @@ function App() {
     if (selectedDirectory === "setting") {
       return (
         <Settings
-          topics={db.map((topic) => topic.topicName)}
+          data={db.map((data) => data)}
           selectedTopics={selectedTopics}
+          selectedCategories={selectedCategories}
           toggleTopicSelection={toggleTopicSelection}
+          toogleCategorySelection={toggleCategorySelection}
           modes={modes}
           handleModeSelection={handleModeSelection}
           trainingMode={trainingMode}

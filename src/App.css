@@ -82,6 +82,37 @@
   overflow: visible;
 }
 
+.input-field {
+  color: rgb(0, 255, 0);
+  background-color: black;
+  border-color: white;
+  border-radius: 6px;
+  border-width: 1px;
+  padding: 3px;
+  margin-top: 5px;
+}
+.button {
+  background-color: rgb(173, 182, 255);
+  border-color: white;
+  color: black;
+  border-radius: 6px;
+  border-width: 1px;
+  padding: 3px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(50, 16, 0);
+  border-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  border-width: 5px;
+  padding: 10px;
+}
+
+
+
 .topic {
   margin: 0;
   padding: 0;
@@ -119,6 +150,12 @@ ul {
     flex-wrap: wrap;
     gap: 15px;
 }
+.category-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-style: bolder;
+}
 
 .settings {
     display: flex;
@@ -147,5 +184,4 @@ ul {
 .answer {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
