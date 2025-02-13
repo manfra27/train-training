@@ -10,66 +10,72 @@ export const db = [
                 entries: [
                     {
                         "term": "ABAP",
-                        "explanation": "A high-level programming language created by SAP for developing applications on the SAP platform. Example:\n```abap\nDATA: lv_text TYPE string.\nlv_text = 'Hello, ABAP!'.\nWRITE: lv_text.\n```",
+                        "explanation": "ABAP (Advanced Business Application Programming) is a high-level programming language developed by SAP for building applications on the SAP platform. It is primarily used for developing enterprise applications that run in the SAP ecosystem, such as SAP ERP and SAP S/4HANA. ABAP supports procedural and object-oriented programming paradigms and integrates seamlessly with SAP databases and application servers. The language is optimized for business logic implementation, data manipulation, and report generation within SAP environments. ABAP plays a crucial role in extending and customizing SAP applications to meet business requirements.",
                         "question": "What is ABAP, and how is it used in SAP development?"
                     },
                     {
                         "term": "WSO2",
-                        "explanation": "An open-source integration platform that provides API management, identity management, and enterprise integration capabilities. Example:\n```xml\n<api xmlns=\"http://ws.apache.org/ns/synapse\" name=\"SampleAPI\" context=\"/sample\">\n    <resource methods=\"GET\">\n        <inSequence>\n            <respond>\n                <message>WSO2 API Response</message>\n            </respond>\n        </inSequence>\n    </resource>\n</api>\n```",
+                        "explanation": "WSO2 is an open-source integration platform that provides tools for API management, identity and access management, enterprise service bus (ESB), and analytics. It enables organizations to integrate disparate systems, expose APIs securely, and manage digital identity across applications. WSO2 supports microservices architecture, cloud deployments, and event-driven integration patterns. It is widely used in enterprise environments to facilitate communication between applications and services, ensuring interoperability and seamless data flow across heterogeneous systems.",
                         "question": "What is WSO2, and how is it used for enterprise integration?"
                     },
                     {
                         "term": "KIS",
-                        "explanation": "A hospital information system (Klinisches Informationssystem) used to manage medical and administrative processes in healthcare institutions. Example:\n```text\nKIS systems store patient data, manage workflows, and support medical documentation.\n```",
+                        "explanation": "KIS (Klinisches Informationssystem) is a hospital information system used to manage medical and administrative processes within healthcare institutions. It provides functionalities such as patient record management, appointment scheduling, medication tracking, and clinical documentation. KIS integrates with laboratory systems, radiology systems, and financial modules to create a centralized digital infrastructure for hospitals. It enhances operational efficiency by improving data accessibility, reducing paperwork, and enabling better decision-making for healthcare professionals.",
                         "question": "What is a KIS system, and how does it support healthcare operations?"
                     },
                     {
                         "term": "HL7",
-                        "explanation": "A set of international standards for the exchange, integration, sharing, and retrieval of electronic health information. Example:\n```hl7\nMSH|^~\\&|SendingApp|SendingFac|ReceivingApp|ReceivingFac|20240213||ADT^A01|123456|P|2.5\n```",
+                        "explanation": "HL7 (Health Level 7) is a set of international standards for exchanging, integrating, sharing, and retrieving electronic health information. It defines structured messaging formats, clinical document architectures, and interoperability frameworks that enable different healthcare systems to communicate effectively. HL7 standards include HL7 v2 (a widely adopted messaging standard), HL7 v3 (an XML-based standard), and FHIR (a modern web-based standard). HL7 facilitates interoperability between hospitals, laboratories, and health information exchanges by ensuring that data is transmitted in a consistent and interpretable format.",
                         "question": "What is HL7, and how does it facilitate healthcare interoperability?"
                     },
                     {
                         "term": ".NET",
-                        "explanation": "A software framework developed by Microsoft for building various types of applications, including web, desktop, and cloud-based solutions. Example:\n```csharp\nusing System;\nclass Program {\n    static void Main() {\n        Console.WriteLine(\"Hello, .NET!\");\n    }\n}\n```",
+                        "explanation": ".NET is a software development framework created by Microsoft that allows developers to build applications for web, desktop, cloud, and mobile environments. It provides a runtime (Common Language Runtime - CLR), a set of libraries, and development tools that support multiple programming languages, including C#, F#, and VB.NET. The framework includes ASP.NET for web development, .NET Core for cross-platform applications, and Windows Presentation Foundation (WPF) for desktop applications. .NET is widely used for enterprise applications due to its scalability, security, and integration with cloud services.",
                         "question": "What is .NET, and what are its main components?"
                     },
                     {
                         "term": "C#",
-                        "explanation": "A modern, object-oriented programming language developed by Microsoft, primarily used for .NET applications. Example:\n```csharp\npublic class Program {\n    public static void Main() {\n        Console.WriteLine(\"Hello, C#\");\n    }\n}\n```",
+                        "explanation": "C# is a modern, object-oriented programming language developed by Microsoft as part of the .NET ecosystem. It is designed for building robust and scalable applications ranging from desktop to cloud-based services. C# includes features such as strong typing, automatic memory management, and asynchronous programming. It supports advanced paradigms like LINQ for data manipulation, ASP.NET for web applications, and Entity Framework for database interactions. C# is widely used in enterprise development, game development (via Unity), and cloud-based solutions.",
                         "question": "What is C#, and what are its key features?"
                     },
                     {
                         "term": "APEX",
-                        "explanation": "A strongly typed, object-oriented programming language used for developing applications on the Salesforce platform. Example:\n```apex\npublic class HelloWorld {\n    public static void sayHello() {\n        System.debug('Hello, APEX!');\n    }\n}\n```",
+                        "explanation": "APEX is a strongly-typed, object-oriented programming language designed by Salesforce for developing applications within the Salesforce ecosystem. It enables developers to create custom business logic, process automation, and integrations within Salesforce environments. APEX is closely integrated with Salesforce’s database and security model, allowing developers to perform operations such as querying records, triggering workflows, and handling complex business rules. It is optimized for multi-tenant cloud environments, ensuring scalability and security in customer relationship management (CRM) applications.",
                         "question": "What is APEX, and how is it used in Salesforce development?"
                     },
                     {
                         "term": "SAP",
-                        "explanation": "A German enterprise software company that provides solutions for business operations and customer relations. Example:\n```text\nSAP ERP systems integrate finance, HR, supply chain, and other business functions.\n```",
+                        "explanation": "SAP (Systems, Applications, and Products in Data Processing) is a leading enterprise software company that provides solutions for managing business operations and customer relations. SAP’s flagship product, SAP ERP, integrates core business processes such as finance, human resources, supply chain, and procurement. The company has evolved to offer cloud-based solutions, including SAP S/4HANA, SAP Business Technology Platform (BTP), and SAP Analytics Cloud. SAP software is widely adopted by enterprises for optimizing business operations, enabling data-driven decision-making, and improving overall efficiency.",
                         "question": "What is SAP, and what are its primary products?"
                     },
                     {
                         "term": "ERP",
-                        "explanation": "Enterprise Resource Planning (ERP) refers to software that manages core business processes such as finance, HR, and supply chain. Example:\n```text\nERP systems unify data and streamline processes across departments.\n```",
+                        "explanation": "Enterprise Resource Planning (ERP) is a category of business management software that integrates core organizational processes into a unified system. ERP systems provide modules for finance, human resources, supply chain, manufacturing, and customer relationship management. These systems improve operational efficiency by streamlining workflows, centralizing data, and enabling real-time reporting. Leading ERP vendors include SAP, Oracle, Microsoft Dynamics, and Workday. Modern ERP solutions are increasingly cloud-based, allowing for greater flexibility, scalability, and integration with emerging technologies such as AI and IoT.",
                         "question": "What is ERP, and why is it essential for businesses?"
                     },
                     {
                         "term": "BAPI",
-                        "explanation": "A standardized programming interface that allows external applications to interact with SAP systems. Example:\n```abap\nCALL FUNCTION 'BAPI_CUSTOMER_GETDETAIL'\n  EXPORTING\n    customer_no = '000123456'\n  IMPORTING\n    customer_data = lv_customer.\n```",
+                        "explanation": "BAPI (Business Application Programming Interface) is a standardized interface that allows external applications to interact with SAP systems. It provides predefined methods for accessing business objects such as customers, orders, and invoices within SAP ERP. BAPIs are commonly used for data integration, automation, and extending SAP functionalities without modifying the core system. They enable seamless communication between SAP and non-SAP systems, facilitating enterprise-wide interoperability. BAPIs are structured according to the SAP Business Object Repository, ensuring consistency and reusability.",
                         "question": "What is BAPI, and how is it used in SAP integrations?"
                     },
                     {
                         "term": "DICOM",
-                        "explanation": "A standard for transmitting, storing, and sharing medical imaging data, used in radiology and healthcare. Example:\n```text\nDICOM files contain patient information, images, and metadata.\n```",
+                        "explanation": "DICOM (Digital Imaging and Communications in Medicine) is an international standard for storing, transmitting, and sharing medical imaging data. It defines data formats, network protocols, and interoperability mechanisms for handling images from modalities such as X-ray, MRI, and CT scans. DICOM ensures that imaging devices, hospital information systems, and radiology information systems can exchange and interpret images consistently. The standard includes metadata about patients, imaging procedures, and diagnostic information, making it essential for electronic health records and clinical workflows.",
                         "question": "What is DICOM, and why is it important in medical imaging?"
                     },
                     {
                         "term": "FHIR",
-                        "explanation": "Fast Healthcare Interoperability Resources (FHIR) is a modern standard for exchanging healthcare data using RESTful APIs. Example:\n```json\n{\n  \"resourceType\": \"Patient\",\n  \"id\": \"12345\",\n  \"name\": [{ \"family\": \"Doe\", \"given\": [\"John\"] }]\n}\n```",
+                        "explanation": "FHIR (Fast Healthcare Interoperability Resources) is a modern standard developed by HL7 for exchanging healthcare information using web technologies. It enables seamless interoperability between healthcare applications by defining structured resources such as Patient, Observation, and MedicationRequest. FHIR supports RESTful APIs, making data accessible via standard HTTP operations. It also allows data representation in JSON and XML formats. FHIR is widely adopted in electronic health records (EHR), telemedicine, and healthcare analytics due to its scalability, ease of implementation, and support for mobile and cloud-based applications.",
                         "question": "What is FHIR, and how does it improve healthcare data exchange?"
                     }
                 ]
             },
+            {
+                topicName: "WSO2",
+                entries: [
+                ]
+            },
+            /*
             {
                 topicName: "FHIR",
                 entries: [
@@ -121,18 +127,17 @@ export const db = [
                 ]
             },
             {
-                topicName: "WSO2",
-                entries: [
-                ]
-            },
-            {
                 topicName: "ABAP",
                 entries: [
                 ]
             },
-            /* 
             {
                 topicName: "API architecture",
+                entries: [
+                ]
+            },
+            {
+                topicName: "API dokumentation",
                 entries: [
                 ]
             },
