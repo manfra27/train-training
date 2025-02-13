@@ -14,6 +14,7 @@ const mapTopicsAndEntries = (db) =>
         }))
     );
 
+
 const ToggleItem = (
     { term, explanation, question, trainingMode, onAnswer },
 ) => {
@@ -25,6 +26,8 @@ const ToggleItem = (
         setReflected(true);
     };
 
+
+
     return (
         <div>
             {
@@ -33,7 +36,7 @@ const ToggleItem = (
 
                         {trainingMode === "explanation"
                             ? <div className="item-question">
-                                <br />
+
                                 {term.split('\n').map((line, index) => (
                                     <div key={index}>{line}</div>
                                 ))}
@@ -46,7 +49,6 @@ const ToggleItem = (
                         {
                             Resolve && trainingMode === "explanation"
                                 ? <div className="item-answer">
-                                    <br />
                                     {explanation.split('\n').map((line, index) => (
                                         <div key={index}>{line}</div>
                                     ))}
@@ -58,12 +60,15 @@ const ToggleItem = (
                         {
                             Resolve && trainingMode === "term"
                                 ? <div className="item-answer">
+                                    <br />
                                     {term.split('\n').map((line, index) => (
                                         <div key={index}>{line}</div>
                                     ))}
+                                    <br />
                                     {explanation.split('\n').map((line, index) => (
                                         <div key={index}>{line}</div>
                                     ))}
+                                    <br />
 
                                 </div>
                                 : (
@@ -72,7 +77,7 @@ const ToggleItem = (
                         }
 
 
-                        <input type="text" className="input-field"></input>
+                        <input type="text" placeholder="..." className="input-field"></input>
                         {
                             Resolve ?
                                 (<>
@@ -96,172 +101,47 @@ const ToggleItem = (
 };
 
 const Train = ({ selectedTopics, db, trainingMode, updateCounts }) => {
-    const mappedData = mapTopicsAndEntries(db).filter((topic) =>
-        selectedTopics.includes(topic.topicName)
+    const [entriesState, setEntriesState] = useState(
+        mapTopicsAndEntries(db).filter((topic) =>
+            selectedTopics.includes(topic.topicName)
+        )
     );
 
-    const allEntries = mappedData.flatMap((topic) => topic.entries);
-
-    const shuffledEntries = allEntries.sort(() => Math.random() - 0.5);
-
-    const handleAnswer = (isCorrect) => {
-        updateCounts(isCorrect);
-    };
-
-    return (
-        <div className="train">
-            {mappedData.length === 0
-                ? <p>PS /Users/jesus{">"} select topics in ./setting</p>
-                : (
-                    <ul>
-                        {shuffledEntries.map((entry) => (
-                            <ToggleItem
-                                key={entry.term}
-                                term={entry.term}
-                                explanation={entry.explanation}
-                                question={entry.question}
-                                answerTypes={entry.answerTypes}
-                                options={entry.options}
-                                trainingMode={trainingMode}
-                                onAnswer={handleAnswer}
-                            />
-                        ))}
-                    </ul>
-                )}
-        </div>
-    );
-};
-
-export default Train;
-
-
-
-
-
-
-
-
-/*
-import React, { useState } from "react";
-
-const mapTopicsAndEntries = (db) =>
-    db.flatMap((category) =>
-        category.subcategories.map((subcategory) => ({
-            topicName: subcategory.topicName,
-            entries: subcategory.entries.map(({ term, explanation, question, answerType, options }) => ({
-                term,
-                explanation,
-                question,
-                answerType,
-                options,
+    const updateEntryState = (term, isCorrect) => {
+        setEntriesState(prevEntries =>
+            prevEntries.map(topic => ({
+                ...topic,
+                entries: topic.entries.map(entry =>
+                    entry.term === term
+                        ? { ...entry, onAnswer: isCorrect }
+                        : entry
+                )
             }))
-        }))
-    );
-
-const ToggleItem = (
-    { term, explanation, question, trainingMode, onAnswer },
-) => {
-    const [Resolve, setResolve] = useState(false);
-    const [Reflected, setReflected] = useState(false);
-
-    const handleAnswer = (isCorrect) => {
-        onAnswer(isCorrect);
-        setReflected(true);
+        );
     };
 
-    return (
-        <div>
-            {
-                Reflected === false ? (
-                    <div>
-                        <div onClick={() => setResolve(true)} className="item" >
-                            {trainingMode === "explanation"
-                                ? <div className="item-question">
-                                    <br />
-                                    {term.split('\n').map((line, index) => (
-                                        <div key={index}>{line}</div>
-                                    ))}
-                                </div>
-                                : <div className="item-question">
-                                    {question.split('\n').map((line, index) => (
-                                        <div key={index}>{line}</div>
-                                    ))}
-                                </div>}
-                            {
-                                Resolve && trainingMode === "explanation"
-                                    ? <div className="item-answer">
-                                        <br />
-                                        {explanation.split('\n').map((line, index) => (
-                                            <div key={index}>{line}</div>
-                                        ))}
-                                    </div>
-                                    : (
-                                        ""
-                                    )
-                            }
-                            {
-                                Resolve && trainingMode === "term"
-                                    ? <div className="item-answer">
-                                        <br />
-                                        {term.split('\n').map((line, index) => (
-                                            <div key={index}>{line}</div>
-                                        ))}
-                                        <br />
-                                        {explanation.split('\n').map((line, index) => (
-                                            <div key={index}>{line}</div>
-                                        ))}
-
-                                    </div>
-                                    : (
-                                        ""
-                                    )
-                            }
-
-
-                            {!Resolve ? (<button onClick={() => setResolve(true)}>resolve</button>) : (<></>)
-                            }
-
-
-                            {
-                                Resolve ?
-                                    (<>
-                                        <br />
-                                        <div className="answer">
-                                            <div onClick={() => handleAnswer(true)}>correct</div>
-                                            <div onClick={() => handleAnswer(false)}>again</div>
-                                        </div>
-                                    </>) : (<div className={onAnswer ? "item-answer" : "item-question"}></div>
-                                    )
-                            }
-                        </div >
-                        <input type="text" className="input-field"></input>
-
-                    </div>
-                ) : (
-                    <div></div>)
-            }
-        </div>
-    );
-};
-
-const Train = ({ selectedTopics, db, trainingMode, updateCounts }) => {
-    const mappedData = mapTopicsAndEntries(db).filter((topic) =>
-        selectedTopics.includes(topic.topicName)
-    );
-
-    const allEntries = mappedData.flatMap((topic) => topic.entries);
-
-    const shuffledEntries = allEntries.sort(() => Math.random() - 0.5);
-
-    const handleAnswer = (isCorrect) => {
-        updateCounts(isCorrect);
+    const resetAgain = () => {
+        setEntriesState(prevEntries =>
+            prevEntries.map(topic => ({
+                ...topic,
+                entries: topic.entries.map(entry =>
+                    entry.onAnswer === false
+                        ? { ...entry, resolved: false, onAnswer: null }
+                        : entry
+                )
+            }))
+        );
     };
+
+    const allEntries = entriesState.flatMap(topic => topic.entries);
+    const shuffledEntries = [...allEntries].sort(() => Math.random() - 0.5);
 
     return (
         <div className="train">
-            {mappedData.length === 0
-                ? <p>PS /Users/jesus{">"} select topics in ./setting</p>
-                : (
+            {entriesState.length === 0 ? (
+                <p>PS /Users/jesus{">"} select topics in ./setting</p>
+            ) : (
+                <>
                     <ul>
                         {shuffledEntries.map((entry) => (
                             <ToggleItem
@@ -269,17 +149,21 @@ const Train = ({ selectedTopics, db, trainingMode, updateCounts }) => {
                                 term={entry.term}
                                 explanation={entry.explanation}
                                 question={entry.question}
-                                answerTypes={entry.answerTypes}
-                                options={entry.options}
                                 trainingMode={trainingMode}
-                                onAnswer={handleAnswer}
+                                onAnswer={(isCorrect) => updateEntryState(entry.term, isCorrect)}
                             />
                         ))}
                     </ul>
-                )}
+                    <button onClick={resetAgain}>repeat again</button>
+                </>
+            )}
         </div>
     );
 };
 
 export default Train;
-*/
+
+
+
+
+

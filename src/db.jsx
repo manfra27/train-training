@@ -3,51 +3,148 @@
 export const db = [
 
     {
-        category: "General",
+        category: "Healthcare Integration Engineering specific",
         subcategories: [
             {
-                topicName: "Command Line Utilities",
+                topicName: "Tech overview",
                 entries: [
-                    { "term": "mvn:", "explanation": "To manage Java projects with Maven.", "question": "Which tool is commonly used to manage and build Java projects?" },
-                    { "term": "ng:", "explanation": "To manage and build Angular projects.", "question": "Which CLI tool is commonly used to create, build, and serve Angular projects?" },
-                    { "term": "npm:", "explanation": "To manage JavaScript packages and dependencies.", "question": "What is the default package manager for Node.js?" },
-                    { "term": "gradle:", "explanation": "To build and manage software projects, often Java-based.", "question": "Which build tool is known for its flexibility and often used for Java projects?" },
-                    { "term": "pip:", "explanation": "To manage Python packages and libraries.", "question": "What tool is used to install and manage Python packages?" },
-                    { "term": "composer:", "explanation": "To manage PHP project dependencies.", "question": "Which tool is used to manage dependencies in PHP projects?" },
-                    { "term": "gem:", "explanation": "To manage Ruby packages (gems).", "question": "What is the name of the tool for managing Ruby libraries?" },
-                    { "term": "yarn:", "explanation": "To manage JavaScript dependencies, similar to npm.", "question": "What is an alternative package manager to npm for JavaScript?" },
-                    { "term": "cargo:", "explanation": "To manage Rust packages and projects.", "question": "Which tool is used to manage Rust projects and dependencies?" },
-                    { "term": "go:", "explanation": "To manage Go modules and dependencies.", "question": "What tool is used to manage Go modules and packages?" },
-                    { "term": "brew:", "explanation": "To manage software packages on macOS.", "question": "What is the popular package manager for macOS?" },
-                    { "term": "docker:", "explanation": "To manage containerized applications.", "question": "Which tool is used to create, deploy, and manage containers?" },
-                    { "term": "kubectl:", "explanation": "To manage Kubernetes clusters and resources.", "question": "What command-line tool is used to interact with Kubernetes clusters?" },
-                    { "term": "terraform:", "explanation": "To manage infrastructure as code across clouds.", "question": "Which tool is used for managing infrastructure as code across different cloud platforms?" },
-                    { "term": "ansible:", "explanation": "To automate IT tasks and manage configurations.", "question": "What tool is commonly used for IT automation and configuration management?" },
-                    { "term": "vagrant:", "explanation": "To manage virtual development environments.", "question": "Which tool is used to manage virtual environments for development?" },
-                    { "term": "make:", "explanation": "To automate build processes in software development.", "question": "Which classic tool automates build processes based on Makefiles?" },
-                    { "term": "npx:", "explanation": "To run Node.js packages without installing them globally.", "question": "Which Node.js tool lets you run packages without global installation?" },
-                    { "term": "git:", "explanation": "To manage version control for source code.", "question": "What tool is widely used for version control in software development?" },
-                    { "term": "ssh:", "explanation": "To connect securely to remote systems.", "question": "What protocol is used for securely connecting to remote machines?" },
-                    { "term": "curl:", "explanation": "To transfer data from or to a server using various protocols.", "question": "Which command-line tool is used to transfer data from or to servers?" },
-                    { "term": "wget:", "explanation": "To download files from the web (alternative to curl).", "question": "What tool is commonly used to download files from the web?" },
-                    { "term": "zsh/bash:", "explanation": "Shells for interacting with the operating system.", "question": "What are examples of popular command-line shells?" },
-                    { "term": "rsync:", "explanation": "To synchronize files between systems.", "question": "Which tool is used to sync files across systems or directories?" },
-                    { "term": "ffmpeg:", "explanation": "To manipulate and convert multimedia files (audio/video).", "question": "What tool is used to process and convert audio/video files?" },
-                    { "term": "tmux:", "explanation": "To manage terminal sessions and split panes.", "question": "Which tool helps manage multiple terminal sessions?" },
-                    { "term": "htop:", "explanation": "To monitor system resource usage interactively.", "question": "What is a popular tool for interactively monitoring system resources?" },
-                    { "term": "jq:", "explanation": "To parse and manipulate JSON data from the command line.", "question": "Which command-line tool is used to process JSON data?" },
-                    { "term": "aws/az/gcloud:", "explanation": "CLI tools for managing AWS, Azure, and Google Cloud resources.", "question": "What are examples of CLI tools for managing cloud resources on AWS, Azure, and Google Cloud?" },
-                    { "term": "python/node/ruby:", "explanation": "Interpreters for running respective programming languages directly.", "question": "Which interpreters are used to run Python, Node.js, or Ruby code?" }
-                ],
+                    {
+                        "term": "ABAP",
+                        "explanation": "A high-level programming language created by SAP for developing applications on the SAP platform. Example:\n```abap\nDATA: lv_text TYPE string.\nlv_text = 'Hello, ABAP!'.\nWRITE: lv_text.\n```",
+                        "question": "What is ABAP, and how is it used in SAP development?"
+                    },
+                    {
+                        "term": "WSO2",
+                        "explanation": "An open-source integration platform that provides API management, identity management, and enterprise integration capabilities. Example:\n```xml\n<api xmlns=\"http://ws.apache.org/ns/synapse\" name=\"SampleAPI\" context=\"/sample\">\n    <resource methods=\"GET\">\n        <inSequence>\n            <respond>\n                <message>WSO2 API Response</message>\n            </respond>\n        </inSequence>\n    </resource>\n</api>\n```",
+                        "question": "What is WSO2, and how is it used for enterprise integration?"
+                    },
+                    {
+                        "term": "KIS",
+                        "explanation": "A hospital information system (Klinisches Informationssystem) used to manage medical and administrative processes in healthcare institutions. Example:\n```text\nKIS systems store patient data, manage workflows, and support medical documentation.\n```",
+                        "question": "What is a KIS system, and how does it support healthcare operations?"
+                    },
+                    {
+                        "term": "HL7",
+                        "explanation": "A set of international standards for the exchange, integration, sharing, and retrieval of electronic health information. Example:\n```hl7\nMSH|^~\\&|SendingApp|SendingFac|ReceivingApp|ReceivingFac|20240213||ADT^A01|123456|P|2.5\n```",
+                        "question": "What is HL7, and how does it facilitate healthcare interoperability?"
+                    },
+                    {
+                        "term": ".NET",
+                        "explanation": "A software framework developed by Microsoft for building various types of applications, including web, desktop, and cloud-based solutions. Example:\n```csharp\nusing System;\nclass Program {\n    static void Main() {\n        Console.WriteLine(\"Hello, .NET!\");\n    }\n}\n```",
+                        "question": "What is .NET, and what are its main components?"
+                    },
+                    {
+                        "term": "C#",
+                        "explanation": "A modern, object-oriented programming language developed by Microsoft, primarily used for .NET applications. Example:\n```csharp\npublic class Program {\n    public static void Main() {\n        Console.WriteLine(\"Hello, C#\");\n    }\n}\n```",
+                        "question": "What is C#, and what are its key features?"
+                    },
+                    {
+                        "term": "APEX",
+                        "explanation": "A strongly typed, object-oriented programming language used for developing applications on the Salesforce platform. Example:\n```apex\npublic class HelloWorld {\n    public static void sayHello() {\n        System.debug('Hello, APEX!');\n    }\n}\n```",
+                        "question": "What is APEX, and how is it used in Salesforce development?"
+                    },
+                    {
+                        "term": "SAP",
+                        "explanation": "A German enterprise software company that provides solutions for business operations and customer relations. Example:\n```text\nSAP ERP systems integrate finance, HR, supply chain, and other business functions.\n```",
+                        "question": "What is SAP, and what are its primary products?"
+                    },
+                    {
+                        "term": "ERP",
+                        "explanation": "Enterprise Resource Planning (ERP) refers to software that manages core business processes such as finance, HR, and supply chain. Example:\n```text\nERP systems unify data and streamline processes across departments.\n```",
+                        "question": "What is ERP, and why is it essential for businesses?"
+                    },
+                    {
+                        "term": "BAPI",
+                        "explanation": "A standardized programming interface that allows external applications to interact with SAP systems. Example:\n```abap\nCALL FUNCTION 'BAPI_CUSTOMER_GETDETAIL'\n  EXPORTING\n    customer_no = '000123456'\n  IMPORTING\n    customer_data = lv_customer.\n```",
+                        "question": "What is BAPI, and how is it used in SAP integrations?"
+                    },
+                    {
+                        "term": "DICOM",
+                        "explanation": "A standard for transmitting, storing, and sharing medical imaging data, used in radiology and healthcare. Example:\n```text\nDICOM files contain patient information, images, and metadata.\n```",
+                        "question": "What is DICOM, and why is it important in medical imaging?"
+                    },
+                    {
+                        "term": "FHIR",
+                        "explanation": "Fast Healthcare Interoperability Resources (FHIR) is a modern standard for exchanging healthcare data using RESTful APIs. Example:\n```json\n{\n  \"resourceType\": \"Patient\",\n  \"id\": \"12345\",\n  \"name\": [{ \"family\": \"Doe\", \"given\": [\"John\"] }]\n}\n```",
+                        "question": "What is FHIR, and how does it improve healthcare data exchange?"
+                    }
+                ]
             },
+            {
+                topicName: "FHIR",
+                entries: [
+                ]
+            },
+            {
+                topicName: "DICOM",
+                entries: [
+                ]
+            },
+            {
+                topicName: "BAPI",
+                entries: [
+                ]
+            },
+            {
+                topicName: "ERP",
+                entries: [
+                ]
+            },
+            {
+                topicName: "SAP",
+                entries: [
+                ]
+            },
+            {
+                topicName: "APEX",
+                entries: [
+                ]
+            },
+            {
+                topicName: "C#",
+                entries: [
+                ]
+            },
+            {
+                topicName: ".NET",
+                entries: [
+                ]
+            },
+            {
+                topicName: "HL7",
+                entries: [
+                ]
+            },
+            {
+                topicName: "KIS",
+                entries: [
+                ]
+            },
+            {
+                topicName: "WSO2",
+                entries: [
+                ]
+            },
+            {
+                topicName: "ABAP",
+                entries: [
+                ]
+            },
+            /* 
+            {
+                topicName: "API architecture",
+                entries: [
+                ]
+            },
+            */
         ],
     },
 
     {
-        category: "Optimisation",
+        category: "Basics",
         subcategories: [
             {
-                topicName: "Algorithm optimisation",
+                topicName: "Alg optimisation",
                 entries: [
                     { "term": "Space complexity", "explanation": "Analyzes how much memory an algorithm uses relative to the input size. Recursive algorithms often have O(n) space complexity due to stack usage.", "question": "What does space complexity analyze in an algorithm?" },
                     { "term": "Amortized analysis", "explanation": "Analyzes the average cost of operations over a sequence of operations. Useful for dynamic arrays with O(1) amortized insertion due to occasional resizing.", "question": "What is the purpose of amortized analysis in algorithms?" },
@@ -80,6 +177,17 @@ export const db = [
                     { "term": "Little-o", "explanation": "Represents the strict upper bound of an algorithm. It means the algorithm’s runtime grows slower than the given bound. Used in theoretical contexts to indicate non-asymptotic upper limits.\n\nExample: If f(n) = n and g(n) = n², then f(n) = o(g(n)) since n grows slower than n².", "question": "What does Little-o notation represent in algorithm analysis?" },
                     { "term": "Little-ω", "explanation": "Represents the strict lower bound of an algorithm, meaning the algorithm's runtime grows faster than the given bound. It is used in theoretical discussions to indicate runtime growth beyond a specific threshold.\n\nExample: If f(n) = n² and g(n) = n, then f(n) = ω(g(n)) since n² grows faster than n.", "question": "What does Little-ω notation represent in algorithm analysis?" }
 
+                ]
+            },
+            {
+                topicName: "OO programming",
+                entries: [
+                    { "term": "Inheritance", "explanation": "x", "question": "x" },
+                    { "term": "Polymorphism", "explanation": "x", "question": "x" },
+                    { "term": "Abstraction", "explanation": "x", "question": "x" },
+                    { "term": "Encapsulation", "explanation": "x", "question": "x" },
+                    { "term": "Multithreading", "explanation": "x", "question": "x" },
+                    { "term": "Synchronization", "explanation": "x", "question": "x" },
                 ]
             },
         ],
@@ -241,10 +349,7 @@ export const db = [
                     { "term": "Keyword: while", "explanation": "Java while keyword starts a while loop that iterates while a condition is true.", "question": "What is the purpose of the while keyword in Java?" }
                 ]
             },
-            {
-                topicName: "Java Control Statements",
-                entries: []
-            },
+            /*
             {
                 topicName: "Java Object class",
                 entries: []
@@ -269,6 +374,7 @@ export const db = [
                 topicName: "Java OOPs Misc",
                 entries: []
             },
+            */
             {
                 topicName: "Java Exception Handling",
                 entries: [
@@ -294,6 +400,7 @@ export const db = [
                     { "term": "Java custom exceptions", "explanation": "Custom exceptions are user-defined exceptions extending `Exception` or `RuntimeException`.\nCode sample:\nclass MyException extends Exception {\n    MyException(String message) { super(message); }\n}\nthrow new MyException(\"Custom Error\");", "question": "How are custom exceptions created and used in Java?" }
                 ]
             },
+            /*
             {
                 topicName: "Java Inner Class",
                 entries: []
@@ -314,6 +421,7 @@ export const db = [
                 topicName: "Java JDBC",
                 entries: []
             },
+            */
             {
                 topicName: "Java collections",
                 entries: [
@@ -365,22 +473,22 @@ export const db = [
                     { "term": "Blocking queue with priority-based processing", "explanation": "PriorityBlockingQueue - A thread-safe, unbounded priority queue. Suitable for priority-based task processing.", "question": "When should you use a PriorityBlockingQueue?" },
                     { "term": "Blocking queue with delayed element processing", "explanation": "DelayQueue - A thread-safe, unbounded queue where elements can only be taken when their delay has expired. Suitable for scheduling tasks.", "question": "When should you use a DelayQueue?" },
                     { "term": "Blocking queue with no capacity (handover pattern)", "explanation": "SynchronousQueue - A thread-safe queue that allows one-to-one handoff between threads. Ideal for handoff scenarios with no buffering.", "question": "When should you use a SynchronousQueue?" },
-                    { "term": "byte", "explanation": "A primitive data type representing an 8-bit signed integer. Suitable for memory-efficient storage of small integer values.", "question": "When should you use byte?" },
-                    { "term": "Byte", "explanation": "The wrapper class for the primitive type byte. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Byte?" },
-                    { "term": "short", "explanation": "A primitive data type representing a 16-bit signed integer. Suitable for memory-efficient storage of small integer values larger than byte.", "question": "When should you use short?" },
-                    { "term": "Short", "explanation": "The wrapper class for the primitive type short. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Short?" },
-                    { "term": "int", "explanation": "A primitive data type representing a 32-bit signed integer. The default choice for integer values in Java.", "question": "When should you use int?" },
-                    { "term": "Integer", "explanation": "The wrapper class for the primitive type int. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Integer?" },
-                    { "term": "long", "explanation": "A primitive data type representing a 64-bit signed integer. Suitable for storing large integer values.", "question": "When should you use long?" },
-                    { "term": "Long", "explanation": "The wrapper class for the primitive type long. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Long?" },
-                    { "term": "float", "explanation": "A primitive data type representing a 32-bit floating-point number. Suitable for memory-efficient storage of decimal values with lower precision.", "question": "When should you use float?" },
-                    { "term": "Float", "explanation": "The wrapper class for the primitive type float. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Float?" },
-                    { "term": "double", "explanation": "A primitive data type representing a 64-bit floating-point number. The default choice for decimal values in Java, offering higher precision.", "question": "When should you use double?" },
-                    { "term": "Double", "explanation": "The wrapper class for the primitive type double. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Double?" },
-                    { "term": "char", "explanation": "A primitive data type representing a single 16-bit Unicode character. Suitable for storing individual characters.", "question": "When should you use char?" },
-                    { "term": "Character", "explanation": "The wrapper class for the primitive type char. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Character?" },
-                    { "term": "boolean", "explanation": "A primitive data type representing a logical value: true or false. Suitable for simple flags or conditions.", "question": "When should you use boolean?" },
-                    { "term": "Boolean", "explanation": "The wrapper class for the primitive type boolean. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Boolean?" }
+                    { "term": "byte ?", "explanation": "A primitive data type representing an 8-bit signed integer. Suitable for memory-efficient storage of small integer values.", "question": "When should you use byte?" },
+                    { "term": "Byte ?", "explanation": "The wrapper class for the primitive type byte. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Byte?" },
+                    { "term": "short ?", "explanation": "A primitive data type representing a 16-bit signed integer. Suitable for memory-efficient storage of small integer values larger than byte.", "question": "When should you use short?" },
+                    { "term": "Short ?", "explanation": "The wrapper class for the primitive type short. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Short?" },
+                    { "term": "int ?", "explanation": "A primitive data type representing a 32-bit signed integer. The default choice for integer values in Java.", "question": "When should you use int?" },
+                    { "term": "Integer ?", "explanation": "The wrapper class for the primitive type int. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Integer?" },
+                    { "term": "long ?", "explanation": "A primitive data type representing a 64-bit signed integer. Suitable for storing large integer values.", "question": "When should you use long?" },
+                    { "term": "Long ?", "explanation": "The wrapper class for the primitive type long. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Long?" },
+                    { "term": "float ?", "explanation": "A primitive data type representing a 32-bit floating-point number. Suitable for memory-efficient storage of decimal values with lower precision.", "question": "When should you use float?" },
+                    { "term": "Float ?", "explanation": "The wrapper class for the primitive type float. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Float?" },
+                    { "term": "double ?", "explanation": "A primitive data type representing a 64-bit floating-point number. The default choice for decimal values in Java, offering higher precision.", "question": "When should you use double?" },
+                    { "term": "Double ?", "explanation": "The wrapper class for the primitive type double. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Double?" },
+                    { "term": "char ?", "explanation": "A primitive data type representing a single 16-bit Unicode character. Suitable for storing individual characters.", "question": "When should you use char?" },
+                    { "term": "Character ?", "explanation": "The wrapper class for the primitive type char. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Character?" },
+                    { "term": "boolean ?", "explanation": "A primitive data type representing a logical value: true or false. Suitable for simple flags or conditions.", "question": "When should you use boolean?" },
+                    { "term": "Boolean ?", "explanation": "The wrapper class for the primitive type boolean. Useful for working with collections or when a nullable type is needed.", "question": "When should you use Boolean?" }
                 ],
             },
             {
@@ -543,7 +651,6 @@ export const db = [
                     { "term": "git restore", "explanation": "Restores changes to files in the working directory.", "question": "Which command restores file changes in Git?" },
                     { "term": "git reset", "explanation": "Resets the current HEAD to a specified state.", "question": "Which command is used to reset the current branch in Git?" },
                     { "term": "git rm", "explanation": "Removes files from the working directory and staging area.", "question": "Which command removes files from Git tracking?" },
-                    { "term": "git tag", "explanation": "Creates, lists, or deletes tags in the repository.", "question": "Which command manages tags in Git?" },
                     { "term": "git show", "explanation": "Displays detailed information about an object in the repository.", "question": "Which command displays detailed information about commits or objects in Git?" },
                     { "term": "git blame", "explanation": "Shows which commit last modified each line of a file.", "question": "Which command shows who last modified each line in a file in Git?" },
                     { "term": "git revert", "explanation": "Creates a new commit that undoes the changes of a previous commit.", "question": "Which command undoes changes from a specific commit without removing it?" },
@@ -678,22 +785,66 @@ export const db = [
                     { "term": "Option-Shift-Command-Delete", "explanation": "Empty the Trash without confirmation.", "question": "What shortcut empties the Trash without confirmation in macOS?" }
                 ],
             },
+
             {
-                topicName: "Shell/Bash/Kernel",
-                entries: [
-                    { "term": "clear", "explanation": "Clears the terminal screen.", "question": "What command clears the terminal screen?" },
-                    { "term": "install", "explanation": "Installs software or packages.", "question": "Which command is used to install software or packages?" },
-                    { "term": "sudo", "explanation": "Executes tasks with superuser privileges.", "question": "What command is used to execute tasks with superuser privileges?" },
-                    { "term": "sudo lsof -i :portnr", "explanation": "Checks what process is running on a specific port.", "question": "How do you check what process is running on a specific port?" },
-                    { "term": "kill -9 PID", "explanation": "Stops a process running on a specific port.", "question": "How do you stop a process running on a specific port?" },
-                    { "term": "kill <PID>", "explanation": "Terminates a process using its process ID.", "question": "What command terminates a process using its process ID?" },
-                    { "term": "ps aux", "explanation": "Lists all running processes on the system.", "question": "Which command lists all running processes on the system?" },
-                    { "term": "uname -a", "explanation": "Displays detailed system information, including the kernel version.", "question": "How can you view detailed system information, including the kernel version?" },
-                    { "term": "dmesg", "explanation": "Displays kernel-related messages.", "question": "Which command displays kernel-related messages?" },
-                    { "term": "df -h", "explanation": "Shows the disk usage of your system in a human-readable format.", "question": "How can you view the disk usage of your system in a human-readable format?" },
-                    { "term": "free -h", "explanation": "Displays memory usage in a human-readable format.", "question": "Which command displays memory usage in a human-readable format?" },
-                    { "term": "top", "explanation": "Monitors system processes and resource usage interactively.", "question": "How can you monitor system processes and resource usage interactively?" },
-                    { "term": "vm_start", "explanation": "Provides information about memory usage on your system.", "question": "What command provides information about memory usage on your system?" },
+                "topicName": "sudo",
+                "entries": [
+                    {
+                        "term": "sudo reboot",
+                        "explanation": "Restarts the system immediately.",
+                        "question": "What command restarts the system immediately?"
+                    },
+                    {
+                        "term": "sudo shutdown -h now",
+                        "explanation": "Shuts down the system immediately.",
+                        "question": "What command shuts down the system immediately?"
+                    },
+                    {
+                        "term": "sudo softwareupdate -i -a",
+                        "explanation": "Installs all available macOS updates.",
+                        "question": "How do you install all available macOS updates?"
+                    },
+                    {
+                        "term": "sudo dscacheutil -flushcache",
+                        "explanation": "Clears the DNS cache on macOS.",
+                        "question": "What command clears the DNS cache on macOS?"
+                    },
+                    {
+                        "term": "sudo ifconfig en0 down/up",
+                        "explanation": "Disables/enables a network interface (e.g., Wi-Fi or Ethernet).",
+                        "question": "Which command disables or enables a network interface on macOS?"
+                    },
+                    {
+                        "term": "sudo spctl --master-disable",
+                        "explanation": "Disables Gatekeeper to allow apps from any source.",
+                        "question": "Which command disables Gatekeeper to allow apps from any source?"
+                    },
+                    {
+                        "term": "sudo brew install <package>",
+                        "explanation": "Installs software via Homebrew with superuser privileges.",
+                        "question": "How do you install a Homebrew package with superuser privileges?"
+                    },
+                    {
+                        "term": "sudo installer -pkg <file>.pkg -target /",
+                        "explanation": "Installs a .pkg file on macOS.",
+                        "question": "What command installs a .pkg file on macOS?"
+                    },
+                    {
+                        "term": "sudo diskutil list",
+                        "explanation": "Lists all disks and partitions on macOS.",
+                        "question": "Which command lists all disks and partitions on macOS?"
+                    },
+                    {
+                        "term": "sudo fsck -fy",
+                        "explanation": "Checks and repairs the file system.",
+                        "question": "What command checks and repairs the file system on macOS?"
+                    }
+                ]
+            },
+
+            {
+                "topicName": "Shell",
+                "entries": [
                     { "term": "ls", "explanation": "Lists files in the current directory.", "question": "How do you list files in the current directory?" },
                     { "term": "cd <directory>", "explanation": "Navigates to a different directory.", "question": "What command allows you to navigate to a different directory?" },
                     { "term": "pwd", "explanation": "Displays the full path of the current working directory.", "question": "How can you view the full path of the current working directory?" },
@@ -702,10 +853,23 @@ export const db = [
                     { "term": "cp", "explanation": "Copies files or directories to a specified location.", "question": "Which command copies files or directories to a specified location?" },
                     { "term": "mv", "explanation": "Moves or renames a file or directory.", "question": "What command is used to move or rename a file or directory?" },
                     { "term": "touch", "explanation": "Creates an empty file in the current directory.", "question": "How do you create an empty file in the current directory?" },
-                    { "term": "open", "explanation": "Opens a file or application from the terminal.", "question": "What command opens a file or application from the terminal?" },
+                    { "term": "clear", "explanation": "Clears the terminal screen.", "question": "What command clears the terminal screen?" },
+                    { "term": "echo -n password | base64", "explanation": "Encodes a string using Base64.", "question": "Which command encodes a string using Base64?" },
+                    { "term": "base64 -D", "explanation": "Decodes a Base64-encoded string.", "question": "What command decodes a Base64-encoded string?" }
+                ]
+            },
+            {
+                "topicName": "Bash",
+                "entries": [
+                    { "term": "sudo", "explanation": "Executes tasks with superuser privileges.", "question": "What command is used to execute tasks with superuser privileges?" },
+                    { "term": "sudo lsof -i :portnr", "explanation": "Checks what process is running on a specific port.", "question": "How do you check what process is running on a specific port?" },
+                    { "term": "kill -9 PID", "explanation": "Stops a process running on a specific port.", "question": "How do you stop a process running on a specific port?" },
+                    { "term": "kill <PID>", "explanation": "Terminates a process using its process ID.", "question": "What command terminates a process using its process ID?" },
+                    { "term": "ps aux", "explanation": "Lists all running processes on the system.", "question": "Which command lists all running processes on the system?" },
                     { "term": "chmod <permissions> <file>", "explanation": "Modifies the permissions of a file.", "question": "Which command modifies the permissions of a file?" },
                     { "term": "chown", "explanation": "Changes the ownership of a file or directory.", "question": "How do you change the ownership of a file or directory?" },
                     { "term": "defaults", "explanation": "Accesses or modifies user defaults.", "question": "Which command is used to access or modify user defaults?" },
+                    { "term": "open", "explanation": "Opens a file or application from the terminal.", "question": "What command opens a file or application from the terminal?" },
                     { "term": "ping <hostname or IP>", "explanation": "Tests network connectivity to a specific host.", "question": "What command tests network connectivity to a specific host?" },
                     { "term": "curl -O <url>", "explanation": "Downloads a file from a URL using curl.", "question": "How do you download a file from a URL using curl?" },
                     { "term": "curl -I <url>", "explanation": "Retrieves only the HTTP headers of a URL using curl.", "question": "What curl command retrieves only the HTTP headers of a URL?" },
@@ -715,11 +879,22 @@ export const db = [
                     { "term": "netstat -tuln", "explanation": "Lists active network connections.", "question": "What command lists active network connections?" },
                     { "term": "traceroute <hostname>", "explanation": "Traces the route packets take to a host.", "question": "How can you trace the route packets take to a host?" },
                     { "term": "nslookup <hostname>", "explanation": "Performs a DNS lookup for a given hostname.", "question": "What command performs a DNS lookup for a given hostname?" },
-                    { "term": "ss -t", "explanation": "Displays active TCP connections on your system.", "question": "How do you display active TCP connections on your system?" },
-                    { "term": "echo -n password | base64", "explanation": "Encodes a string using Base64.", "question": "Which command encodes a string using Base64?" },
-                    { "term": "base64 -D", "explanation": "Decodes a Base64-encoded string.", "question": "What command decodes a Base64-encoded string?" }
-                ],
+                    { "term": "ss -t", "explanation": "Displays active TCP connections on your system.", "question": "How do you display active TCP connections on your system?" }
+                ]
             },
+            {
+                "topicName": "Kernel",
+                "entries": [
+                    { "term": "uname -a", "explanation": "Displays detailed system information, including the kernel version.", "question": "How can you view detailed system information, including the kernel version?" },
+                    { "term": "dmesg", "explanation": "Displays kernel-related messages.", "question": "Which command displays kernel-related messages?" },
+                    { "term": "df -h", "explanation": "Shows the disk usage of your system in a human-readable format.", "question": "How can you view the disk usage of your system in a human-readable format?" },
+                    { "term": "free -h", "explanation": "Displays memory usage in a human-readable format.", "question": "Which command displays memory usage in a human-readable format?" },
+                    { "term": "top", "explanation": "Monitors system processes and resource usage interactively.", "question": "How can you monitor system processes and resource usage interactively?" },
+                    { "term": "vm_stat", "explanation": "Provides information about memory usage on your system.", "question": "What command provides information about memory usage on your system?" }
+                ]
+            },
+
+
             {
                 topicName: "Linux Commands",
                 entries: [
@@ -752,6 +927,48 @@ export const db = [
             },
         ],
     },
+
+    {
+        category: "Overview",
+        subcategories: [
+            {
+                topicName: "Command Line Utilities",
+                entries: [
+                    { "term": "mvn:", "explanation": "To manage Java projects with Maven.", "question": "Which tool is commonly used to manage and build Java projects?" },
+                    { "term": "ng:", "explanation": "To manage and build Angular projects.", "question": "Which CLI tool is commonly used to create, build, and serve Angular projects?" },
+                    { "term": "npm:", "explanation": "To manage JavaScript packages and dependencies.", "question": "What is the default package manager for Node.js?" },
+                    { "term": "gradle:", "explanation": "To build and manage software projects, often Java-based.", "question": "Which build tool is known for its flexibility and often used for Java projects?" },
+                    { "term": "pip:", "explanation": "To manage Python packages and libraries.", "question": "What tool is used to install and manage Python packages?" },
+                    { "term": "composer:", "explanation": "To manage PHP project dependencies.", "question": "Which tool is used to manage dependencies in PHP projects?" },
+                    { "term": "gem:", "explanation": "To manage Ruby packages (gems).", "question": "What is the name of the tool for managing Ruby libraries?" },
+                    { "term": "yarn:", "explanation": "To manage JavaScript dependencies, similar to npm.", "question": "What is an alternative package manager to npm for JavaScript?" },
+                    { "term": "cargo:", "explanation": "To manage Rust packages and projects.", "question": "Which tool is used to manage Rust projects and dependencies?" },
+                    { "term": "go:", "explanation": "To manage Go modules and dependencies.", "question": "What tool is used to manage Go modules and packages?" },
+                    { "term": "brew:", "explanation": "To manage software packages on macOS.", "question": "What is the popular package manager for macOS?" },
+                    { "term": "docker:", "explanation": "To manage containerized applications.", "question": "Which tool is used to create, deploy, and manage containers?" },
+                    { "term": "kubectl:", "explanation": "To manage Kubernetes clusters and resources.", "question": "What command-line tool is used to interact with Kubernetes clusters?" },
+                    { "term": "terraform:", "explanation": "To manage infrastructure as code across clouds.", "question": "Which tool is used for managing infrastructure as code across different cloud platforms?" },
+                    { "term": "ansible:", "explanation": "To automate IT tasks and manage configurations.", "question": "What tool is commonly used for IT automation and configuration management?" },
+                    { "term": "vagrant:", "explanation": "To manage virtual development environments.", "question": "Which tool is used to manage virtual environments for development?" },
+                    { "term": "make:", "explanation": "To automate build processes in software development.", "question": "Which classic tool automates build processes based on Makefiles?" },
+                    { "term": "npx:", "explanation": "To run Node.js packages without installing them globally.", "question": "Which Node.js tool lets you run packages without global installation?" },
+                    { "term": "git:", "explanation": "To manage version control for source code.", "question": "What tool is widely used for version control in software development?" },
+                    { "term": "ssh:", "explanation": "To connect securely to remote systems.", "question": "What protocol is used for securely connecting to remote machines?" },
+                    { "term": "curl:", "explanation": "To transfer data from or to a server using various protocols.", "question": "Which command-line tool is used to transfer data from or to servers?" },
+                    { "term": "wget:", "explanation": "To download files from the web (alternative to curl).", "question": "What tool is commonly used to download files from the web?" },
+                    { "term": "zsh/bash:", "explanation": "Shells for interacting with the operating system.", "question": "What are examples of popular command-line shells?" },
+                    { "term": "rsync:", "explanation": "To synchronize files between systems.", "question": "Which tool is used to sync files across systems or directories?" },
+                    { "term": "ffmpeg:", "explanation": "To manipulate and convert multimedia files (audio/video).", "question": "What tool is used to process and convert audio/video files?" },
+                    { "term": "tmux:", "explanation": "To manage terminal sessions and split panes.", "question": "Which tool helps manage multiple terminal sessions?" },
+                    { "term": "htop:", "explanation": "To monitor system resource usage interactively.", "question": "What is a popular tool for interactively monitoring system resources?" },
+                    { "term": "jq:", "explanation": "To parse and manipulate JSON data from the command line.", "question": "Which command-line tool is used to process JSON data?" },
+                    { "term": "aws/az/gcloud:", "explanation": "CLI tools for managing AWS, Azure, and Google Cloud resources.", "question": "What are examples of CLI tools for managing cloud resources on AWS, Azure, and Google Cloud?" },
+                    { "term": "python/node/ruby:", "explanation": "Interpreters for running respective programming languages directly.", "question": "Which interpreters are used to run Python, Node.js, or Ruby code?" }
+                ],
+            },
+        ],
+    },
+
     {
         category: "Random",
         subcategories: [
