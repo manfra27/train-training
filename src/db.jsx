@@ -1,9 +1,8 @@
-// last id = 281
 
 export const db = [
 
     {
-        category: "Healthcare Integration Engineering specific",
+        category: "General tech knowledge",
         subcategories: [
             {
                 topicName: "Tech overview",
@@ -70,80 +69,195 @@ export const db = [
                     }
                 ]
             },
-            {
-                topicName: "WSO2",
-                entries: [
-                ]
-            },
-            /*
-            {
-                topicName: "FHIR",
-                entries: [
-                ]
-            },
-            {
-                topicName: "DICOM",
-                entries: [
-                ]
-            },
-            {
-                topicName: "BAPI",
-                entries: [
-                ]
-            },
-            {
-                topicName: "ERP",
-                entries: [
-                ]
-            },
-            {
-                topicName: "SAP",
-                entries: [
-                ]
-            },
-            {
-                topicName: "APEX",
-                entries: [
-                ]
-            },
-            {
-                topicName: "C#",
-                entries: [
-                ]
-            },
-            {
-                topicName: ".NET",
-                entries: [
-                ]
-            },
-            {
-                topicName: "HL7",
-                entries: [
-                ]
-            },
-            {
-                topicName: "KIS",
-                entries: [
-                ]
-            },
-            {
-                topicName: "ABAP",
-                entries: [
-                ]
-            },
-            {
-                topicName: "API architecture",
-                entries: [
-                ]
-            },
-            {
-                topicName: "API dokumentation",
-                entries: [
-                ]
-            },
-            */
         ],
     },
+
+    {
+        category: "WSO2",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "FHIR",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "DICOM",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    }, {
+        category: "BAPI",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "ERP",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "SAP",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "APEX",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "C#",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: ".NET",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "HL7",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "KIS",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "ABAP",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "API architecture",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        category: "",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+
+
+    {
+        category: "",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+
+
+
+
+
 
     {
         category: "Basics",

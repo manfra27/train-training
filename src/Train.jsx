@@ -35,20 +35,20 @@ const ToggleItem = (
                     <div className="card">
 
                         {trainingMode === "explanation"
-                            ? <div className="item-question">
+                            ? <div className="text-field">
 
                                 {term.split('\n').map((line, index) => (
                                     <div key={index}>{line}</div>
                                 ))}
                             </div>
-                            : <div className="item-question">
+                            : <div className="text-field">
                                 {question.split('\n').map((line, index) => (
                                     <div key={index}>{line}</div>
                                 ))}
                             </div>}
                         {
                             Resolve && trainingMode === "explanation"
-                                ? <div className="item-answer">
+                                ? <div className="text-field">
                                     {explanation.split('\n').map((line, index) => (
                                         <div key={index}>{line}</div>
                                     ))}
@@ -59,7 +59,7 @@ const ToggleItem = (
                         }
                         {
                             Resolve && trainingMode === "term"
-                                ? <div className="item-answer">
+                                ? <div className="text-field">
                                     <br />
                                     {term.split('\n').map((line, index) => (
                                         <div key={index}>{line}</div>
@@ -68,7 +68,7 @@ const ToggleItem = (
                                     {explanation.split('\n').map((line, index) => (
                                         <div key={index}>{line}</div>
                                     ))}
-                                    <br />
+
 
                                 </div>
                                 : (
@@ -85,13 +85,10 @@ const ToggleItem = (
                                         <button onClick={() => handleAnswer(true)} className="button">correct</button>
                                         <button onClick={() => handleAnswer(false)} className="button">again</button>
                                     </div>
-                                </>) : (<div className={onAnswer ? "item-answer" : "item-question"}></div>
+                                </>) : (<div className={onAnswer ? "text-field" : "text-field"}></div>
                                 )
                         }
-
                         {!Resolve ? (<button onClick={() => setResolve(true)} className="button">Resolve</button>) : (<></>)}
-
-
                     </div>
                 ) : (
                     <div></div>)
@@ -154,7 +151,7 @@ const Train = ({ selectedTopics, db, trainingMode, updateCounts }) => {
                             />
                         ))}
                     </ul>
-                    <button onClick={resetAgain}>repeat again</button>
+                    <button onClick={resetAgain} className="button">repeat</button>
                 </>
             )}
         </div>

@@ -108,7 +108,7 @@ function App() {
               : "item-question"}
             onClick={() => handleDirectory("train")}
           >
-            !!!
+            Training
           </div>
           <div
             className={selectedDirectory === "setting"
@@ -116,20 +116,22 @@ function App() {
               : "item-question"}
             onClick={() => handleDirectory("setting")}
           >
-            ?
-          </div>
-          <div
-            className={selectedDirectory === "guide"
-              ? "item-answer"
-              : "item-question"}
-            onClick={() => handleDirectory("guide")}
-          >
-            ¿
+            Settings
           </div>
         </div>
       </footer>
     </div>
   );
 }
+/*
+         <div
+           className={selectedDirectory === "guide"
+             ? "item-answer"
+             : "item-question"}
+           onClick={() => handleDirectory("guide")}
+         >
+           ¿
+         </div>
+         */
 
 export default App;
