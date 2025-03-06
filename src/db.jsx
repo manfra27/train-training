@@ -66,7 +66,31 @@ export const db = [
                         "term": "FHIR",
                         "explanation": "FHIR (Fast Healthcare Interoperability Resources) is a modern standard developed by HL7 for exchanging healthcare information using web technologies. It enables seamless interoperability between healthcare applications by defining structured resources such as Patient, Observation, and MedicationRequest. FHIR supports RESTful APIs, making data accessible via standard HTTP operations. It also allows data representation in JSON and XML formats. FHIR is widely adopted in electronic health records (EHR), telemedicine, and healthcare analytics due to its scalability, ease of implementation, and support for mobile and cloud-based applications.",
                         "question": "What is FHIR, and how does it improve healthcare data exchange?"
-                    }
+                    },
+
+
+                    { "term": "Citrix Files", "explanation": "", "question": "" },
+                    { "term": "Cisco Jabber", "explanation": "", "question": "" },
+                    { "term": "Power Shell", "explanation": "", "question": "" },
+                    { "term": "Citrix Workspace", "explanation": "", "question": "" },
+                    { "term": "Dolby Access", "explanation": "", "question": "" },
+                    { "term": "FileZilla", "explanation": "", "question": "" },
+                    { "term": "Greenshot", "explanation": "", "question": "" },
+                    { "term": "ImgBurn", "explanation": "", "question": "" },
+                    { "term": "Kaspersky Endpoint Security for Windows", "explanation": "", "question": "" },
+                    { "term": "PolyPoint", "explanation": "", "question": "" },
+                    { "term": "Webex", "explanation": "", "question": "" },
+                    { "term": "XMind", "explanation": "", "question": "" },
+                    { "term": "ARTS", "explanation": "", "question": "" },
+                    { "term": "BIC3", "explanation": "", "question": "" },
+                    { "term": "Ibi-care V6", "explanation": "", "question": "" },
+                    { "term": "Omnitracker 12 client", "explanation": "", "question": "" },
+                    { "term": "Sunet plus", "explanation": "", "question": "" },
+                    { "term": "UKA solutions", "explanation": "", "question": "" },
+                    { "term": "Panopto", "explanation": "", "question": "" },
+                    { "term": "Adobe Acrobat DC", "explanation": "", "question": "" },
+
+
                 ]
             },
         ],
@@ -76,7 +100,23 @@ export const db = [
         category: "WSO2",
         subcategories: [
             {
-                topicName: "x",
+                topicName: "Fundamental concepts and terms",
+                entries: [
+                    { "term": "WSO2 HTTP methods", "explanation": "GET = Retrieves data from a resource,\nPUT = Updates or creates a resource,\nPOST = Creates a new resource,\nDELETE = Removes a resource,\nPATCH = Partially updates a resource,\nHEAD = Retrieves headers for a resource without the body,\nOPTIONS = Retrieves allowed HTTP methods for a resource", "question": "" },
+                    { "term": "WSO2 API lifecycle", "explanation": "CREATED = Initial state where the API is designed but not yet available for use\n, PRE-RELEASED = API is tested internally but not yet available to external consumers\n, PUBLISHED = API is publicly available for consumption\n, BLOCKED = API access is restricted due to policy or security reasons\n, DEPRECEATED = API is still available but marked for removal in the future\n, RETIRED = API is no longer available for use\n", "question": "" },
+                    { "term": "WSO2 API Product", "explanation": "A combination of resources from one or more available APIs. A product can be subscribed to manage the consumption of grouped resources > APIs.", "question": "" },
+                    { "term": "WSO2 API Visibility", "explanation": "A modification who can view APIs on the Developer Portal.\nPublic = visible to everyone\nRestricted by role = Only user which required role\nVisible to my domain = Only users registered to API creators tenant domain.", "question": "" },
+                    { "term": "", "explanation": "", "question": "" },
+                ]
+            },
+            {
+                topicName: "WSO2 ESB Server",
+                entries: [
+                    { "term": "ESB meaning", "explanation": "Enterprise Service Bus", "question": "" },
+                ]
+            },
+            {
+                topicName: "WSO2 Micro Integrator",
                 entries: [
                     {
                     },
@@ -228,7 +268,7 @@ export const db = [
         ],
     },
     {
-        category: "",
+        category: "DSG Daten schutz gesetz CH",
         subcategories: [
             {
                 topicName: "x",
@@ -239,23 +279,6 @@ export const db = [
             },
         ],
     },
-
-
-    {
-        category: "",
-        subcategories: [
-            {
-                topicName: "x",
-                entries: [
-                    {
-                    },
-                ]
-            },
-        ],
-    },
-
-
-
 
 
 
