@@ -214,7 +214,7 @@ export const db = [
                     },
                     {
                         "term": "mmlp:// Protocol",
-                        "explanation": "MMLP (Medical Message Layer Protocol) – A transport protocol used for secure HL7 messaging. Ensures reliable medical data transmission.",
+                        "explanation": "MMLP (Medical Message Layer Protocol)  A transport protocol used for secure HL7 messaging. Ensures reliable medical data transmission.",
                         "question": "What is MMLP, and how does it enhance the security of HL7 message transmission?"
                     },
                     {
@@ -228,18 +228,93 @@ export const db = [
                 topicName: "WSO2 ESB Server",
                 entries: [
                     { "term": "ESB meaning", "explanation": "Enterprise Service Bus", "question": "" },
-                    { "term": "", "explanation": "", "question": "" },
                 ]
             },
             {
                 topicName: "WSO2 Micro Integrator",
                 entries: [
                     {
+                        "term": "Centralized integration architecture",
+                        "explanation": "A model where a central integration hub (e.g., an ESB) manages communication between services. It provides a single point of control, governance, and monitoring.",
+                        "question": "What is a centralized integration architecture, and how does it function in enterprise systems?"
                     },
+                    {
+                        "term": "Decentralized integration architecture",
+                        "explanation": "A distributed model where services communicate directly with each other without a central hub. This is often seen in microservices-based architectures.",
+                        "question": "How does a decentralized integration architecture differ from a centralized one, and when should it be used?"
+                    },
+                    {
+                        "term": "Content based routing",
+                        "explanation": "A routing mechanism that directs messages to different services based on their content, such as specific fields in a JSON or XML message.",
+                        "question": "What is content-based routing, and how does it work in message mediation?"
+                    },
+                    {
+                        "term": "Service orchestration",
+                        "explanation": "A method of managing interactions between multiple services to fulfill business processes, ensuring they are executed in a defined sequence.",
+                        "question": "What is service orchestration, and how does it differ from service choreography?"
+                    },
+                    {
+                        "term": "Coarse-grained service",
+                        "explanation": "A service that performs a larger business function and typically aggregates multiple fine-grained services.",
+                        "question": "What is a coarse-grained service, and how does it benefit service design?"
+                    },
+                    {
+                        "term": "Synchronous service orchestration",
+                        "explanation": "A service orchestration pattern where services interact in real-time, with each service waiting for a response before continuing.",
+                        "question": "What is synchronous service orchestration, and what are its advantages and disadvantages?"
+                    },
+                    {
+                        "term": "Asynchronous service orchestration",
+                        "explanation": "A non-blocking service orchestration pattern where services interact without waiting for an immediate response, improving scalability.",
+                        "question": "What is asynchronous service orchestration, and when should it be used instead of synchronous orchestration?"
+                    },
+                    {
+                        "term": "Service chaining",
+                        "explanation": "A design pattern where multiple services are invoked sequentially to complete a business process.",
+                        "question": "How does service chaining work, and what are its benefits in enterprise integration?"
+                    },
+                    {
+                        "term": "Parallel service invocations",
+                        "explanation": "A pattern where multiple service calls are made concurrently to improve performance and reduce latency in service execution.",
+                        "question": "What are parallel service invocations, and how do they enhance service performance?"
+                    },
+                    {
+                        "term": "Wire-level protocols like AMQP and MQTT",
+                        "explanation": "Protocols used for low-level communication between systems, such as AMQP for message queuing and MQTT for lightweight IoT messaging.",
+                        "question": "What are wire-level protocols, and how do AMQP and MQTT facilitate communication in distributed systems?"
+                    },
+                    {
+                        "term": "Enterprise integration pattern",
+                        "explanation": "A set of design patterns that address common integration challenges, such as message routing, transformation, and aggregation.",
+                        "question": "What are enterprise integration patterns, and how are they used in system integration?"
+                    },
+                    {
+                        "term": "Mediator",
+                        "explanation": "A component that processes, transforms, or routes messages between services, used in integration platforms like WSO2 EI.",
+                        "question": "What is a mediator in enterprise integration, and what are its key use cases?"
+                    },
+                    {
+                        "term": "WSDL endpoint",
+                        "explanation": "A Web Services Description Language (WSDL) endpoint that defines the operations and message structures for SOAP-based web services.",
+                        "question": "What is a WSDL endpoint, and how does it relate to SOAP web services?"
+                    },
+                    {
+                        "term": "Load balancing endpoint",
+                        "explanation": "An endpoint that distributes requests across multiple backend services to optimize performance and prevent overloading.",
+                        "question": "What is a load balancing endpoint, and how does it improve service reliability?"
+                    },
+                    {
+                        "term": "Apache Axis2",
+                        "explanation": "A Java-based web services framework that supports SOAP and RESTful web services, commonly used in service-oriented architectures.",
+                        "question": "What is Apache Axis2, and how is it used for web service development?"
+                    },
+
+                    
                 ]
             },
         ],
     },
+    /*
     {
         category: "FHIR",
         subcategories: [
@@ -395,7 +470,7 @@ export const db = [
             },
         ],
     },
-
+*/
 
 
     {
