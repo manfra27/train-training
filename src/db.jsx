@@ -102,17 +102,133 @@ export const db = [
             {
                 topicName: "Fundamental concepts and terms",
                 entries: [
-                    { "term": "WSO2 HTTP methods", "explanation": "GET = Retrieves data from a resource,\nPUT = Updates or creates a resource,\nPOST = Creates a new resource,\nDELETE = Removes a resource,\nPATCH = Partially updates a resource,\nHEAD = Retrieves headers for a resource without the body,\nOPTIONS = Retrieves allowed HTTP methods for a resource", "question": "" },
-                    { "term": "WSO2 API lifecycle", "explanation": "CREATED = Initial state where the API is designed but not yet available for use\n, PRE-RELEASED = API is tested internally but not yet available to external consumers\n, PUBLISHED = API is publicly available for consumption\n, BLOCKED = API access is restricted due to policy or security reasons\n, DEPRECEATED = API is still available but marked for removal in the future\n, RETIRED = API is no longer available for use\n", "question": "" },
-                    { "term": "WSO2 API Product", "explanation": "A combination of resources from one or more available APIs. A product can be subscribed to manage the consumption of grouped resources > APIs.", "question": "" },
-                    { "term": "WSO2 API Visibility", "explanation": "A modification who can view APIs on the Developer Portal.\nPublic = visible to everyone\nRestricted by role = Only user which required role\nVisible to my domain = Only users registered to API creators tenant domain.", "question": "" },
-                    { "term": "", "explanation": "", "question": "" },
+                    {
+                        "term": "WSO2 HTTP methods",
+                        "explanation": "GET = Retrieves data from a resource,\nPUT = Updates or creates a resource,\nPOST = Creates a new resource,\nDELETE = Removes a resource,\nPATCH = Partially updates a resource,\nHEAD = Retrieves headers for a resource without the body,\nOPTIONS = Retrieves allowed HTTP methods for a resource",
+                        "question": "What are the different HTTP methods used in WSO2 and their purposes?"
+                    },
+                    {
+                        "term": "WSO2 API lifecycle",
+                        "explanation": "CREATED = Initial state where the API is designed but not yet available for use\n, PRE-RELEASED = API is tested internally but not yet available to external consumers\n, PUBLISHED = API is publicly available for consumption\n, BLOCKED = API access is restricted due to policy or security reasons\n, DEPRECATED = API is still available but marked for removal in the future\n, RETIRED = API is no longer available for use\n",
+                        "question": "What are the different states of the WSO2 API lifecycle and what do they mean?"
+                    },
+                    {
+                        "term": "WSO2 API Product",
+                        "explanation": "A combination of resources from one or more available APIs. A product can be subscribed to manage the consumption of grouped resources > APIs.",
+                        "question": "What is an API Product in WSO2, and how does it differ from a single API?"
+                    },
+                    {
+                        "term": "WSO2 API Visibility",
+                        "explanation": "A modification that determines who can view APIs on the Developer Portal.\nPublic = Visible to everyone\nRestricted by role = Only users with the required role\nVisible to my domain = Only users registered to the API creator's tenant domain.",
+                        "question": "How does API visibility work in WSO2, and what are its different levels?"
+                    },
+                    {
+                        "term": "WSO2 Rate limiting",
+                        "explanation": "Useful to:\n> Protect APIs from denial-of-service attacks.\n> Regulate traffic according to infrastructure availability.\n> Control API monetization.",
+                        "question": "Why is rate limiting important in WSO2 API management, and what are its key benefits?"
+                    },
+                    {
+                        "term": "WSO2 Choreo Connect",
+                        "explanation": "An API gateway for microservices providing:\n> Lightweight message processing\n> Message security\n> Transport security\n> Routing and more...",
+                        "question": "What is WSO2 Choreo Connect, and how does it enhance microservices communication?"
+                    },
+                    {
+                        "term": "WSO2 Workflows",
+                        "explanation": "Enables the implementation of logic on API Publisher and Developer Portal users. Examples include authentication checks or privilege verification.",
+                        "question": "What is the purpose of workflows in WSO2, and how are they used?"
+                    },
+                    {
+                        "term": "WSO2 Message Mediation Policy",
+                        "explanation": "Enrich, transform, or modify request or response messages routed via the API Gateway. An example is the conversion of XML to JSON format.",
+                        "question": "How does a Message Mediation Policy work in WSO2, and what is an example use case?"
+                    },
+                    {
+                        "term": "WSO2 Handler",
+                        "explanation": "Allows a message to be processed before reaching the API Gateway. Use cases include:\n> Security validation\n> Policy enforcement\n> Pushing events to third-party systems\n> Custom logging requirements.",
+                        "question": "What is a WSO2 Handler, and what are its main use cases?"
+                    },
+                    {
+                        "term": "WSO2 Tags",
+                        "explanation": "Enable the categorization of APIs by adding tags to them.",
+                        "question": "How are tags used in WSO2 API management, and why are they useful?"
+                    },
+                    {
+                        "term": "WSO2 Tenant",
+                        "explanation": "A logically isolated entity used to map organizational units like departments, business units, or partners.",
+                        "question": "What is a Tenant in WSO2, and how does it help in multi-tenancy?"
+                    },
+                    {
+                        "term": "WSO2 Roles",
+                        "explanation": "API Publisher role = Publishes and manages APIs\nAPI Creator role = Develops and defines the APIs\nAPI Subscriber role = Consumes APIs through one or more applications\nAdmin role = Approves workflows, configures rate limits, and manages system-wide API policies.",
+                        "question": "What are the different user roles in WSO2, and what are their responsibilities?"
+                    },
+                    {
+                        "term": "PID (Patient Identifier / Patient Identification)",
+                        "explanation": "In HL7, PID refers to the Patient Identification Segment, which contains patient demographic details (e.g., name, date of birth, medical record number).",
+                        "question": "What is the role of the PID segment in HL7, and what information does it contain?"
+                    },
+                    {
+                        "term": "FID (File Identifier / Field Identifier)",
+                        "explanation": "Can refer to a unique file ID in a system or a specific field in an interface.\nIn WSO2 APIs, FID might be used to track documents/files exchanged through integrations.",
+                        "question": "What does FID stand for in WSO2, and how is it used in API integrations?"
+                    },
+                    {
+                        "term": "Meldungstyp (Message Type)",
+                        "explanation": "German for 'message type'; defines the category of a message in an interface.\nIn HL7, this corresponds to MSH-9 (Message Type), such as:\n• ADT (Admission, Discharge, Transfer)\n• ORM (Order Message)\n• ORU (Observation Result)\nIn WSO2 API logs, it might refer to an event type (e.g., ERROR, INFO).",
+                        "question": "How does 'Meldungstyp' relate to HL7 and WSO2 API logs?"
+                    },
+                    {
+                        "term": "Key",
+                        "explanation": "In WSO2 API Manager, a 'key' typically refers to:\n• API Key: Used for authentication.\n• Consumer Key & Secret: OAuth2 credentials for API clients.\nIn databases/interfaces, it can also mean a unique identifier (e.g., Primary Key in a table).",
+                        "question": "What are the different meanings of 'Key' in WSO2 API Manager and databases?"
+                    },
+                    {
+                        "term": "FTP (File Transfer Protocol)",
+                        "explanation": "Used to transfer files between systems.\nNot encrypted, faster but less secure.",
+                        "question": "What are the characteristics of FTP, and why is it considered less secure?"
+                    },
+                    {
+                        "term": "SFTP (Secure File Transfer Protocol)",
+                        "explanation": "Used to transfer files between systems.\nEncrypted with SSH, slower but more secure.",
+                        "question": "How does SFTP improve security over FTP, and what are its trade-offs?"
+                    },
+                    {
+                        "term": "SHARE",
+                        "explanation": "A shared network connection that allows multiple systems to access common files and directories.",
+                        "question": "What is a shared network connection (SHARE), and how is it used in system integrations?"
+                    },
+                    {
+                        "term": "URL/Hostnames",
+                        "explanation": "The server address where the API or service is hosted. Used to identify and locate online resources.",
+                        "question": "What is the function of a URL/Hostname in API communication?"
+                    },
+                    {
+                        "term": "Ports",
+                        "explanation": "Specifies which network port is used for communication (e.g., 443 for HTTPS, 21 for FTP). Ports define how data is transmitted between systems.",
+                        "question": "Why are ports important in network communication, and what are some common port numbers used in WSO2 and healthcare integrations?"
+                    },
+                    {
+                        "term": "API Paths",
+                        "explanation": "The specific path inside the API that must be called (e.g., /patients/{id}). Defines the resource location within an API.",
+                        "question": "What are API paths, and how do they structure API requests?"
+                    },
+                    {
+                        "term": "mmlp:// Protocol",
+                        "explanation": "MMLP (Medical Message Layer Protocol) – A transport protocol used for secure HL7 messaging. Ensures reliable medical data transmission.",
+                        "question": "What is MMLP, and how does it enhance the security of HL7 message transmission?"
+                    },
+                    {
+                        "term": "EDI (Electronic Data Interchange) Protocol",
+                        "explanation": "EDI is a standardized system for exchanging structured business data electronically, without human intervention. It replaces paper-based documents like invoices, orders, and claims with machine-readable formats.",
+                        "question": "How does EDI improve business data exchange, and what are its key use cases in healthcare?"
+                    },
                 ]
             },
             {
                 topicName: "WSO2 ESB Server",
                 entries: [
                     { "term": "ESB meaning", "explanation": "Enterprise Service Bus", "question": "" },
+                    { "term": "", "explanation": "", "question": "" },
                 ]
             },
             {
