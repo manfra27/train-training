@@ -309,11 +309,1077 @@ export const db = [
                         "question": "What is Apache Axis2, and how is it used for web service development?"
                     },
 
-                    
+
                 ]
             },
         ],
     },
+
+
+
+
+    {
+        category: "Osbsidian",
+        subcategories: [
+            {
+                topicName: "Basicsss",
+                entries: [
+
+                    {
+                        "term": "Vault",
+                        "explanation": "A folder where all your notes (Markdown files) are stored.",
+                        "question": "What is a vault in Obsidian?"
+                    },
+                    {
+                        "term": "Notes",
+                        "explanation": "Individual Markdown (.md) files that contain your content.",
+                        "question": "What are notes in Obsidian?"
+                    },
+                    {
+                        "term": "Links",
+                        "explanation": "Use [[Note Name]] to create internal links between notes.",
+                        "question": "How do you create internal links between notes in Obsidian?"
+                    },
+                    {
+                        "term": "Backlinks",
+                        "explanation": "Notes that link back to the current note (visible in the sidebar).",
+                        "question": "What are backlinks in Obsidian?"
+                    },
+                    {
+                        "term": "Graph View",
+                        "explanation": "A visual representation of your notes and how they connect.",
+                        "question": "What is the Graph View used for in Obsidian?"
+                    },
+                    {
+                        "term": "Tags",
+                        "explanation": "Add #tags inside notes to categorize and search them easily.",
+                        "question": "How are tags used in Obsidian?"
+                    },
+                    {
+                        "term": "Plugins",
+                        "explanation": "Extend functionality (e.g., Daily Notes, Templates, Dataview).",
+                        "question": "What is the purpose of plugins in Obsidian?"
+                    }
+
+                ]
+            },
+        ],
+    },
+
+
+
+    {
+        category: "Windows 11",
+        subcategories: [
+            {
+                topicName: "Keys",
+                entries: [
+
+                    {
+                        "term": "Win + A",
+                        "explanation": "Open Quick Settings.",
+                        "question": "What does 'Win + A' do?"
+                    },
+                    {
+                        "term": "Win + B",
+                        "explanation": "Focus system tray icons.",
+                        "question": "What does 'Win + B' do?"
+                    },
+                    {
+                        "term": "Win + C",
+                        "explanation": "Open Microsoft Teams Chat.",
+                        "question": "What does 'Win + C' do?"
+                    },
+                    {
+                        "term": "Win + D",
+                        "explanation": "Show/hide desktop.",
+                        "question": "What does 'Win + D' do?"
+                    },
+                    {
+                        "term": "Win + E",
+                        "explanation": "Open File Explorer.",
+                        "question": "What does 'Win + E' do?"
+                    },
+                    {
+                        "term": "Win + G",
+                        "explanation": "Open Xbox Game Bar.",
+                        "question": "What does 'Win + G' do?"
+                    },
+                    {
+                        "term": "Win + H",
+                        "explanation": "Start voice typing.",
+                        "question": "What does 'Win + H' do?"
+                    },
+                    {
+                        "term": "Win + I",
+                        "explanation": "Open Settings.",
+                        "question": "What does 'Win + I' do?"
+                    },
+                    {
+                        "term": "Win + K",
+                        "explanation": "Open Cast for screen sharing.",
+                        "question": "What does 'Win + K' do?"
+                    },
+                    {
+                        "term": "Win + L",
+                        "explanation": "Lock your PC.",
+                        "question": "What does 'Win + L' do?"
+                    },
+                    {
+                        "term": "Win + M",
+                        "explanation": "Minimize all windows.",
+                        "question": "What does 'Win + M' do?"
+                    },
+                    {
+                        "term": "Win + N",
+                        "explanation": "Open Notification Center and Calendar.",
+                        "question": "What does 'Win + N' do?"
+                    },
+                    {
+                        "term": "Win + P",
+                        "explanation": "Open display projection options.",
+                        "question": "What does 'Win + P' do?"
+                    },
+                    {
+                        "term": "Win + R",
+                        "explanation": "Open Run dialog box.",
+                        "question": "What does 'Win + R' do?"
+                    },
+                    {
+                        "term": "Win + S",
+                        "explanation": "Open Search.",
+                        "question": "What does 'Win + S' do?"
+                    },
+                    {
+                        "term": "Win + Shift + S",
+                        "explanation": "Capture a screenshot using Snipping Tool.",
+                        "question": "What does 'Win + Shift + S' do?"
+                    },
+                    {
+                        "term": "Win + T",
+                        "explanation": "Cycle through taskbar apps.",
+                        "question": "What does 'Win + T' do?"
+                    },
+                    {
+                        "term": "Win + U",
+                        "explanation": "Open Accessibility settings.",
+                        "question": "What does 'Win + U' do?"
+                    },
+                    {
+                        "term": "Win + V",
+                        "explanation": "Open Clipboard history.",
+                        "question": "What does 'Win + V' do?"
+                    },
+                    {
+                        "term": "Win + W",
+                        "explanation": "Open Widgets panel.",
+                        "question": "What does 'Win + W' do?"
+                    },
+                    {
+                        "term": "Win + X",
+                        "explanation": "Open Quick Link menu.",
+                        "question": "What does 'Win + X' do?"
+                    },
+                    {
+                        "term": "Win + Z",
+                        "explanation": "Open Snap Layouts.",
+                        "question": "What does 'Win + Z' do?"
+                    },
+                    {
+                        "term": "Win + .",
+                        "explanation": "Open emoji panel.",
+                        "question": "What does 'Win + .' do?"
+                    },
+                    {
+                        "term": "Win + Spacebar",
+                        "explanation": "Switch input language and keyboard layout.",
+                        "question": "What does 'Win + Spacebar' do?"
+                    },
+                    {
+                        "term": "Win + PrtScn",
+                        "explanation": "Capture a full-screen screenshot.",
+                        "question": "What does 'Win + PrtScn' do?"
+                    },
+                    {
+                        "term": "Win + Ctrl + D",
+                        "explanation": "Create a new virtual desktop.",
+                        "question": "What does 'Win + Ctrl + D' do?"
+                    },
+                    {
+                        "term": "Win + Ctrl + Left/Right Arrow",
+                        "explanation": "Switch between virtual desktops.",
+                        "question": "What does 'Win + Ctrl + Left/Right Arrow' do?"
+                    },
+                    {
+                        "term": "Win + Ctrl + F4",
+                        "explanation": "Close the current virtual desktop.",
+                        "question": "What does 'Win + Ctrl + F4' do?"
+                    },
+                    {
+                        "term": "Ctrl + A",
+                        "explanation": "Select all items.",
+                        "question": "What does 'Ctrl + A' do?"
+                    },
+                    {
+                        "term": "Ctrl + C",
+                        "explanation": "Copy selected item.",
+                        "question": "What does 'Ctrl + C' do?"
+                    },
+                    {
+                        "term": "Ctrl + X",
+                        "explanation": "Cut selected item.",
+                        "question": "What does 'Ctrl + X' do?"
+                    },
+                    {
+                        "term": "Ctrl + V",
+                        "explanation": "Paste copied item.",
+                        "question": "What does 'Ctrl + V' do?"
+                    },
+                    {
+                        "term": "Ctrl + Z",
+                        "explanation": "Undo last action.",
+                        "question": "What does 'Ctrl + Z' do?"
+                    },
+                    {
+                        "term": "Ctrl + Y",
+                        "explanation": "Redo last action.",
+                        "question": "What does 'Ctrl + Y' do?"
+                    },
+                    {
+                        "term": "Alt + Tab",
+                        "explanation": "Switch between open windows.",
+                        "question": "What does 'Alt + Tab' do?"
+                    },
+                    {
+                        "term": "Alt + F4",
+                        "explanation": "Close active window.",
+                        "question": "What does 'Alt + F4' do?"
+                    },
+                    {
+                        "term": "Shift + Delete",
+                        "explanation": "Permanently delete selected item.",
+                        "question": "What does 'Shift + Delete' do?"
+                    }
+                ]
+            },
+        ],
+    },
+
+
+
+    {
+        category: "VMs",
+        subcategories: [
+            {
+                topicName: "basicss",
+                entries: [
+
+                    {
+                        "term": "Virtual Machine (VM)",
+                        "explanation": "A software-based emulation of a physical computer running an operating system.",
+                        "question": "What is a virtual machine (VM)?"
+                    },
+                    {
+                        "term": "Hypervisor",
+                        "explanation": "Software that creates and manages virtual machines by allocating system resources.",
+                        "question": "What is a hypervisor?"
+                    },
+                    {
+                        "term": "Type 1 Hypervisor",
+                        "explanation": "A hypervisor that runs directly on the hardware (bare-metal), e.g., Microsoft Hyper-V, VMware ESXi.",
+                        "question": "What is a Type 1 hypervisor?"
+                    },
+                    {
+                        "term": "Type 2 Hypervisor",
+                        "explanation": "A hypervisor that runs on top of a host OS, e.g., VirtualBox, VMware Workstation.",
+                        "question": "What is a Type 2 hypervisor?"
+                    },
+                    {
+                        "term": "Guest OS",
+                        "explanation": "The operating system installed inside a virtual machine.",
+                        "question": "What is a guest OS?"
+                    },
+                    {
+                        "term": "Host OS",
+                        "explanation": "The operating system running on the physical hardware that hosts the VM.",
+                        "question": "What is a host OS?"
+                    },
+                    {
+                        "term": "Snapshots",
+                        "explanation": "Saved states of a VM that can be reverted to at any time.",
+                        "question": "What are snapshots in virtualization?"
+                    },
+                    {
+                        "term": "Virtual Hard Disk (VHD/VHDX)",
+                        "explanation": "A file that acts as a hard disk for a virtual machine.",
+                        "question": "What is a virtual hard disk (VHD/VHDX)?"
+                    },
+                    {
+                        "term": "ISO Image",
+                        "explanation": "A disk image file used to install an operating system in a VM.",
+                        "question": "What is an ISO image in virtualization?"
+                    },
+                    {
+                        "term": "VM Templates",
+                        "explanation": "Pre-configured VM images used to quickly deploy new virtual machines.",
+                        "question": "What are VM templates used for?"
+                    },
+                    {
+                        "term": "Networking Mode",
+                        "explanation": "Determines how a VM connects to a network (Bridged, NAT, Host-Only, Internal).",
+                        "question": "What is networking mode in virtualization?"
+                    },
+                    {
+                        "term": "Bridged Network",
+                        "explanation": "The VM gets an IP address from the same network as the host, making it appear as a separate machine.",
+                        "question": "What is a bridged network in virtualization?"
+                    },
+                    {
+                        "term": "NAT (Network Address Translation)",
+                        "explanation": "The VM shares the host’s IP address, enabling internet access but isolating it from the LAN.",
+                        "question": "What is NAT in virtualization?"
+                    },
+                    {
+                        "term": "Host-Only Network",
+                        "explanation": "The VM can only communicate with the host machine and other VMs in the same host-only network.",
+                        "question": "What is a host-only network in virtualization?"
+                    },
+                    {
+                        "term": "Virtual CPU (vCPU)",
+                        "explanation": "A portion of the physical CPU allocated to the virtual machine.",
+                        "question": "What is a virtual CPU (vCPU)?"
+                    },
+                    {
+                        "term": "Memory Allocation",
+                        "explanation": "The amount of RAM assigned to a virtual machine from the host system.",
+                        "question": "What is memory allocation in virtualization?"
+                    },
+                    {
+                        "term": "Passthrough GPU",
+                        "explanation": "Assigning a physical GPU directly to a virtual machine for better performance.",
+                        "question": "What is passthrough GPU in virtualization?"
+                    },
+                    {
+                        "term": "Virtual Machine Manager (VMM)",
+                        "explanation": "A software tool used to create and manage virtual machines, e.g., Hyper-V Manager, VMware vSphere.",
+                        "question": "What is a virtual machine manager (VMM)?"
+                    },
+                    {
+                        "term": "VM Cloning",
+                        "explanation": "Creating an exact copy of an existing virtual machine.",
+                        "question": "What is VM cloning?"
+                    },
+                    {
+                        "term": "Live Migration",
+                        "explanation": "Moving a running VM from one host to another without downtime.",
+                        "question": "What is live migration in virtualization?"
+                    },
+                    {
+                        "term": "Container vs VM",
+                        "explanation": "Containers share the host OS kernel, while VMs run full operating systems on virtualized hardware.",
+                        "question": "What is the difference between a container and a virtual machine?"
+                    },
+                    {
+                        "term": "Nested Virtualization",
+                        "explanation": "Running a virtual machine inside another virtual machine.",
+                        "question": "What is nested virtualization?"
+                    },
+                    {
+                        "term": "Thin Provisioning",
+                        "explanation": "Allocating disk space dynamically to a VM as needed, rather than pre-allocating all of it.",
+                        "question": "What is thin provisioning in virtualization?"
+                    },
+                    {
+                        "term": "Thick Provisioning",
+                        "explanation": "Pre-allocating the full disk space to a VM to prevent fragmentation and improve performance.",
+                        "question": "What is thick provisioning in virtualization?"
+                    },
+                    {
+                        "term": "Virtual Machine Scale Set",
+                        "explanation": "A group of identical VMs in cloud environments that auto-scale based on demand.",
+                        "question": "What is a virtual machine scale set?"
+                    },
+                    {
+                        "term": "VM Checkpoints",
+                        "explanation": "A feature in Hyper-V that allows creating temporary snapshots of a VM state.",
+                        "question": "What are VM checkpoints in Hyper-V?"
+                    },
+                    {
+                        "term": "Power States",
+                        "explanation": "VM states such as Running, Paused, Stopped, or Saved.",
+                        "question": "What are power states in virtualization?"
+                    }
+
+
+                ]
+            },
+        ],
+    },
+
+
+
+
+    {
+        category: "API architecture",
+        subcategories: [
+            {
+                topicName: "Basics",
+                entries: [
+
+                    {
+                        "term": "API (Application Programming Interface)",
+                        "explanation": "A set of rules that allow software components to communicate with each other.",
+                        "question": "What is an API?"
+                    },
+                    {
+                        "term": "REST (Representational State Transfer)",
+                        "explanation": "An architectural style for APIs using standard HTTP methods and stateless operations.",
+                        "question": "What is REST in API design?"
+                    },
+                    {
+                        "term": "SOAP (Simple Object Access Protocol)",
+                        "explanation": "A protocol-based API that uses XML messaging for communication.",
+                        "question": "What is SOAP in API communication?"
+                    },
+                    {
+                        "term": "GraphQL",
+                        "explanation": "A query language for APIs that allows clients to request only the data they need.",
+                        "question": "What is GraphQL?"
+                    },
+                    {
+                        "term": "gRPC",
+                        "explanation": "A high-performance, open-source RPC framework that uses Protocol Buffers for efficient communication.",
+                        "question": "What is gRPC?"
+                    },
+                    {
+                        "term": "Endpoint",
+                        "explanation": "A specific URL where an API can be accessed.",
+                        "question": "What is an API endpoint?"
+                    },
+                    {
+                        "term": "Request",
+                        "explanation": "A call made by a client to an API to fetch or modify data.",
+                        "question": "What is an API request?"
+                    },
+                    {
+                        "term": "Response",
+                        "explanation": "The data returned by an API after processing a request.",
+                        "question": "What is an API response?"
+                    },
+                    {
+                        "term": "HTTP Methods",
+                        "explanation": "Actions used in RESTful APIs, such as GET, POST, PUT, DELETE, and PATCH.",
+                        "question": "What are HTTP methods in an API?"
+                    },
+                    {
+                        "term": "GET",
+                        "explanation": "Retrieves data from a server without modifying it.",
+                        "question": "What does the GET method do in an API?"
+                    },
+                    {
+                        "term": "POST",
+                        "explanation": "Sends data to a server to create a resource.",
+                        "question": "What does the POST method do in an API?"
+                    },
+                    {
+                        "term": "PUT",
+                        "explanation": "Updates or replaces an existing resource.",
+                        "question": "What does the PUT method do in an API?"
+                    },
+                    {
+                        "term": "PATCH",
+                        "explanation": "Partially updates an existing resource.",
+                        "question": "What does the PATCH method do in an API?"
+                    },
+                    {
+                        "term": "DELETE",
+                        "explanation": "Removes a resource from the server.",
+                        "question": "What does the DELETE method do in an API?"
+                    },
+                    {
+                        "term": "Status Codes",
+                        "explanation": "HTTP response codes indicating the result of an API request (e.g., 200 OK, 404 Not Found, 500 Internal Server Error).",
+                        "question": "What are HTTP status codes used for in APIs?"
+                    },
+                    {
+                        "term": "Headers",
+                        "explanation": "Metadata sent with API requests and responses (e.g., Content-Type, Authorization).",
+                        "question": "What are headers in an API request?"
+                    },
+                    {
+                        "term": "Payload",
+                        "explanation": "The actual data sent in an API request body (usually in JSON or XML format).",
+                        "question": "What is a payload in an API request?"
+                    },
+                    {
+                        "term": "Rate Limiting",
+                        "explanation": "A restriction on the number of API calls allowed within a time frame.",
+                        "question": "What is rate limiting in APIs?"
+                    },
+                    {
+                        "term": "Authentication",
+                        "explanation": "Verifying the identity of an API client using tokens, API keys, or credentials.",
+                        "question": "What is authentication in an API?"
+                    },
+                    {
+                        "term": "Authorization",
+                        "explanation": "Determining if a client has permission to access a resource (e.g., OAuth, JWT).",
+                        "question": "What is authorization in an API?"
+                    },
+                    {
+                        "term": "OAuth",
+                        "explanation": "An authorization framework that allows secure access to resources without sharing credentials.",
+                        "question": "What is OAuth in API security?"
+                    },
+                    {
+                        "term": "JWT (JSON Web Token)",
+                        "explanation": "A compact, self-contained token for authentication and authorization.",
+                        "question": "What is JWT in API authentication?"
+                    },
+                    {
+                        "term": "API Gateway",
+                        "explanation": "A management layer that handles API requests, security, and routing (e.g., Kong, Apigee, AWS API Gateway).",
+                        "question": "What is an API Gateway?"
+                    },
+                    {
+                        "term": "Reverse Proxy",
+                        "explanation": "A server that routes client requests to backend services and handles load balancing.",
+                        "question": "What is a reverse proxy in API architecture?"
+                    },
+                    {
+                        "term": "Microservices",
+                        "explanation": "An architecture where an application is divided into small, independent services that communicate via APIs.",
+                        "question": "What are microservices?"
+                    },
+                    {
+                        "term": "Monolithic API",
+                        "explanation": "A traditional API design where all logic is contained in a single application.",
+                        "question": "What is a monolithic API?"
+                    },
+                    {
+                        "term": "Service Discovery",
+                        "explanation": "A method for automatically locating services in a distributed system.",
+                        "question": "What is service discovery in APIs?"
+                    },
+                    {
+                        "term": "Webhooks",
+                        "explanation": "APIs that send real-time data updates when an event occurs.",
+                        "question": "What are webhooks in APIs?"
+                    },
+                    {
+                        "term": "API Versioning",
+                        "explanation": "The practice of managing different versions of an API (e.g., v1, v2).",
+                        "question": "What is API versioning?"
+                    },
+                    {
+                        "term": "API Documentation",
+                        "explanation": "A guide that explains how to use an API (e.g., OpenAPI, Swagger).",
+                        "question": "What is API documentation?"
+                    },
+                    {
+                        "term": "SDK (Software Development Kit)",
+                        "explanation": "A set of tools and libraries for integrating an API into an application.",
+                        "question": "What is an SDK in API development?"
+                    },
+                    {
+                        "term": "Throttling",
+                        "explanation": "Controlling the rate of API requests to prevent overloading servers.",
+                        "question": "What is throttling in API management?"
+                    },
+                    {
+                        "term": "CORS (Cross-Origin Resource Sharing)",
+                        "explanation": "A security mechanism that restricts how web pages can request resources from different domains.",
+                        "question": "What is CORS in APIs?"
+                    },
+                    {
+                        "term": "Idempotency",
+                        "explanation": "Ensuring that repeated API calls produce the same result without unintended effects.",
+                        "question": "What is idempotency in APIs?"
+                    },
+                    {
+                        "term": "HATEOAS (Hypermedia as the Engine of Application State)",
+                        "explanation": "A REST principle where API responses include links for navigation.",
+                        "question": "What is HATEOAS in REST APIs?"
+                    },
+                    {
+                        "term": "API Gateway Caching",
+                        "explanation": "Storing API responses to reduce load on backend services and improve performance.",
+                        "question": "What is API Gateway caching?"
+                    },
+                    {
+                        "term": "API Monetization",
+                        "explanation": "The process of charging for API usage, often via usage-based pricing models.",
+                        "question": "What is API monetization?"
+                    },
+                    {
+                        "term": "Event-Driven API",
+                        "explanation": "An API that responds to events and asynchronously communicates updates (e.g., WebSockets, Kafka).",
+                        "question": "What is an event-driven API?"
+                    },
+                    {
+                        "term": "Polling",
+                        "explanation": "A method where a client repeatedly requests data from an API at regular intervals.",
+                        "question": "What is polling in API communication?"
+                    },
+                    {
+                        "term": "WebSockets",
+                        "explanation": "A communication protocol for real-time, bidirectional data exchange between client and server.",
+                        "question": "What are WebSockets used for?"
+                    },
+                    {
+                        "term": "gRPC Streaming",
+                        "explanation": "A feature in gRPC that allows continuous data exchange between a client and a server.",
+                        "question": "What is gRPC streaming?"
+                    },
+                    {
+                        "term": "RESTful Constraints",
+                        "explanation": "Architectural constraints of REST APIs, including statelessness, cacheability, and uniform interface.",
+                        "question": "What are RESTful constraints?"
+                    },
+                    {
+                        "term": "API Composition",
+                        "explanation": "Aggregating data from multiple microservices into a single response.",
+                        "question": "What is API composition?"
+                    },
+                    {
+                        "term": "API Chaining",
+                        "explanation": "When an API request triggers multiple dependent API calls.",
+                        "question": "What is API chaining?"
+                    },
+                    {
+                        "term": "Federated API",
+                        "explanation": "An architecture where multiple services expose a unified API interface (often seen in GraphQL Federation).",
+                        "question": "What is a federated API?"
+                    },
+                    {
+                        "term": "API Orchestration",
+                        "explanation": "Managing and coordinating multiple API calls to deliver a single response.",
+                        "question": "What is API orchestration?"
+                    },
+                    {
+                        "term": "Service Mesh",
+                        "explanation": "A dedicated infrastructure layer for managing service-to-service communication in microservices (e.g., Istio, Linkerd).",
+                        "question": "What is a service mesh?"
+                    },
+                    {
+                        "term": "API Rate Limiting Strategies",
+                        "explanation": "Techniques such as token bucket, leaky bucket, and fixed window to control API request rates.",
+                        "question": "What are API rate limiting strategies?"
+                    },
+                    {
+                        "term": "Circuit Breaker Pattern",
+                        "explanation": "A design pattern that prevents repeated API calls to a failing service, improving fault tolerance.",
+                        "question": "What is the circuit breaker pattern in API design?"
+                    },
+                    {
+                        "term": "Bulkhead Pattern",
+                        "explanation": "An API resiliency pattern that isolates failures in different parts of an application.",
+                        "question": "What is the bulkhead pattern in API architecture?"
+                    },
+                    {
+                        "term": "API Gateway vs Load Balancer",
+                        "explanation": "An API Gateway manages traffic, security, and routing, while a Load Balancer distributes traffic across servers.",
+                        "question": "What is the difference between an API Gateway and a Load Balancer?"
+                    },
+                    {
+                        "term": "Edge API",
+                        "explanation": "An API deployed at the network edge to reduce latency and improve performance.",
+                        "question": "What is an edge API?"
+                    },
+                    {
+                        "term": "Serverless API",
+                        "explanation": "An API built using a serverless computing model (e.g., AWS Lambda, Azure Functions).",
+                        "question": "What is a serverless API?"
+                    },
+                    {
+                        "term": "API Caching Strategies",
+                        "explanation": "Methods like HTTP caching, in-memory caching, and reverse proxy caching to reduce API latency.",
+                        "question": "What are common API caching strategies?"
+                    },
+                    {
+                        "term": "ETag (Entity Tag)",
+                        "explanation": "A mechanism for caching API responses by assigning unique identifiers to resources.",
+                        "question": "What is an ETag in APIs?"
+                    },
+                    {
+                        "term": "API Observability",
+                        "explanation": "Monitoring API performance, error rates, and logs using tools like OpenTelemetry and Prometheus.",
+                        "question": "What is API observability?"
+                    },
+                    {
+                        "term": "API Error Handling Best Practices",
+                        "explanation": "Using proper status codes, detailed error messages, and retry mechanisms for fault tolerance.",
+                        "question": "What are best practices for API error handling?"
+                    },
+                    {
+                        "term": "API Pagination",
+                        "explanation": "Techniques like offset-based, cursor-based, and keyset pagination to handle large datasets efficiently.",
+                        "question": "What is API pagination?"
+                    },
+                    {
+                        "term": "API Analytics",
+                        "explanation": "Collecting and analyzing API usage data to optimize performance and detect issues.",
+                        "question": "What is API analytics?"
+                    },
+                    {
+                        "term": "Private vs Public APIs",
+                        "explanation": "Private APIs are internal to an organization, while public APIs are exposed to external developers.",
+                        "question": "What is the difference between private and public APIs?"
+                    },
+                    {
+                        "term": "Partner APIs",
+                        "explanation": "APIs shared with specific business partners under restricted access.",
+                        "question": "What are partner APIs?"
+                    },
+                    {
+                        "term": "OpenAPI Specification",
+                        "explanation": "A standard for documenting REST APIs in a machine-readable format (formerly known as Swagger).",
+                        "question": "What is the OpenAPI Specification?"
+                    },
+                    {
+                        "term": "GraphQL Federation",
+                        "explanation": "A technique to merge multiple GraphQL services into a unified schema.",
+                        "question": "What is GraphQL Federation?"
+                    },
+                    {
+                        "term": "Rate Limiting vs Quotas",
+                        "explanation": "Rate limiting restricts the number of requests per time frame, while quotas define overall request allowances.",
+                        "question": "What is the difference between rate limiting and quotas?"
+                    },
+                    {
+                        "term": "OAuth Scopes",
+                        "explanation": "Permissions granted to an API client specifying which resources it can access.",
+                        "question": "What are OAuth scopes?"
+                    },
+                    {
+                        "term": "PKCE (Proof Key for Code Exchange)",
+                        "explanation": "An OAuth 2.0 extension that enhances security for public clients.",
+                        "question": "What is PKCE in OAuth 2.0?"
+                    },
+                    {
+                        "term": "Zero Trust API Security",
+                        "explanation": "An API security approach that assumes no request is trustworthy by default, requiring strict authentication.",
+                        "question": "What is Zero Trust API security?"
+                    },
+                    {
+                        "term": "API Sandboxing",
+                        "explanation": "A testing environment where developers can experiment with an API without affecting production systems.",
+                        "question": "What is API sandboxing?"
+                    },
+                    {
+                        "term": "API Management Platforms",
+                        "explanation": "Tools like Apigee, Kong, and AWS API Gateway for managing API lifecycle, security, and analytics.",
+                        "question": "What are API management platforms?"
+                    },
+                    {
+                        "term": "API Discovery",
+                        "explanation": "The process of finding available APIs in an ecosystem, often using API catalogs or registries.",
+                        "question": "What is API discovery?"
+                    },
+                    {
+                        "term": "Data Transfer Formats",
+                        "explanation": "Common formats used in API communication, such as JSON, XML, Protocol Buffers, and Avro.",
+                        "question": "What are common data transfer formats in APIs?"
+                    },
+                    {
+                        "term": "GraphQL Resolvers",
+                        "explanation": "Functions that fetch and return data in response to a GraphQL query.",
+                        "question": "What are GraphQL resolvers?"
+                    },
+                    {
+                        "term": "API Lifecycle Management",
+                        "explanation": "Managing an API from design, development, deployment, versioning, and deprecation.",
+                        "question": "What is API lifecycle management?"
+                    },
+                    {
+                        "term": "Shadow APIs",
+                        "explanation": "Untracked or undocumented APIs within an organization, posing security risks.",
+                        "question": "What are shadow APIs?"
+                    },
+                    {
+                        "term": "API Sprawl",
+                        "explanation": "The uncontrolled growth of APIs, leading to complexity and maintenance challenges.",
+                        "question": "What is API sprawl?"
+                    },
+                    {
+                        "term": "API Key Rotation",
+                        "explanation": "Regularly updating API keys to prevent unauthorized access.",
+                        "question": "What is API key rotation?"
+                    }
+                ]
+            },
+
+
+            {
+                topicName: "cmd.exe",
+                entries: [
+
+                    {
+                        "term": "cd",
+                        "explanation": "Change directory.",
+                        "question": "What does the 'cd' command do?"
+                    },
+                    {
+                        "term": "dir",
+                        "explanation": "List files and directories in the current directory.",
+                        "question": "What does the 'dir' command do?"
+                    },
+                    {
+                        "term": "mkdir",
+                        "explanation": "Create a new directory.",
+                        "question": "What does the 'mkdir' command do?"
+                    },
+                    {
+                        "term": "rmdir",
+                        "explanation": "Remove an empty directory.",
+                        "question": "What does the 'rmdir' command do?"
+                    },
+                    {
+                        "term": "del",
+                        "explanation": "Delete a file.",
+                        "question": "What does the 'del' command do?"
+                    },
+                    {
+                        "term": "copy",
+                        "explanation": "Copy files from one location to another.",
+                        "question": "What does the 'copy' command do?"
+                    },
+                    {
+                        "term": "move",
+                        "explanation": "Move or rename files.",
+                        "question": "What does the 'move' command do?"
+                    },
+                    {
+                        "term": "ren",
+                        "explanation": "Rename a file or folder.",
+                        "question": "What does the 'ren' command do?"
+                    },
+                    {
+                        "term": "cls",
+                        "explanation": "Clear the command prompt screen.",
+                        "question": "What does the 'cls' command do?"
+                    },
+                    {
+                        "term": "exit",
+                        "explanation": "Close the command prompt.",
+                        "question": "What does the 'exit' command do?"
+                    },
+                    {
+                        "term": "echo",
+                        "explanation": "Display messages or enable/disable command echoing.",
+                        "question": "What does the 'echo' command do?"
+                    },
+                    {
+                        "term": "type",
+                        "explanation": "Display the content of a text file.",
+                        "question": "What does the 'type' command do?"
+                    },
+                    {
+                        "term": "more",
+                        "explanation": "View the content of a file page by page.",
+                        "question": "What does the 'more' command do?"
+                    },
+                    {
+                        "term": "find",
+                        "explanation": "Search for a text string in a file.",
+                        "question": "What does the 'find' command do?"
+                    },
+                    {
+                        "term": "attrib",
+                        "explanation": "Change file attributes (e.g., read-only, hidden).",
+                        "question": "What does the 'attrib' command do?"
+                    },
+                    {
+                        "term": "tree",
+                        "explanation": "Display directory structure in a tree format.",
+                        "question": "What does the 'tree' command do?"
+                    },
+                    {
+                        "term": "tasklist",
+                        "explanation": "Show running processes.",
+                        "question": "What does the 'tasklist' command do?"
+                    },
+                    {
+                        "term": "taskkill",
+                        "explanation": "Terminate a running process by PID or name.",
+                        "question": "What does the 'taskkill' command do?"
+                    },
+                    {
+                        "term": "netstat",
+                        "explanation": "Show active network connections.",
+                        "question": "What does the 'netstat' command do?"
+                    },
+                    {
+                        "term": "ipconfig",
+                        "explanation": "Display network configuration and IP addresses.",
+                        "question": "What does the 'ipconfig' command do?"
+                    },
+                    {
+                        "term": "ping",
+                        "explanation": "Test network connectivity to a specific host.",
+                        "question": "What does the 'ping' command do?"
+                    },
+                    {
+                        "term": "tracert",
+                        "explanation": "Trace the route packets take to a host.",
+                        "question": "What does the 'tracert' command do?"
+                    },
+                    {
+                        "term": "nslookup",
+                        "explanation": "Query DNS information.",
+                        "question": "What does the 'nslookup' command do?"
+                    },
+                    {
+                        "term": "arp",
+                        "explanation": "Show or modify the ARP cache.",
+                        "question": "What does the 'arp' command do?"
+                    },
+                    {
+                        "term": "hostname",
+                        "explanation": "Display the computer name.",
+                        "question": "What does the 'hostname' command do?"
+                    },
+                    {
+                        "term": "systeminfo",
+                        "explanation": "Show detailed system information.",
+                        "question": "What does the 'systeminfo' command do?"
+                    },
+                    {
+                        "term": "ver",
+                        "explanation": "Show the Windows version.",
+                        "question": "What does the 'ver' command do?"
+                    },
+                    {
+                        "term": "set",
+                        "explanation": "Display or modify environment variables.",
+                        "question": "What does the 'set' command do?"
+                    },
+                    {
+                        "term": "wmic",
+                        "explanation": "Query system information using Windows Management Instrumentation.",
+                        "question": "What does the 'wmic' command do?"
+                    },
+                    {
+                        "term": "schtasks",
+                        "explanation": "Manage scheduled tasks.",
+                        "question": "What does the 'schtasks' command do?"
+                    },
+                    {
+                        "term": "sc",
+                        "explanation": "Manage Windows services.",
+                        "question": "What does the 'sc' command do?"
+                    },
+                    {
+                        "term": "chkdsk",
+                        "explanation": "Check disk for errors.",
+                        "question": "What does the 'chkdsk' command do?"
+                    },
+                    {
+                        "term": "diskpart",
+                        "explanation": "Manage disk partitions.",
+                        "question": "What does the 'diskpart' command do?"
+                    },
+                    {
+                        "term": "shutdown",
+                        "explanation": "Shutdown or restart the computer.",
+                        "question": "What does the 'shutdown' command do?"
+                    },
+                    {
+                        "term": "powercfg",
+                        "explanation": "Manage power settings.",
+                        "question": "What does the 'powercfg' command do?"
+                    },
+                    {
+                        "term": "cipher",
+                        "explanation": "Encrypt or decrypt files.",
+                        "question": "What does the 'cipher' command do?"
+                    },
+                    {
+                        "term": "xcopy",
+                        "explanation": "Copy files and directories with more options than copy.",
+                        "question": "What does the 'xcopy' command do?"
+                    },
+                    {
+                        "term": "robocopy",
+                        "explanation": "Robust file copy tool with more advanced features.",
+                        "question": "What does the 'robocopy' command do?"
+                    },
+                    {
+                        "term": "fsutil",
+                        "explanation": "Manage file system tasks.",
+                        "question": "What does the 'fsutil' command do?"
+                    },
+                    {
+                        "term": "gpupdate",
+                        "explanation": "Refresh Group Policy settings.",
+                        "question": "What does the 'gpupdate' command do?"
+                    },
+                    {
+                        "term": "net use",
+                        "explanation": "Map network drives.",
+                        "question": "What does the 'net use' command do?"
+                    },
+                    {
+                        "term": "whoami",
+                        "explanation": "Show the currently logged-in user.",
+                        "question": "What does the 'whoami' command do?"
+                    },
+                    {
+                        "term": "timeout",
+                        "explanation": "Pause execution for a specified time.",
+                        "question": "What does the 'timeout' command do?"
+                    },
+                    {
+                        "term": "pause",
+                        "explanation": "Pause a script until a key is pressed.",
+                        "question": "What does the 'pause' command do?"
+                    },
+                    {
+                        "term": "call",
+                        "explanation": "Call a batch script from another script.",
+                        "question": "What does the 'call' command do?"
+                    },
+                    {
+                        "term": "start",
+                        "explanation": "Open a new command prompt window or start a program.",
+                        "question": "What does the 'start' command do?"
+                    },
+                    {
+                        "term": "color",
+                        "explanation": "Change the command prompt text and background color.",
+                        "question": "What does the 'color' command do?"
+                    },
+                    {
+                        "term": "title",
+                        "explanation": "Change the title of the command prompt window.",
+                        "question": "What does the 'title' command do?"
+                    }
+
+                ]
+            },
+        ],
+    },
+
+
+
+    {
+        category: "XML",
+        subcategories: [
+            {
+                topicName: "x",
+                entries: [
+                    {
+                    },
+                ]
+            },
+        ],
+    },
+
+
+
+
+
+
     /*
     {
         category: "FHIR",
@@ -436,18 +1502,6 @@ export const db = [
     },
     {
         category: "ABAP",
-        subcategories: [
-            {
-                topicName: "x",
-                entries: [
-                    {
-                    },
-                ]
-            },
-        ],
-    },
-    {
-        category: "API architecture",
         subcategories: [
             {
                 topicName: "x",
