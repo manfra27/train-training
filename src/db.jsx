@@ -1369,6 +1369,204 @@ export const db = [
                 topicName: "x",
                 entries: [
                     {
+                        "term": "<?xml>",
+                        "explanation": "Defines the XML declaration, specifying the XML version and encoding.",
+                        "question": "What does '<?xml>' signify in an XML document?"
+                    },
+                    {
+                        "term": "<proxy>",
+                        "explanation": "Defines a proxy service in XML-based configurations, often used in integration platforms like WSO2.",
+                        "question": "What is the purpose of the '<proxy>' element in XML?"
+                    },
+                    {
+                        "term": "<parameter>",
+                        "explanation": "Represents a configurable parameter that can be passed to XML-based configurations.",
+                        "question": "What does the '<parameter>' element do in XML?"
+                    },
+                    {
+                        "term": "<target>",
+                        "explanation": "Specifies the destination or endpoint in XML-based service configurations.",
+                        "question": "What is the role of the '<target>' element in XML?"
+                    },
+                    {
+                        "term": "<inSequence>",
+                        "explanation": "Defines the sequence of actions to be executed when a message enters a service.",
+                        "question": "What does '<inSequence>' represent in XML configurations?"
+                    },
+                    {
+                        "term": "<send>",
+                        "explanation": "Used to send a message to a specified endpoint.",
+                        "question": "What does the '<send>' element do in XML?"
+                    },
+                    {
+                        "term": "<endpoint>",
+                        "explanation": "Defines a communication endpoint in XML-based configurations.",
+                        "question": "What is the function of the '<endpoint>' element in XML?"
+                    },
+                    {
+                        "term": "<rules>",
+                        "explanation": "Defines processing rules for XML-based workflows and configurations.",
+                        "question": "What does the '<rules>' element specify in XML?"
+                    },
+                    {
+                        "term": "<jmsProperty>",
+                        "explanation": "Defines properties for JMS (Java Message Service) in XML configurations.",
+                        "question": "What is '<jmsProperty>' used for in XML?"
+                    },
+                    {
+                        "term": "<default>",
+                        "explanation": "Specifies the default value or behavior in XML configurations.",
+                        "question": "What is the purpose of '<default>' in XML?"
+                    },
+                    {
+                        "term": "<class>",
+                        "explanation": "References a Java class in XML-based configurations.",
+                        "question": "What does '<class>' represent in XML?"
+                    },
+                    {
+                        "term": "<Root>",
+                        "explanation": "Represents the top-level element of an XML document.",
+                        "question": "What is the '<Root>' element in XML?"
+                    },
+                    {
+                        "term": "<Message>",
+                        "explanation": "Represents a message payload in XML-based systems.",
+                        "question": "What does '<Message>' represent in XML?"
+                    },
+                    {
+                        "term": "XML Schema (XSD)",
+                        "explanation": "Defines the structure and rules for an XML document.",
+                        "question": "What is XML Schema (XSD)?"
+                    },
+                    {
+                        "term": "DTD (Document Type Definition)",
+                        "explanation": "Defines the structure and allowed elements in an XML document.",
+                        "question": "What is DTD in XML?"
+                    },
+                    {
+                        "term": "XML Namespace",
+                        "explanation": "Avoids element name conflicts by providing a unique identifier.",
+                        "question": "What is an XML namespace?"
+                    },
+                    {
+                        "term": "CDATA (Character Data)",
+                        "explanation": "Used to include raw text without parsing special characters.",
+                        "question": "What is CDATA in XML?"
+                    },
+                    {
+                        "term": "XPath",
+                        "explanation": "A query language for navigating XML documents.",
+                        "question": "What is XPath used for?"
+                    },
+                    {
+                        "term": "XSLT (Extensible Stylesheet Language Transformations)",
+                        "explanation": "Transforms XML data into different formats like HTML or another XML structure.",
+                        "question": "What is XSLT in XML processing?"
+                    },
+                    {
+                        "term": "XML DOM (Document Object Model)",
+                        "explanation": "A programming interface for reading and modifying XML documents.",
+                        "question": "What is XML DOM?"
+                    },
+                    {
+                        "term": "XML Serialization",
+                        "explanation": "The process of converting an object into XML format.",
+                        "question": "What is XML serialization?"
+                    },
+                    {
+                        "term": "Well-formed XML",
+                        "explanation": "An XML document that follows proper syntax rules.",
+                        "question": "What is a well-formed XML document?"
+                    },
+                    {
+                        "term": "Valid XML",
+                        "explanation": "An XML document that follows a defined DTD or XSD schema.",
+                        "question": "What is a valid XML document?"
+                    },
+                    {
+                        "term": "SOAP XML",
+                        "explanation": "An XML-based messaging protocol for web services.",
+                        "question": "What is SOAP XML?"
+                    },
+                    {
+                        "term": "XML Parsing",
+                        "explanation": "Processing and extracting data from XML documents.",
+                        "question": "What is XML parsing?"
+                    },
+                    {
+                        "term": "XML Encoding",
+                        "explanation": "Defines how characters are represented (e.g., UTF-8, UTF-16).",
+                        "question": "What is XML encoding?"
+                    },
+                    {
+                        "term": "XML Attributes",
+                        "explanation": "Provide additional information about XML elements.",
+                        "question": "What are XML attributes?"
+                    },
+                    {
+                        "term": "XML Elements",
+                        "explanation": "The basic building blocks of an XML document, enclosed in tags.",
+                        "question": "What are XML elements?"
+                    },
+                    {
+                        "term": "XML Comments",
+                        "explanation": "Used to add human-readable notes inside an XML document.",
+                        "question": "How are comments written in XML?"
+                    },
+                    {
+                        "term": "XML Processing Instruction",
+                        "explanation": "Provides instructions to the XML processor, e.g., linking stylesheets.",
+                        "question": "What is an XML processing instruction?"
+                    },
+                    {
+                        "term": "XQuery",
+                        "explanation": "A query language for searching and extracting XML data.",
+                        "question": "What is XQuery?"
+                    },
+                    {
+                        "term": "XML Stream Processing",
+                        "explanation": "Processing XML data in a streaming manner instead of loading the whole document.",
+                        "question": "What is XML stream processing?"
+                    },
+                    {
+                        "term": "XML Digital Signatures",
+                        "explanation": "A security mechanism to ensure the authenticity of XML data.",
+                        "question": "What are XML digital signatures?"
+                    },
+                    {
+                        "term": "XLink",
+                        "explanation": "Defines links between XML documents.",
+                        "question": "What is XLink in XML?"
+                    },
+                    {
+                        "term": "XPointer",
+                        "explanation": "Defines a way to reference specific parts of an XML document.",
+                        "question": "What is XPointer in XML?"
+                    },
+                    {
+                        "term": "XML Encryption",
+                        "explanation": "Encrypts XML data to ensure confidentiality.",
+                        "question": "What is XML encryption?"
+                    },
+                    {
+                        "term": "XForms",
+                        "explanation": "An XML-based standard for web forms.",
+                        "question": "What are XForms in XML?"
+                    },
+                    {
+                        "term": "RSS (Really Simple Syndication)",
+                        "explanation": "An XML format used for syndicating web content.",
+                        "question": "What is RSS in XML?"
+                    },
+                    {
+                        "term": "SVG (Scalable Vector Graphics)",
+                        "explanation": "An XML-based format for vector graphics.",
+                        "question": "What is SVG in XML?"
+                    },
+                    {
+                        "term": "XML Schema Definition Language (XSD)",
+                        "explanation": "A schema language used to define XML document structure.",
+                        "question": "What is XSD in XML?"
                     },
                 ]
             },
@@ -1376,6 +1574,19 @@ export const db = [
     },
 
 
+    /*
+                    xsl 
+                    xmlns
+                    
+                    lean power shell... 
+                    
+                    Firewall
+                    - 3 firewall levels
+                    - - 1 Network-Level Firewall (Packet filtering Firewall) = Filters traffic based on IP addresses, ports, and protocols.
+                    - - 2 Transport-level Firewall (Stateful inspection firewall) = Tracks active connectons and allows only legitimate sessions.
+                    - - 3 Application-level firewall (Next generation firewall) = Inspects Http, ftp, dns, ssh and others. 
+                    
+    */
 
 
 
