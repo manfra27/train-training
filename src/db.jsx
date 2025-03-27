@@ -7,15 +7,88 @@ export const db = [
             {
                 topicName: "Micro Integrator Fundamentals",
                 entries: [
+                    {
+                        "term": "Centralized integration architecture",
+                        "explanation": "A model where a central integration hub (e.g., an ESB) manages communication between services. It provides a single point of control, governance, and monitoring.",
+                        "question": "What is a centralized integration architecture, and how does it function in enterprise systems?"
+                    },
+                    {
+                        "term": "Decentralized integration architecture",
+                        "explanation": "A distributed model where services communicate directly with each other without a central hub. This is often seen in microservices-based architectures.",
+                        "question": "How does a decentralized integration architecture differ from a centralized one, and when should it be used?"
+                    },
+                    {
+                        "term": "Content based routing",
+                        "explanation": "A routing mechanism that directs messages to different services based on their content, such as specific fields in a JSON or XML message.",
+                        "question": "What is content-based routing, and how does it work in message mediation?"
+                    },
+                    {
+                        "term": "Service orchestration",
+                        "explanation": "A method of managing interactions between multiple services to fulfill business processes, ensuring they are executed in a defined sequence.",
+                        "question": "What is service orchestration, and how does it differ from service choreography?"
+                    },
+                    {
+                        "term": "Coarse-grained service",
+                        "explanation": "A service that performs a larger business function and typically aggregates multiple fine-grained services.",
+                        "question": "What is a coarse-grained service, and how does it benefit service design?"
+                    },
+                    {
+                        "term": "Synchronous service orchestration",
+                        "explanation": "A service orchestration pattern where services interact in real-time, with each service waiting for a response before continuing.",
+                        "question": "What is synchronous service orchestration, and what are its advantages and disadvantages?"
+                    },
+                    {
+                        "term": "Asynchronous service orchestration",
+                        "explanation": "A non-blocking service orchestration pattern where services interact without waiting for an immediate response, improving scalability.",
+                        "question": "What is asynchronous service orchestration, and when should it be used instead of synchronous orchestration?"
+                    },
+                    {
+                        "term": "Service chaining",
+                        "explanation": "A design pattern where multiple services are invoked sequentially to complete a business process.",
+                        "question": "How does service chaining work, and what are its benefits in enterprise integration?"
+                    },
+                    {
+                        "term": "Parallel service invocations",
+                        "explanation": "A pattern where multiple service calls are made concurrently to improve performance and reduce latency in service execution.",
+                        "question": "What are parallel service invocations, and how do they enhance service performance?"
+                    },
+                    {
+                        "term": "Wire-level protocols like AMQP and MQTT",
+                        "explanation": "Protocols used for low-level communication between systems, such as AMQP for message queuing and MQTT for lightweight IoT messaging.",
+                        "question": "What are wire-level protocols, and how do AMQP and MQTT facilitate communication in distributed systems?"
+                    },
+                    {
+                        "term": "Enterprise integration pattern",
+                        "explanation": "A set of design patterns that address common integration challenges, such as message routing, transformation, and aggregation.",
+                        "question": "What are enterprise integration patterns, and how are they used in system integration?"
+                    },
+                    {
+                        "term": "Mediator",
+                        "explanation": "A component that processes, transforms, or routes messages between services, used in integration platforms like WSO2 EI.",
+                        "question": "What is a mediator in enterprise integration, and what are its key use cases?"
+                    },
+                    {
+                        "term": "WSDL endpoint",
+                        "explanation": "A Web Services Description Language (WSDL) endpoint that defines the operations and message structures for SOAP-based web services.",
+                        "question": "What is a WSDL endpoint, and how does it relate to SOAP web services?"
+                    },
+                    {
+                        "term": "Load balancing endpoint",
+                        "explanation": "An endpoint that distributes requests across multiple backend services to optimize performance and prevent overloading.",
+                        "question": "What is a load balancing endpoint, and how does it improve service reliability?"
+                    },
+                    {
+                        "term": "Apache Axis2",
+                        "explanation": "A Java-based web services framework that supports SOAP and RESTful web services, commonly used in service-oriented architectures.",
+                        "question": "What is Apache Axis2, and how is it used for web service development?"
+                    },
                     { "term": "centralized integration architecure", "explanation": "All communication flows through a central hub like ESB, Message broker...", "question": "" },
                     { "term": "decentralized integration architecture", "explanation": "Systems communicate directly or via distributetd components like \nmicroservices with APIs, \nevent driven systems..", "question": "" },
-                    /*
+
                     { "term": "WSO2 Micro Integrator", "explanation": "> vent-driven, \n> standards-based messaging engine (the Bus), which supports \n> message routing, \n> message transformations, and other  types  of  messaging  use  cases.", "question": "" },
                     { "term": "Content based routing", "explanation": "When the Micro Integrator processes individual messages from clients, it can route messages based on the content of the message.", "question": "" },
                     { "term": "Micro Integrator message transformation", "explanation": "1 adding/removing content from messages,\n2 converting a message to a completely different message format,\3 validating messages based on the available validation mechanisms of the message format. ", "question": "" },
                     { "term": "A single coarse-grained service", "explanation": "An interface for broad exposed high level functionalities.", "question": "" },
-                    { "term": "Synchronous service orchestration", "explanation": "Services execute in sequence.", "question": "" },
-                    { "term": "Asynchronous service orchestration", "explanation": "Services are invoked without waiting.", "question": "" },
                     { "term": "Service chaining", "explanation": "Multiple services are orchestrated in a sequence. The input of one service is dependent of the output of another one.", "question": "" },
                     { "term": "Parallel service invocations", "explanation": "Multiple services are invoked simultaneously without any blocking until a response is received from another service.", "question": "" },
                     { "term": "Hybrid-Cloud Integration", "explanation": "Enablse to connect apps and data among cloud environments and on prem.", "question": "" },
@@ -25,130 +98,26 @@ export const db = [
                     { "term": "Building Block Mediators", "explanation": "Mediators are individual processing units that perform a specific function such as sending  or  filtering  messages.  The  Micro  Integrator  includes  a  comprehensive mediator library that provides functionality for implementing widely used enterprise integration patterns (EIPs). You can also easily write a custom mediator to provide additional  functionality  using  various  technologies  such  as  Java,  scripting,  and Spring.", "question": "" },
                     { "term": "Building Block Endpoints", "explanation": "An endpoint defines an external destination (such as a service) for a message. An endpoint can be specified as an address endpoint, WSDL endpoint, a load balancing endpoint, etc. An endpoint is defined independently of transports, allowing you to use the same endpoint  with  multiple  transports.  When  you  configure  a  message  mediation sequence  or  a  proxy  service  to  handle  the  incoming  message,  you  specify  the transport to use and the endpoint where the message will be sent.", "question": "" },
                     { "term": "Building Block Transports", "explanation": "Carry messages in a specific format.18Sequences are the configuration component for mediators. Sequences allow you to organize the mediators for implementing pipes and filter patterns.Mediators are individual processing units that perform a specific function such as sending  or  filtering  messages.  The  Micro  Integrator  includes  a  comprehensive mediator library that provides functionality for implementing widely used enterprise integration patterns (EIPs). You can also easily write a custom mediator to provide additional  functionality  using  various  technologies  such  as  Java,  scripting,  and Spring.An endpoint defines an external destination (such as a service) for a message. An endpoint can be specified as an address endpoint, WSDL endpoint, a load balancing endpoint, etc. An endpoint is defined independently of transports, allowing you to use the same endpoint  with  multiple  transports.  When  you  configure  a  message  mediation sequence  or  a  proxy  service  to  handle  the  incoming  message,  you  specify  the transport to use and the endpoint where the message will be sent.Transports - Carry messages in a specific format.The Micro Integrator supports all the widely used transports including HTTP/s, JMS, and VFS, and domain-specific transports like FIX. All WSO2 transports are directly or indirectly based on the Apache Axis2 transports framework.", "question": "" },
-
-
-                    { "term": "Synapse Message Receiver", "explanation": "", "question": "" },
-                    { "term": "Proxy Message Receiver", "explanation": "", "question": "" },
-                    { "term": "Synapse environment", "explanation": "", "question": "" },
-                    { "term": "Callback receiver", "explanation": "", "question": "" },
-
-                    { "term": "Content based Router", "explanation": "", "question": "" },
-                    { "term": "Message Filter", "explanation": "", "question": "" },
-                    { "term": "Message Splitter", "explanation": "", "question": "" },
-                    { "term": "Message Aggregator", "explanation": "", "question": "" },
-
-                    { "term": "", "explanation": "", "question": "" },
-                    { "term": "", "explanation": "", "question": "" },
-                    { "term": "", "explanation": "", "question": "" },
-                    { "term": "", "explanation": "", "question": "" },
-
-
-
-                    { "term": "", "explanation": "", "question": "" },
-                
-                    */
+                    /*
+                                        { "term": "Synapse Message Receiver", "explanation": "", "question": "" },
+                                        { "term": "Proxy Message Receiver", "explanation": "", "question": "" },
+                                        { "term": "Synapse environment", "explanation": "", "question": "" },
+                                        { "term": "Callback receiver", "explanation": "", "question": "" },
+                    
+                                        { "term": "Content based Router", "explanation": "", "question": "" },
+                                        { "term": "Message Filter", "explanation": "", "question": "" },
+                                        { "term": "Message Splitter", "explanation": "", "question": "" },
+                                        { "term": "Message Aggregator", "explanation": "", "question": "" },
+                    
+                                        { "term": "", "explanation": "", "question": "" },
+                                        { "term": "", "explanation": "", "question": "" },
+                                        { "term": "", "explanation": "", "question": "" },
+                                        { "term": "", "explanation": "", "question": "" },
+                                        { "term": "", "explanation": "", "question": "" },
+                                    
+                                        */
                 ]
             },
-        ],
-    },
-    {
-        category: "General tech knowledge",
-        subcategories: [
-            {
-                topicName: "Tech overview",
-                entries: [
-                    {
-                        "term": "ABAP",
-                        "explanation": "ABAP (Advanced Business Application Programming) is a high-level programming language developed by SAP for building applications on the SAP platform. It is primarily used for developing enterprise applications that run in the SAP ecosystem, such as SAP ERP and SAP S/4HANA. ABAP supports procedural and object-oriented programming paradigms and integrates seamlessly with SAP databases and application servers. The language is optimized for business logic implementation, data manipulation, and report generation within SAP environments. ABAP plays a crucial role in extending and customizing SAP applications to meet business requirements.",
-                        "question": "What is ABAP, and how is it used in SAP development?"
-                    },
-                    {
-                        "term": "WSO2",
-                        "explanation": "WSO2 is an open-source integration platform that provides tools for API management, identity and access management, enterprise service bus (ESB), and analytics. It enables organizations to integrate disparate systems, expose APIs securely, and manage digital identity across applications. WSO2 supports microservices architecture, cloud deployments, and event-driven integration patterns. It is widely used in enterprise environments to facilitate communication between applications and services, ensuring interoperability and seamless data flow across heterogeneous systems.",
-                        "question": "What is WSO2, and how is it used for enterprise integration?"
-                    },
-                    {
-                        "term": "KIS",
-                        "explanation": "KIS (Klinisches Informationssystem) is a hospital information system used to manage medical and administrative processes within healthcare institutions. It provides functionalities such as patient record management, appointment scheduling, medication tracking, and clinical documentation. KIS integrates with laboratory systems, radiology systems, and financial modules to create a centralized digital infrastructure for hospitals. It enhances operational efficiency by improving data accessibility, reducing paperwork, and enabling better decision-making for healthcare professionals.",
-                        "question": "What is a KIS system, and how does it support healthcare operations?"
-                    },
-                    {
-                        "term": "HL7",
-                        "explanation": "HL7 (Health Level 7) is a set of international standards for exchanging, integrating, sharing, and retrieving electronic health information. It defines structured messaging formats, clinical document architectures, and interoperability frameworks that enable different healthcare systems to communicate effectively. HL7 standards include HL7 v2 (a widely adopted messaging standard), HL7 v3 (an XML-based standard), and FHIR (a modern web-based standard). HL7 facilitates interoperability between hospitals, laboratories, and health information exchanges by ensuring that data is transmitted in a consistent and interpretable format.",
-                        "question": "What is HL7, and how does it facilitate healthcare interoperability?"
-                    },
-                    {
-                        "term": ".NET",
-                        "explanation": ".NET is a software development framework created by Microsoft that allows developers to build applications for web, desktop, cloud, and mobile environments. It provides a runtime (Common Language Runtime - CLR), a set of libraries, and development tools that support multiple programming languages, including C#, F#, and VB.NET. The framework includes ASP.NET for web development, .NET Core for cross-platform applications, and Windows Presentation Foundation (WPF) for desktop applications. .NET is widely used for enterprise applications due to its scalability, security, and integration with cloud services.",
-                        "question": "What is .NET, and what are its main components?"
-                    },
-                    {
-                        "term": "C#",
-                        "explanation": "C# is a modern, object-oriented programming language developed by Microsoft as part of the .NET ecosystem. It is designed for building robust and scalable applications ranging from desktop to cloud-based services. C# includes features such as strong typing, automatic memory management, and asynchronous programming. It supports advanced paradigms like LINQ for data manipulation, ASP.NET for web applications, and Entity Framework for database interactions. C# is widely used in enterprise development, game development (via Unity), and cloud-based solutions.",
-                        "question": "What is C#, and what are its key features?"
-                    },
-                    {
-                        "term": "APEX",
-                        "explanation": "APEX is a strongly-typed, object-oriented programming language designed by Salesforce for developing applications within the Salesforce ecosystem. It enables developers to create custom business logic, process automation, and integrations within Salesforce environments. APEX is closely integrated with Salesforce’s database and security model, allowing developers to perform operations such as querying records, triggering workflows, and handling complex business rules. It is optimized for multi-tenant cloud environments, ensuring scalability and security in customer relationship management (CRM) applications.",
-                        "question": "What is APEX, and how is it used in Salesforce development?"
-                    },
-                    {
-                        "term": "SAP",
-                        "explanation": "SAP (Systems, Applications, and Products in Data Processing) is a leading enterprise software company that provides solutions for managing business operations and customer relations. SAP’s flagship product, SAP ERP, integrates core business processes such as finance, human resources, supply chain, and procurement. The company has evolved to offer cloud-based solutions, including SAP S/4HANA, SAP Business Technology Platform (BTP), and SAP Analytics Cloud. SAP software is widely adopted by enterprises for optimizing business operations, enabling data-driven decision-making, and improving overall efficiency.",
-                        "question": "What is SAP, and what are its primary products?"
-                    },
-                    {
-                        "term": "ERP",
-                        "explanation": "Enterprise Resource Planning (ERP) is a category of business management software that integrates core organizational processes into a unified system. ERP systems provide modules for finance, human resources, supply chain, manufacturing, and customer relationship management. These systems improve operational efficiency by streamlining workflows, centralizing data, and enabling real-time reporting. Leading ERP vendors include SAP, Oracle, Microsoft Dynamics, and Workday. Modern ERP solutions are increasingly cloud-based, allowing for greater flexibility, scalability, and integration with emerging technologies such as AI and IoT.",
-                        "question": "What is ERP, and why is it essential for businesses?"
-                    },
-                    {
-                        "term": "BAPI",
-                        "explanation": "BAPI (Business Application Programming Interface) is a standardized interface that allows external applications to interact with SAP systems. It provides predefined methods for accessing business objects such as customers, orders, and invoices within SAP ERP. BAPIs are commonly used for data integration, automation, and extending SAP functionalities without modifying the core system. They enable seamless communication between SAP and non-SAP systems, facilitating enterprise-wide interoperability. BAPIs are structured according to the SAP Business Object Repository, ensuring consistency and reusability.",
-                        "question": "What is BAPI, and how is it used in SAP integrations?"
-                    },
-                    {
-                        "term": "DICOM",
-                        "explanation": "DICOM (Digital Imaging and Communications in Medicine) is an international standard for storing, transmitting, and sharing medical imaging data. It defines data formats, network protocols, and interoperability mechanisms for handling images from modalities such as X-ray, MRI, and CT scans. DICOM ensures that imaging devices, hospital information systems, and radiology information systems can exchange and interpret images consistently. The standard includes metadata about patients, imaging procedures, and diagnostic information, making it essential for electronic health records and clinical workflows.",
-                        "question": "What is DICOM, and why is it important in medical imaging?"
-                    },
-                    {
-                        "term": "FHIR",
-                        "explanation": "FHIR (Fast Healthcare Interoperability Resources) is a modern standard developed by HL7 for exchanging healthcare information using web technologies. It enables seamless interoperability between healthcare applications by defining structured resources such as Patient, Observation, and MedicationRequest. FHIR supports RESTful APIs, making data accessible via standard HTTP operations. It also allows data representation in JSON and XML formats. FHIR is widely adopted in electronic health records (EHR), telemedicine, and healthcare analytics due to its scalability, ease of implementation, and support for mobile and cloud-based applications.",
-                        "question": "What is FHIR, and how does it improve healthcare data exchange?"
-                    },
-
-
-                    { "term": "Citrix Files", "explanation": "", "question": "" },
-                    { "term": "Cisco Jabber", "explanation": "", "question": "" },
-                    { "term": "Power Shell", "explanation": "", "question": "" },
-                    { "term": "Citrix Workspace", "explanation": "", "question": "" },
-                    { "term": "Dolby Access", "explanation": "", "question": "" },
-                    { "term": "FileZilla", "explanation": "", "question": "" },
-                    { "term": "Greenshot", "explanation": "", "question": "" },
-                    { "term": "ImgBurn", "explanation": "", "question": "" },
-                    { "term": "Kaspersky Endpoint Security for Windows", "explanation": "", "question": "" },
-                    { "term": "PolyPoint", "explanation": "", "question": "" },
-                    { "term": "Webex", "explanation": "", "question": "" },
-                    { "term": "XMind", "explanation": "", "question": "" },
-                    { "term": "ARTS", "explanation": "", "question": "" },
-                    { "term": "BIC3", "explanation": "", "question": "" },
-                    { "term": "Ibi-care V6", "explanation": "", "question": "" },
-                    { "term": "Omnitracker 12 client", "explanation": "", "question": "" },
-                    { "term": "Sunet plus", "explanation": "", "question": "" },
-                    { "term": "UKA solutions", "explanation": "", "question": "" },
-                    { "term": "Panopto", "explanation": "", "question": "" },
-                    { "term": "Adobe Acrobat DC", "explanation": "", "question": "" },
-
-
-                ]
-            },
-        ],
-    },
-
-    {
-        category: "WSO2",
-        subcategories: [
             {
                 topicName: "Fundamental concepts and terms",
                 entries: [
@@ -280,342 +249,8 @@ export const db = [
                     { "term": "ESB meaning", "explanation": "Enterprise Service Bus", "question": "" },
                 ]
             },
-            {
-                topicName: "WSO2 Micro Integrator",
-                entries: [
-                    {
-                        "term": "Centralized integration architecture",
-                        "explanation": "A model where a central integration hub (e.g., an ESB) manages communication between services. It provides a single point of control, governance, and monitoring.",
-                        "question": "What is a centralized integration architecture, and how does it function in enterprise systems?"
-                    },
-                    {
-                        "term": "Decentralized integration architecture",
-                        "explanation": "A distributed model where services communicate directly with each other without a central hub. This is often seen in microservices-based architectures.",
-                        "question": "How does a decentralized integration architecture differ from a centralized one, and when should it be used?"
-                    },
-                    {
-                        "term": "Content based routing",
-                        "explanation": "A routing mechanism that directs messages to different services based on their content, such as specific fields in a JSON or XML message.",
-                        "question": "What is content-based routing, and how does it work in message mediation?"
-                    },
-                    {
-                        "term": "Service orchestration",
-                        "explanation": "A method of managing interactions between multiple services to fulfill business processes, ensuring they are executed in a defined sequence.",
-                        "question": "What is service orchestration, and how does it differ from service choreography?"
-                    },
-                    {
-                        "term": "Coarse-grained service",
-                        "explanation": "A service that performs a larger business function and typically aggregates multiple fine-grained services.",
-                        "question": "What is a coarse-grained service, and how does it benefit service design?"
-                    },
-                    {
-                        "term": "Synchronous service orchestration",
-                        "explanation": "A service orchestration pattern where services interact in real-time, with each service waiting for a response before continuing.",
-                        "question": "What is synchronous service orchestration, and what are its advantages and disadvantages?"
-                    },
-                    {
-                        "term": "Asynchronous service orchestration",
-                        "explanation": "A non-blocking service orchestration pattern where services interact without waiting for an immediate response, improving scalability.",
-                        "question": "What is asynchronous service orchestration, and when should it be used instead of synchronous orchestration?"
-                    },
-                    {
-                        "term": "Service chaining",
-                        "explanation": "A design pattern where multiple services are invoked sequentially to complete a business process.",
-                        "question": "How does service chaining work, and what are its benefits in enterprise integration?"
-                    },
-                    {
-                        "term": "Parallel service invocations",
-                        "explanation": "A pattern where multiple service calls are made concurrently to improve performance and reduce latency in service execution.",
-                        "question": "What are parallel service invocations, and how do they enhance service performance?"
-                    },
-                    {
-                        "term": "Wire-level protocols like AMQP and MQTT",
-                        "explanation": "Protocols used for low-level communication between systems, such as AMQP for message queuing and MQTT for lightweight IoT messaging.",
-                        "question": "What are wire-level protocols, and how do AMQP and MQTT facilitate communication in distributed systems?"
-                    },
-                    {
-                        "term": "Enterprise integration pattern",
-                        "explanation": "A set of design patterns that address common integration challenges, such as message routing, transformation, and aggregation.",
-                        "question": "What are enterprise integration patterns, and how are they used in system integration?"
-                    },
-                    {
-                        "term": "Mediator",
-                        "explanation": "A component that processes, transforms, or routes messages between services, used in integration platforms like WSO2 EI.",
-                        "question": "What is a mediator in enterprise integration, and what are its key use cases?"
-                    },
-                    {
-                        "term": "WSDL endpoint",
-                        "explanation": "A Web Services Description Language (WSDL) endpoint that defines the operations and message structures for SOAP-based web services.",
-                        "question": "What is a WSDL endpoint, and how does it relate to SOAP web services?"
-                    },
-                    {
-                        "term": "Load balancing endpoint",
-                        "explanation": "An endpoint that distributes requests across multiple backend services to optimize performance and prevent overloading.",
-                        "question": "What is a load balancing endpoint, and how does it improve service reliability?"
-                    },
-                    {
-                        "term": "Apache Axis2",
-                        "explanation": "A Java-based web services framework that supports SOAP and RESTful web services, commonly used in service-oriented architectures.",
-                        "question": "What is Apache Axis2, and how is it used for web service development?"
-                    },
-
-
-                ]
-            },
         ],
     },
-
-
-
-
-    {
-        category: "Osbsidian",
-        subcategories: [
-            {
-                topicName: "Basicsss",
-                entries: [
-
-                    {
-                        "term": "Vault",
-                        "explanation": "A folder where all your notes (Markdown files) are stored.",
-                        "question": "What is a vault in Obsidian?"
-                    },
-                    {
-                        "term": "Notes",
-                        "explanation": "Individual Markdown (.md) files that contain your content.",
-                        "question": "What are notes in Obsidian?"
-                    },
-                    {
-                        "term": "Links",
-                        "explanation": "Use [[Note Name]] to create internal links between notes.",
-                        "question": "How do you create internal links between notes in Obsidian?"
-                    },
-                    {
-                        "term": "Backlinks",
-                        "explanation": "Notes that link back to the current note (visible in the sidebar).",
-                        "question": "What are backlinks in Obsidian?"
-                    },
-                    {
-                        "term": "Graph View",
-                        "explanation": "A visual representation of your notes and how they connect.",
-                        "question": "What is the Graph View used for in Obsidian?"
-                    },
-                    {
-                        "term": "Tags",
-                        "explanation": "Add #tags inside notes to categorize and search them easily.",
-                        "question": "How are tags used in Obsidian?"
-                    },
-                    {
-                        "term": "Plugins",
-                        "explanation": "Extend functionality (e.g., Daily Notes, Templates, Dataview).",
-                        "question": "What is the purpose of plugins in Obsidian?"
-                    }
-
-                ]
-            },
-        ],
-    },
-
-
-
-    {
-        category: "Windows 11",
-        subcategories: [
-            {
-                topicName: "Keys",
-                entries: [
-
-                    {
-                        "term": "Win + A",
-                        "explanation": "Open Quick Settings.",
-                        "question": "What does 'Win + A' do?"
-                    },
-                    {
-                        "term": "Win + B",
-                        "explanation": "Focus system tray icons.",
-                        "question": "What does 'Win + B' do?"
-                    },
-                    {
-                        "term": "Win + C",
-                        "explanation": "Open Microsoft Teams Chat.",
-                        "question": "What does 'Win + C' do?"
-                    },
-                    {
-                        "term": "Win + D",
-                        "explanation": "Show/hide desktop.",
-                        "question": "What does 'Win + D' do?"
-                    },
-                    {
-                        "term": "Win + E",
-                        "explanation": "Open File Explorer.",
-                        "question": "What does 'Win + E' do?"
-                    },
-                    {
-                        "term": "Win + G",
-                        "explanation": "Open Xbox Game Bar.",
-                        "question": "What does 'Win + G' do?"
-                    },
-                    {
-                        "term": "Win + H",
-                        "explanation": "Start voice typing.",
-                        "question": "What does 'Win + H' do?"
-                    },
-                    {
-                        "term": "Win + I",
-                        "explanation": "Open Settings.",
-                        "question": "What does 'Win + I' do?"
-                    },
-                    {
-                        "term": "Win + K",
-                        "explanation": "Open Cast for screen sharing.",
-                        "question": "What does 'Win + K' do?"
-                    },
-                    {
-                        "term": "Win + L",
-                        "explanation": "Lock your PC.",
-                        "question": "What does 'Win + L' do?"
-                    },
-                    {
-                        "term": "Win + M",
-                        "explanation": "Minimize all windows.",
-                        "question": "What does 'Win + M' do?"
-                    },
-                    {
-                        "term": "Win + N",
-                        "explanation": "Open Notification Center and Calendar.",
-                        "question": "What does 'Win + N' do?"
-                    },
-                    {
-                        "term": "Win + P",
-                        "explanation": "Open display projection options.",
-                        "question": "What does 'Win + P' do?"
-                    },
-                    {
-                        "term": "Win + R",
-                        "explanation": "Open Run dialog box.",
-                        "question": "What does 'Win + R' do?"
-                    },
-                    {
-                        "term": "Win + S",
-                        "explanation": "Open Search.",
-                        "question": "What does 'Win + S' do?"
-                    },
-                    {
-                        "term": "Win + Shift + S",
-                        "explanation": "Capture a screenshot using Snipping Tool.",
-                        "question": "What does 'Win + Shift + S' do?"
-                    },
-                    {
-                        "term": "Win + T",
-                        "explanation": "Cycle through taskbar apps.",
-                        "question": "What does 'Win + T' do?"
-                    },
-                    {
-                        "term": "Win + U",
-                        "explanation": "Open Accessibility settings.",
-                        "question": "What does 'Win + U' do?"
-                    },
-                    {
-                        "term": "Win + V",
-                        "explanation": "Open Clipboard history.",
-                        "question": "What does 'Win + V' do?"
-                    },
-                    {
-                        "term": "Win + W",
-                        "explanation": "Open Widgets panel.",
-                        "question": "What does 'Win + W' do?"
-                    },
-                    {
-                        "term": "Win + X",
-                        "explanation": "Open Quick Link menu.",
-                        "question": "What does 'Win + X' do?"
-                    },
-                    {
-                        "term": "Win + Z",
-                        "explanation": "Open Snap Layouts.",
-                        "question": "What does 'Win + Z' do?"
-                    },
-                    {
-                        "term": "Win + .",
-                        "explanation": "Open emoji panel.",
-                        "question": "What does 'Win + .' do?"
-                    },
-                    {
-                        "term": "Win + Spacebar",
-                        "explanation": "Switch input language and keyboard layout.",
-                        "question": "What does 'Win + Spacebar' do?"
-                    },
-                    {
-                        "term": "Win + PrtScn",
-                        "explanation": "Capture a full-screen screenshot.",
-                        "question": "What does 'Win + PrtScn' do?"
-                    },
-                    {
-                        "term": "Win + Ctrl + D",
-                        "explanation": "Create a new virtual desktop.",
-                        "question": "What does 'Win + Ctrl + D' do?"
-                    },
-                    {
-                        "term": "Win + Ctrl + Left/Right Arrow",
-                        "explanation": "Switch between virtual desktops.",
-                        "question": "What does 'Win + Ctrl + Left/Right Arrow' do?"
-                    },
-                    {
-                        "term": "Win + Ctrl + F4",
-                        "explanation": "Close the current virtual desktop.",
-                        "question": "What does 'Win + Ctrl + F4' do?"
-                    },
-                    {
-                        "term": "Ctrl + A",
-                        "explanation": "Select all items.",
-                        "question": "What does 'Ctrl + A' do?"
-                    },
-                    {
-                        "term": "Ctrl + C",
-                        "explanation": "Copy selected item.",
-                        "question": "What does 'Ctrl + C' do?"
-                    },
-                    {
-                        "term": "Ctrl + X",
-                        "explanation": "Cut selected item.",
-                        "question": "What does 'Ctrl + X' do?"
-                    },
-                    {
-                        "term": "Ctrl + V",
-                        "explanation": "Paste copied item.",
-                        "question": "What does 'Ctrl + V' do?"
-                    },
-                    {
-                        "term": "Ctrl + Z",
-                        "explanation": "Undo last action.",
-                        "question": "What does 'Ctrl + Z' do?"
-                    },
-                    {
-                        "term": "Ctrl + Y",
-                        "explanation": "Redo last action.",
-                        "question": "What does 'Ctrl + Y' do?"
-                    },
-                    {
-                        "term": "Alt + Tab",
-                        "explanation": "Switch between open windows.",
-                        "question": "What does 'Alt + Tab' do?"
-                    },
-                    {
-                        "term": "Alt + F4",
-                        "explanation": "Close active window.",
-                        "question": "What does 'Alt + F4' do?"
-                    },
-                    {
-                        "term": "Shift + Delete",
-                        "explanation": "Permanently delete selected item.",
-                        "question": "What does 'Shift + Delete' do?"
-                    }
-                ]
-            },
-        ],
-    },
-
-
 
     {
         category: "VMs",
@@ -766,141 +401,9 @@ export const db = [
         ],
     },
 
-
-
     {
         category: "APIs",
         subcategories: [
-            {
-                topicName: "Protocols",
-                entries: [
-                    {
-                        "term": "MQTT",
-                        "explanation": "Message Queuing Telemetry Transport\nA lightweight publish-subscribe network protocol ideal for IoT and low-bandwidth devices.",
-                        "question": ""
-                    },
-                    {
-                        "term": "AMQP",
-                        "explanation": "Advanced Message Queuing Protocol\nAn open standard application layer protocol for message-oriented middleware, enabling reliable and secure message delivery.",
-                        "question": ""
-                    },
-                    {
-                        "term": "FTP",
-                        "explanation": "File Transfer Protocol\nA standard network protocol used to transfer files between a client and server over a TCP-based network.",
-                        "question": ""
-                    },
-                    {
-                        "term": "FTPS",
-                        "explanation": "FTP Secure\nAn extension of FTP that adds support for the Transport Layer Security (TLS) to encrypt the command and data channels.",
-                        "question": ""
-                    },
-                    {
-                        "term": "SFTP",
-                        "explanation": "SSH File Transfer Protocol\nA secure file transfer protocol that runs over SSH, providing file access, transfer, and management.",
-                        "question": ""
-                    },
-                    {
-                        "term": "SMB",
-                        "explanation": "Server Message Block\nA network file sharing protocol that allows applications to read and write to files and request services from server programs in a computer network.",
-                        "question": ""
-                    },
-                    {
-                        "term": "JMS",
-                        "explanation": "Java Message Service\nEnables asynchronous message-based communication between systems using queues or topics.",
-                        "question": ""
-                    },
-                    {
-                        "term": "HTTP",
-                        "explanation": "Hypertext Transfer Protocol\nA stateless protocol used for transferring web pages and resources over the internet.",
-                        "question": ""
-                    },
-                    {
-                        "term": "HTTPS",
-                        "explanation": "HTTP Secure\nAn extension of HTTP with TLS encryption for secure communication over a network.",
-                        "question": ""
-                    },
-                    {
-                        "term": "SOAP",
-                        "explanation": "Simple Object Access Protocol\nA protocol for exchanging structured information in web services using XML.",
-                        "question": ""
-                    },
-                    {
-                        "term": "REST",
-                        "explanation": "Representational State Transfer\nAn architectural style for designing stateless web APIs using standard HTTP methods.",
-                        "question": ""
-                    },
-                    {
-                        "term": "WebSocket",
-                        "explanation": "A protocol providing full-duplex communication channels over a single TCP connection for real-time data exchange.",
-                        "question": ""
-                    },
-                    {
-                        "term": "GraphQL",
-                        "explanation": "A query language for APIs that enables clients to request only the data they need, reducing over-fetching.",
-                        "question": ""
-                    },
-                    {
-                        "term": "TCP",
-                        "explanation": "Transmission Control Protocol\nA connection-oriented protocol that ensures reliable, ordered, and error-checked delivery of data.",
-                        "question": ""
-                    },
-                    {
-                        "term": "SMTP",
-                        "explanation": "Simple Mail Transfer Protocol\nUsed to send and relay outgoing email between mail servers.",
-                        "question": ""
-                    },
-                    {
-                        "term": "POP3",
-                        "explanation": "Post Office Protocol v3\nA protocol for retrieving emails from a mail server and downloading them to a local client.",
-                        "question": ""
-                    },
-                    {
-                        "term": "IMAP",
-                        "explanation": "Internet Message Access Protocol\nAllows clients to access and manage email messages on a mail server in real time.",
-                        "question": ""
-                    },
-                    {
-                        "term": "HL7",
-                        "explanation": "Health Level 7\nA set of international standards for transferring clinical and administrative data in healthcare systems.",
-                        "question": ""
-                    },
-                    {
-                        "term": "FHIR",
-                        "explanation": "Fast Healthcare Interoperability Resources\nA standard describing data formats and elements for exchanging electronic health records via APIs.",
-                        "question": ""
-                    },
-                    {
-                        "term": "CORBA",
-                        "explanation": "Common Object Request Broker Architecture\nA standard for distributed objects communication across different programming languages and systems.",
-                        "question": ""
-                    },
-                    {
-                        "term": "RMI",
-                        "explanation": "Remote Method Invocation\nA Java API that allows objects to invoke methods on remote Java objects.",
-                        "question": ""
-                    },
-                    {
-                        "term": "JSON-RPC",
-                        "explanation": "A remote procedure call protocol encoded in JSON, enabling communication between a client and server.",
-                        "question": ""
-                    },
-                    {
-                        "term": "XML-RPC",
-                        "explanation": "A remote procedure call protocol that uses XML to encode calls and HTTP as a transport mechanism.",
-                        "question": ""
-                    },
-                    {
-                        "term": "CoAP",
-                        "explanation": "Constrained Application Protocol\nA lightweight protocol for constrained devices, designed for machine-to-machine communication in IoT.",
-                        "question": ""
-                    },
-                    {
-                        "term": "gRPC",
-                        "explanation": "A high-performance RPC framework by Google that uses HTTP/2 and Protocol Buffers for communication between services.",
-                        "question": ""
-                    }
-                ]
-            },
             {
                 topicName: "Basics",
                 entries: [
@@ -1287,253 +790,134 @@ export const db = [
                     }
                 ]
             },
-
-
             {
-                topicName: "cmd.exe",
+                topicName: "Protocols",
                 entries: [
-
                     {
-                        "term": "cd",
-                        "explanation": "Change directory.",
-                        "question": "What does the 'cd' command do?"
+                        "term": "MQTT",
+                        "explanation": "Message Queuing Telemetry Transport\nA lightweight publish-subscribe network protocol ideal for IoT and low-bandwidth devices.",
+                        "question": ""
                     },
                     {
-                        "term": "dir",
-                        "explanation": "List files and directories in the current directory.",
-                        "question": "What does the 'dir' command do?"
+                        "term": "AMQP",
+                        "explanation": "Advanced Message Queuing Protocol\nAn open standard application layer protocol for message-oriented middleware, enabling reliable and secure message delivery.",
+                        "question": ""
                     },
                     {
-                        "term": "mkdir",
-                        "explanation": "Create a new directory.",
-                        "question": "What does the 'mkdir' command do?"
+                        "term": "FTP",
+                        "explanation": "File Transfer Protocol\nA standard network protocol used to transfer files between a client and server over a TCP-based network.",
+                        "question": ""
                     },
                     {
-                        "term": "rmdir",
-                        "explanation": "Remove an empty directory.",
-                        "question": "What does the 'rmdir' command do?"
+                        "term": "FTPS",
+                        "explanation": "FTP Secure\nAn extension of FTP that adds support for the Transport Layer Security (TLS) to encrypt the command and data channels.",
+                        "question": ""
                     },
                     {
-                        "term": "del",
-                        "explanation": "Delete a file.",
-                        "question": "What does the 'del' command do?"
+                        "term": "SFTP",
+                        "explanation": "SSH File Transfer Protocol\nA secure file transfer protocol that runs over SSH, providing file access, transfer, and management.",
+                        "question": ""
                     },
                     {
-                        "term": "copy",
-                        "explanation": "Copy files from one location to another.",
-                        "question": "What does the 'copy' command do?"
+                        "term": "SMB",
+                        "explanation": "Server Message Block\nA network file sharing protocol that allows applications to read and write to files and request services from server programs in a computer network.",
+                        "question": ""
                     },
                     {
-                        "term": "move",
-                        "explanation": "Move or rename files.",
-                        "question": "What does the 'move' command do?"
+                        "term": "JMS",
+                        "explanation": "Java Message Service\nEnables asynchronous message-based communication between systems using queues or topics.",
+                        "question": ""
                     },
                     {
-                        "term": "ren",
-                        "explanation": "Rename a file or folder.",
-                        "question": "What does the 'ren' command do?"
+                        "term": "HTTP",
+                        "explanation": "Hypertext Transfer Protocol\nA stateless protocol used for transferring web pages and resources over the internet.",
+                        "question": ""
                     },
                     {
-                        "term": "cls",
-                        "explanation": "Clear the command prompt screen.",
-                        "question": "What does the 'cls' command do?"
+                        "term": "HTTPS",
+                        "explanation": "HTTP Secure\nAn extension of HTTP with TLS encryption for secure communication over a network.",
+                        "question": ""
                     },
                     {
-                        "term": "exit",
-                        "explanation": "Close the command prompt.",
-                        "question": "What does the 'exit' command do?"
+                        "term": "SOAP",
+                        "explanation": "Simple Object Access Protocol\nA protocol for exchanging structured information in web services using XML.",
+                        "question": ""
                     },
                     {
-                        "term": "echo",
-                        "explanation": "Display messages or enable/disable command echoing.",
-                        "question": "What does the 'echo' command do?"
+                        "term": "REST",
+                        "explanation": "Representational State Transfer\nAn architectural style for designing stateless web APIs using standard HTTP methods.",
+                        "question": ""
                     },
                     {
-                        "term": "type",
-                        "explanation": "Display the content of a text file.",
-                        "question": "What does the 'type' command do?"
+                        "term": "WebSocket",
+                        "explanation": "A protocol providing full-duplex communication channels over a single TCP connection for real-time data exchange.",
+                        "question": ""
                     },
                     {
-                        "term": "more",
-                        "explanation": "View the content of a file page by page.",
-                        "question": "What does the 'more' command do?"
+                        "term": "GraphQL",
+                        "explanation": "A query language for APIs that enables clients to request only the data they need, reducing over-fetching.",
+                        "question": ""
                     },
                     {
-                        "term": "find",
-                        "explanation": "Search for a text string in a file.",
-                        "question": "What does the 'find' command do?"
+                        "term": "TCP",
+                        "explanation": "Transmission Control Protocol\nA connection-oriented protocol that ensures reliable, ordered, and error-checked delivery of data.",
+                        "question": ""
                     },
                     {
-                        "term": "attrib",
-                        "explanation": "Change file attributes (e.g., read-only, hidden).",
-                        "question": "What does the 'attrib' command do?"
+                        "term": "SMTP",
+                        "explanation": "Simple Mail Transfer Protocol\nUsed to send and relay outgoing email between mail servers.",
+                        "question": ""
                     },
                     {
-                        "term": "tree",
-                        "explanation": "Display directory structure in a tree format.",
-                        "question": "What does the 'tree' command do?"
+                        "term": "POP3",
+                        "explanation": "Post Office Protocol v3\nA protocol for retrieving emails from a mail server and downloading them to a local client.",
+                        "question": ""
                     },
                     {
-                        "term": "tasklist",
-                        "explanation": "Show running processes.",
-                        "question": "What does the 'tasklist' command do?"
+                        "term": "IMAP",
+                        "explanation": "Internet Message Access Protocol\nAllows clients to access and manage email messages on a mail server in real time.",
+                        "question": ""
                     },
                     {
-                        "term": "taskkill",
-                        "explanation": "Terminate a running process by PID or name.",
-                        "question": "What does the 'taskkill' command do?"
+                        "term": "HL7",
+                        "explanation": "Health Level 7\nA set of international standards for transferring clinical and administrative data in healthcare systems.",
+                        "question": ""
                     },
                     {
-                        "term": "netstat",
-                        "explanation": "Show active network connections.",
-                        "question": "What does the 'netstat' command do?"
+                        "term": "FHIR",
+                        "explanation": "Fast Healthcare Interoperability Resources\nA standard describing data formats and elements for exchanging electronic health records via APIs.",
+                        "question": ""
                     },
                     {
-                        "term": "ipconfig",
-                        "explanation": "Display network configuration and IP addresses.",
-                        "question": "What does the 'ipconfig' command do?"
+                        "term": "CORBA",
+                        "explanation": "Common Object Request Broker Architecture\nA standard for distributed objects communication across different programming languages and systems.",
+                        "question": ""
                     },
                     {
-                        "term": "ping",
-                        "explanation": "Test network connectivity to a specific host.",
-                        "question": "What does the 'ping' command do?"
+                        "term": "RMI",
+                        "explanation": "Remote Method Invocation\nA Java API that allows objects to invoke methods on remote Java objects.",
+                        "question": ""
                     },
                     {
-                        "term": "tracert",
-                        "explanation": "Trace the route packets take to a host.",
-                        "question": "What does the 'tracert' command do?"
+                        "term": "JSON-RPC",
+                        "explanation": "A remote procedure call protocol encoded in JSON, enabling communication between a client and server.",
+                        "question": ""
                     },
                     {
-                        "term": "nslookup",
-                        "explanation": "Query DNS information.",
-                        "question": "What does the 'nslookup' command do?"
+                        "term": "XML-RPC",
+                        "explanation": "A remote procedure call protocol that uses XML to encode calls and HTTP as a transport mechanism.",
+                        "question": ""
                     },
                     {
-                        "term": "arp",
-                        "explanation": "Show or modify the ARP cache.",
-                        "question": "What does the 'arp' command do?"
+                        "term": "CoAP",
+                        "explanation": "Constrained Application Protocol\nA lightweight protocol for constrained devices, designed for machine-to-machine communication in IoT.",
+                        "question": ""
                     },
                     {
-                        "term": "hostname",
-                        "explanation": "Display the computer name.",
-                        "question": "What does the 'hostname' command do?"
-                    },
-                    {
-                        "term": "systeminfo",
-                        "explanation": "Show detailed system information.",
-                        "question": "What does the 'systeminfo' command do?"
-                    },
-                    {
-                        "term": "ver",
-                        "explanation": "Show the Windows version.",
-                        "question": "What does the 'ver' command do?"
-                    },
-                    {
-                        "term": "set",
-                        "explanation": "Display or modify environment variables.",
-                        "question": "What does the 'set' command do?"
-                    },
-                    {
-                        "term": "wmic",
-                        "explanation": "Query system information using Windows Management Instrumentation.",
-                        "question": "What does the 'wmic' command do?"
-                    },
-                    {
-                        "term": "schtasks",
-                        "explanation": "Manage scheduled tasks.",
-                        "question": "What does the 'schtasks' command do?"
-                    },
-                    {
-                        "term": "sc",
-                        "explanation": "Manage Windows services.",
-                        "question": "What does the 'sc' command do?"
-                    },
-                    {
-                        "term": "chkdsk",
-                        "explanation": "Check disk for errors.",
-                        "question": "What does the 'chkdsk' command do?"
-                    },
-                    {
-                        "term": "diskpart",
-                        "explanation": "Manage disk partitions.",
-                        "question": "What does the 'diskpart' command do?"
-                    },
-                    {
-                        "term": "shutdown",
-                        "explanation": "Shutdown or restart the computer.",
-                        "question": "What does the 'shutdown' command do?"
-                    },
-                    {
-                        "term": "powercfg",
-                        "explanation": "Manage power settings.",
-                        "question": "What does the 'powercfg' command do?"
-                    },
-                    {
-                        "term": "cipher",
-                        "explanation": "Encrypt or decrypt files.",
-                        "question": "What does the 'cipher' command do?"
-                    },
-                    {
-                        "term": "xcopy",
-                        "explanation": "Copy files and directories with more options than copy.",
-                        "question": "What does the 'xcopy' command do?"
-                    },
-                    {
-                        "term": "robocopy",
-                        "explanation": "Robust file copy tool with more advanced features.",
-                        "question": "What does the 'robocopy' command do?"
-                    },
-                    {
-                        "term": "fsutil",
-                        "explanation": "Manage file system tasks.",
-                        "question": "What does the 'fsutil' command do?"
-                    },
-                    {
-                        "term": "gpupdate",
-                        "explanation": "Refresh Group Policy settings.",
-                        "question": "What does the 'gpupdate' command do?"
-                    },
-                    {
-                        "term": "net use",
-                        "explanation": "Map network drives.",
-                        "question": "What does the 'net use' command do?"
-                    },
-                    {
-                        "term": "whoami",
-                        "explanation": "Show the currently logged-in user.",
-                        "question": "What does the 'whoami' command do?"
-                    },
-                    {
-                        "term": "timeout",
-                        "explanation": "Pause execution for a specified time.",
-                        "question": "What does the 'timeout' command do?"
-                    },
-                    {
-                        "term": "pause",
-                        "explanation": "Pause a script until a key is pressed.",
-                        "question": "What does the 'pause' command do?"
-                    },
-                    {
-                        "term": "call",
-                        "explanation": "Call a batch script from another script.",
-                        "question": "What does the 'call' command do?"
-                    },
-                    {
-                        "term": "start",
-                        "explanation": "Open a new command prompt window or start a program.",
-                        "question": "What does the 'start' command do?"
-                    },
-                    {
-                        "term": "color",
-                        "explanation": "Change the command prompt text and background color.",
-                        "question": "What does the 'color' command do?"
-                    },
-                    {
-                        "term": "title",
-                        "explanation": "Change the title of the command prompt window.",
-                        "question": "What does the 'title' command do?"
+                        "term": "gRPC",
+                        "explanation": "A high-performance RPC framework by Google that uses HTTP/2 and Protocol Buffers for communication between services.",
+                        "question": ""
                     }
-
                 ]
             },
         ],
@@ -2561,7 +1945,444 @@ export const db = [
                     { "term": "Option-Shift-Command-Delete", "explanation": "Empty the Trash without confirmation.", "question": "What shortcut empties the Trash without confirmation in macOS?" }
                 ],
             },
+            {
+                topicName: "Windows 11 Keys",
+                entries: [
 
+                    {
+                        "term": "Win + A",
+                        "explanation": "Open Quick Settings.",
+                        "question": "What does 'Win + A' do?"
+                    },
+                    {
+                        "term": "Win + B",
+                        "explanation": "Focus system tray icons.",
+                        "question": "What does 'Win + B' do?"
+                    },
+                    {
+                        "term": "Win + C",
+                        "explanation": "Open Microsoft Teams Chat.",
+                        "question": "What does 'Win + C' do?"
+                    },
+                    {
+                        "term": "Win + D",
+                        "explanation": "Show/hide desktop.",
+                        "question": "What does 'Win + D' do?"
+                    },
+                    {
+                        "term": "Win + E",
+                        "explanation": "Open File Explorer.",
+                        "question": "What does 'Win + E' do?"
+                    },
+                    {
+                        "term": "Win + G",
+                        "explanation": "Open Xbox Game Bar.",
+                        "question": "What does 'Win + G' do?"
+                    },
+                    {
+                        "term": "Win + H",
+                        "explanation": "Start voice typing.",
+                        "question": "What does 'Win + H' do?"
+                    },
+                    {
+                        "term": "Win + I",
+                        "explanation": "Open Settings.",
+                        "question": "What does 'Win + I' do?"
+                    },
+                    {
+                        "term": "Win + K",
+                        "explanation": "Open Cast for screen sharing.",
+                        "question": "What does 'Win + K' do?"
+                    },
+                    {
+                        "term": "Win + L",
+                        "explanation": "Lock your PC.",
+                        "question": "What does 'Win + L' do?"
+                    },
+                    {
+                        "term": "Win + M",
+                        "explanation": "Minimize all windows.",
+                        "question": "What does 'Win + M' do?"
+                    },
+                    {
+                        "term": "Win + N",
+                        "explanation": "Open Notification Center and Calendar.",
+                        "question": "What does 'Win + N' do?"
+                    },
+                    {
+                        "term": "Win + P",
+                        "explanation": "Open display projection options.",
+                        "question": "What does 'Win + P' do?"
+                    },
+                    {
+                        "term": "Win + R",
+                        "explanation": "Open Run dialog box.",
+                        "question": "What does 'Win + R' do?"
+                    },
+                    {
+                        "term": "Win + S",
+                        "explanation": "Open Search.",
+                        "question": "What does 'Win + S' do?"
+                    },
+                    {
+                        "term": "Win + Shift + S",
+                        "explanation": "Capture a screenshot using Snipping Tool.",
+                        "question": "What does 'Win + Shift + S' do?"
+                    },
+                    {
+                        "term": "Win + T",
+                        "explanation": "Cycle through taskbar apps.",
+                        "question": "What does 'Win + T' do?"
+                    },
+                    {
+                        "term": "Win + U",
+                        "explanation": "Open Accessibility settings.",
+                        "question": "What does 'Win + U' do?"
+                    },
+                    {
+                        "term": "Win + V",
+                        "explanation": "Open Clipboard history.",
+                        "question": "What does 'Win + V' do?"
+                    },
+                    {
+                        "term": "Win + W",
+                        "explanation": "Open Widgets panel.",
+                        "question": "What does 'Win + W' do?"
+                    },
+                    {
+                        "term": "Win + X",
+                        "explanation": "Open Quick Link menu.",
+                        "question": "What does 'Win + X' do?"
+                    },
+                    {
+                        "term": "Win + Z",
+                        "explanation": "Open Snap Layouts.",
+                        "question": "What does 'Win + Z' do?"
+                    },
+                    {
+                        "term": "Win + .",
+                        "explanation": "Open emoji panel.",
+                        "question": "What does 'Win + .' do?"
+                    },
+                    {
+                        "term": "Win + Spacebar",
+                        "explanation": "Switch input language and keyboard layout.",
+                        "question": "What does 'Win + Spacebar' do?"
+                    },
+                    {
+                        "term": "Win + PrtScn",
+                        "explanation": "Capture a full-screen screenshot.",
+                        "question": "What does 'Win + PrtScn' do?"
+                    },
+                    {
+                        "term": "Win + Ctrl + D",
+                        "explanation": "Create a new virtual desktop.",
+                        "question": "What does 'Win + Ctrl + D' do?"
+                    },
+                    {
+                        "term": "Win + Ctrl + Left/Right Arrow",
+                        "explanation": "Switch between virtual desktops.",
+                        "question": "What does 'Win + Ctrl + Left/Right Arrow' do?"
+                    },
+                    {
+                        "term": "Win + Ctrl + F4",
+                        "explanation": "Close the current virtual desktop.",
+                        "question": "What does 'Win + Ctrl + F4' do?"
+                    },
+                    {
+                        "term": "Ctrl + A",
+                        "explanation": "Select all items.",
+                        "question": "What does 'Ctrl + A' do?"
+                    },
+                    {
+                        "term": "Ctrl + C",
+                        "explanation": "Copy selected item.",
+                        "question": "What does 'Ctrl + C' do?"
+                    },
+                    {
+                        "term": "Ctrl + X",
+                        "explanation": "Cut selected item.",
+                        "question": "What does 'Ctrl + X' do?"
+                    },
+                    {
+                        "term": "Ctrl + V",
+                        "explanation": "Paste copied item.",
+                        "question": "What does 'Ctrl + V' do?"
+                    },
+                    {
+                        "term": "Ctrl + Z",
+                        "explanation": "Undo last action.",
+                        "question": "What does 'Ctrl + Z' do?"
+                    },
+                    {
+                        "term": "Ctrl + Y",
+                        "explanation": "Redo last action.",
+                        "question": "What does 'Ctrl + Y' do?"
+                    },
+                    {
+                        "term": "Alt + Tab",
+                        "explanation": "Switch between open windows.",
+                        "question": "What does 'Alt + Tab' do?"
+                    },
+                    {
+                        "term": "Alt + F4",
+                        "explanation": "Close active window.",
+                        "question": "What does 'Alt + F4' do?"
+                    },
+                    {
+                        "term": "Shift + Delete",
+                        "explanation": "Permanently delete selected item.",
+                        "question": "What does 'Shift + Delete' do?"
+                    }
+                ]
+            },
+            {
+                topicName: "cmd.exe",
+                entries: [
+
+                    {
+                        "term": "cd",
+                        "explanation": "Change directory.",
+                        "question": "What does the 'cd' command do?"
+                    },
+                    {
+                        "term": "dir",
+                        "explanation": "List files and directories in the current directory.",
+                        "question": "What does the 'dir' command do?"
+                    },
+                    {
+                        "term": "mkdir",
+                        "explanation": "Create a new directory.",
+                        "question": "What does the 'mkdir' command do?"
+                    },
+                    {
+                        "term": "rmdir",
+                        "explanation": "Remove an empty directory.",
+                        "question": "What does the 'rmdir' command do?"
+                    },
+                    {
+                        "term": "del",
+                        "explanation": "Delete a file.",
+                        "question": "What does the 'del' command do?"
+                    },
+                    {
+                        "term": "copy",
+                        "explanation": "Copy files from one location to another.",
+                        "question": "What does the 'copy' command do?"
+                    },
+                    {
+                        "term": "move",
+                        "explanation": "Move or rename files.",
+                        "question": "What does the 'move' command do?"
+                    },
+                    {
+                        "term": "ren",
+                        "explanation": "Rename a file or folder.",
+                        "question": "What does the 'ren' command do?"
+                    },
+                    {
+                        "term": "cls",
+                        "explanation": "Clear the command prompt screen.",
+                        "question": "What does the 'cls' command do?"
+                    },
+                    {
+                        "term": "exit",
+                        "explanation": "Close the command prompt.",
+                        "question": "What does the 'exit' command do?"
+                    },
+                    {
+                        "term": "echo",
+                        "explanation": "Display messages or enable/disable command echoing.",
+                        "question": "What does the 'echo' command do?"
+                    },
+                    {
+                        "term": "type",
+                        "explanation": "Display the content of a text file.",
+                        "question": "What does the 'type' command do?"
+                    },
+                    {
+                        "term": "more",
+                        "explanation": "View the content of a file page by page.",
+                        "question": "What does the 'more' command do?"
+                    },
+                    {
+                        "term": "find",
+                        "explanation": "Search for a text string in a file.",
+                        "question": "What does the 'find' command do?"
+                    },
+                    {
+                        "term": "attrib",
+                        "explanation": "Change file attributes (e.g., read-only, hidden).",
+                        "question": "What does the 'attrib' command do?"
+                    },
+                    {
+                        "term": "tree",
+                        "explanation": "Display directory structure in a tree format.",
+                        "question": "What does the 'tree' command do?"
+                    },
+                    {
+                        "term": "tasklist",
+                        "explanation": "Show running processes.",
+                        "question": "What does the 'tasklist' command do?"
+                    },
+                    {
+                        "term": "taskkill",
+                        "explanation": "Terminate a running process by PID or name.",
+                        "question": "What does the 'taskkill' command do?"
+                    },
+                    {
+                        "term": "netstat",
+                        "explanation": "Show active network connections.",
+                        "question": "What does the 'netstat' command do?"
+                    },
+                    {
+                        "term": "ipconfig",
+                        "explanation": "Display network configuration and IP addresses.",
+                        "question": "What does the 'ipconfig' command do?"
+                    },
+                    {
+                        "term": "ping",
+                        "explanation": "Test network connectivity to a specific host.",
+                        "question": "What does the 'ping' command do?"
+                    },
+                    {
+                        "term": "tracert",
+                        "explanation": "Trace the route packets take to a host.",
+                        "question": "What does the 'tracert' command do?"
+                    },
+                    {
+                        "term": "nslookup",
+                        "explanation": "Query DNS information.",
+                        "question": "What does the 'nslookup' command do?"
+                    },
+                    {
+                        "term": "arp",
+                        "explanation": "Show or modify the ARP cache.",
+                        "question": "What does the 'arp' command do?"
+                    },
+                    {
+                        "term": "hostname",
+                        "explanation": "Display the computer name.",
+                        "question": "What does the 'hostname' command do?"
+                    },
+                    {
+                        "term": "systeminfo",
+                        "explanation": "Show detailed system information.",
+                        "question": "What does the 'systeminfo' command do?"
+                    },
+                    {
+                        "term": "ver",
+                        "explanation": "Show the Windows version.",
+                        "question": "What does the 'ver' command do?"
+                    },
+                    {
+                        "term": "set",
+                        "explanation": "Display or modify environment variables.",
+                        "question": "What does the 'set' command do?"
+                    },
+                    {
+                        "term": "wmic",
+                        "explanation": "Query system information using Windows Management Instrumentation.",
+                        "question": "What does the 'wmic' command do?"
+                    },
+                    {
+                        "term": "schtasks",
+                        "explanation": "Manage scheduled tasks.",
+                        "question": "What does the 'schtasks' command do?"
+                    },
+                    {
+                        "term": "sc",
+                        "explanation": "Manage Windows services.",
+                        "question": "What does the 'sc' command do?"
+                    },
+                    {
+                        "term": "chkdsk",
+                        "explanation": "Check disk for errors.",
+                        "question": "What does the 'chkdsk' command do?"
+                    },
+                    {
+                        "term": "diskpart",
+                        "explanation": "Manage disk partitions.",
+                        "question": "What does the 'diskpart' command do?"
+                    },
+                    {
+                        "term": "shutdown",
+                        "explanation": "Shutdown or restart the computer.",
+                        "question": "What does the 'shutdown' command do?"
+                    },
+                    {
+                        "term": "powercfg",
+                        "explanation": "Manage power settings.",
+                        "question": "What does the 'powercfg' command do?"
+                    },
+                    {
+                        "term": "cipher",
+                        "explanation": "Encrypt or decrypt files.",
+                        "question": "What does the 'cipher' command do?"
+                    },
+                    {
+                        "term": "xcopy",
+                        "explanation": "Copy files and directories with more options than copy.",
+                        "question": "What does the 'xcopy' command do?"
+                    },
+                    {
+                        "term": "robocopy",
+                        "explanation": "Robust file copy tool with more advanced features.",
+                        "question": "What does the 'robocopy' command do?"
+                    },
+                    {
+                        "term": "fsutil",
+                        "explanation": "Manage file system tasks.",
+                        "question": "What does the 'fsutil' command do?"
+                    },
+                    {
+                        "term": "gpupdate",
+                        "explanation": "Refresh Group Policy settings.",
+                        "question": "What does the 'gpupdate' command do?"
+                    },
+                    {
+                        "term": "net use",
+                        "explanation": "Map network drives.",
+                        "question": "What does the 'net use' command do?"
+                    },
+                    {
+                        "term": "whoami",
+                        "explanation": "Show the currently logged-in user.",
+                        "question": "What does the 'whoami' command do?"
+                    },
+                    {
+                        "term": "timeout",
+                        "explanation": "Pause execution for a specified time.",
+                        "question": "What does the 'timeout' command do?"
+                    },
+                    {
+                        "term": "pause",
+                        "explanation": "Pause a script until a key is pressed.",
+                        "question": "What does the 'pause' command do?"
+                    },
+                    {
+                        "term": "call",
+                        "explanation": "Call a batch script from another script.",
+                        "question": "What does the 'call' command do?"
+                    },
+                    {
+                        "term": "start",
+                        "explanation": "Open a new command prompt window or start a program.",
+                        "question": "What does the 'start' command do?"
+                    },
+                    {
+                        "term": "color",
+                        "explanation": "Change the command prompt text and background color.",
+                        "question": "What does the 'color' command do?"
+                    },
+                    {
+                        "term": "title",
+                        "explanation": "Change the title of the command prompt window.",
+                        "question": "What does the 'title' command do?"
+                    }
+
+                ]
+            },
             {
                 "topicName": "sudo",
                 "entries": [
@@ -2741,6 +2562,91 @@ export const db = [
                     { "term": "aws/az/gcloud:", "explanation": "CLI tools for managing AWS, Azure, and Google Cloud resources.", "question": "What are examples of CLI tools for managing cloud resources on AWS, Azure, and Google Cloud?" },
                     { "term": "python/node/ruby:", "explanation": "Interpreters for running respective programming languages directly.", "question": "Which interpreters are used to run Python, Node.js, or Ruby code?" }
                 ],
+            },
+            {
+                topicName: "Technologies",
+                entries: [
+                    {
+                        "term": "ABAP",
+                        "explanation": "ABAP (Advanced Business Application Programming) is a high-level programming language developed by SAP for building applications on the SAP platform. It is primarily used for developing enterprise applications that run in the SAP ecosystem, such as SAP ERP and SAP S/4HANA. ABAP supports procedural and object-oriented programming paradigms and integrates seamlessly with SAP databases and application servers. The language is optimized for business logic implementation, data manipulation, and report generation within SAP environments. ABAP plays a crucial role in extending and customizing SAP applications to meet business requirements.",
+                        "question": "What is ABAP, and how is it used in SAP development?"
+                    },
+                    {
+                        "term": "WSO2",
+                        "explanation": "WSO2 is an open-source integration platform that provides tools for API management, identity and access management, enterprise service bus (ESB), and analytics. It enables organizations to integrate disparate systems, expose APIs securely, and manage digital identity across applications. WSO2 supports microservices architecture, cloud deployments, and event-driven integration patterns. It is widely used in enterprise environments to facilitate communication between applications and services, ensuring interoperability and seamless data flow across heterogeneous systems.",
+                        "question": "What is WSO2, and how is it used for enterprise integration?"
+                    },
+                    {
+                        "term": "KIS",
+                        "explanation": "KIS (Klinisches Informationssystem) is a hospital information system used to manage medical and administrative processes within healthcare institutions. It provides functionalities such as patient record management, appointment scheduling, medication tracking, and clinical documentation. KIS integrates with laboratory systems, radiology systems, and financial modules to create a centralized digital infrastructure for hospitals. It enhances operational efficiency by improving data accessibility, reducing paperwork, and enabling better decision-making for healthcare professionals.",
+                        "question": "What is a KIS system, and how does it support healthcare operations?"
+                    },
+                    {
+                        "term": "HL7",
+                        "explanation": "HL7 (Health Level 7) is a set of international standards for exchanging, integrating, sharing, and retrieving electronic health information. It defines structured messaging formats, clinical document architectures, and interoperability frameworks that enable different healthcare systems to communicate effectively. HL7 standards include HL7 v2 (a widely adopted messaging standard), HL7 v3 (an XML-based standard), and FHIR (a modern web-based standard). HL7 facilitates interoperability between hospitals, laboratories, and health information exchanges by ensuring that data is transmitted in a consistent and interpretable format.",
+                        "question": "What is HL7, and how does it facilitate healthcare interoperability?"
+                    },
+                    {
+                        "term": ".NET",
+                        "explanation": ".NET is a software development framework created by Microsoft that allows developers to build applications for web, desktop, cloud, and mobile environments. It provides a runtime (Common Language Runtime - CLR), a set of libraries, and development tools that support multiple programming languages, including C#, F#, and VB.NET. The framework includes ASP.NET for web development, .NET Core for cross-platform applications, and Windows Presentation Foundation (WPF) for desktop applications. .NET is widely used for enterprise applications due to its scalability, security, and integration with cloud services.",
+                        "question": "What is .NET, and what are its main components?"
+                    },
+                    {
+                        "term": "C#",
+                        "explanation": "C# is a modern, object-oriented programming language developed by Microsoft as part of the .NET ecosystem. It is designed for building robust and scalable applications ranging from desktop to cloud-based services. C# includes features such as strong typing, automatic memory management, and asynchronous programming. It supports advanced paradigms like LINQ for data manipulation, ASP.NET for web applications, and Entity Framework for database interactions. C# is widely used in enterprise development, game development (via Unity), and cloud-based solutions.",
+                        "question": "What is C#, and what are its key features?"
+                    },
+                    {
+                        "term": "APEX",
+                        "explanation": "APEX is a strongly-typed, object-oriented programming language designed by Salesforce for developing applications within the Salesforce ecosystem. It enables developers to create custom business logic, process automation, and integrations within Salesforce environments. APEX is closely integrated with Salesforce’s database and security model, allowing developers to perform operations such as querying records, triggering workflows, and handling complex business rules. It is optimized for multi-tenant cloud environments, ensuring scalability and security in customer relationship management (CRM) applications.",
+                        "question": "What is APEX, and how is it used in Salesforce development?"
+                    },
+                    {
+                        "term": "SAP",
+                        "explanation": "SAP (Systems, Applications, and Products in Data Processing) is a leading enterprise software company that provides solutions for managing business operations and customer relations. SAP’s flagship product, SAP ERP, integrates core business processes such as finance, human resources, supply chain, and procurement. The company has evolved to offer cloud-based solutions, including SAP S/4HANA, SAP Business Technology Platform (BTP), and SAP Analytics Cloud. SAP software is widely adopted by enterprises for optimizing business operations, enabling data-driven decision-making, and improving overall efficiency.",
+                        "question": "What is SAP, and what are its primary products?"
+                    },
+                    {
+                        "term": "ERP",
+                        "explanation": "Enterprise Resource Planning (ERP) is a category of business management software that integrates core organizational processes into a unified system. ERP systems provide modules for finance, human resources, supply chain, manufacturing, and customer relationship management. These systems improve operational efficiency by streamlining workflows, centralizing data, and enabling real-time reporting. Leading ERP vendors include SAP, Oracle, Microsoft Dynamics, and Workday. Modern ERP solutions are increasingly cloud-based, allowing for greater flexibility, scalability, and integration with emerging technologies such as AI and IoT.",
+                        "question": "What is ERP, and why is it essential for businesses?"
+                    },
+                    {
+                        "term": "BAPI",
+                        "explanation": "BAPI (Business Application Programming Interface) is a standardized interface that allows external applications to interact with SAP systems. It provides predefined methods for accessing business objects such as customers, orders, and invoices within SAP ERP. BAPIs are commonly used for data integration, automation, and extending SAP functionalities without modifying the core system. They enable seamless communication between SAP and non-SAP systems, facilitating enterprise-wide interoperability. BAPIs are structured according to the SAP Business Object Repository, ensuring consistency and reusability.",
+                        "question": "What is BAPI, and how is it used in SAP integrations?"
+                    },
+                    {
+                        "term": "DICOM",
+                        "explanation": "DICOM (Digital Imaging and Communications in Medicine) is an international standard for storing, transmitting, and sharing medical imaging data. It defines data formats, network protocols, and interoperability mechanisms for handling images from modalities such as X-ray, MRI, and CT scans. DICOM ensures that imaging devices, hospital information systems, and radiology information systems can exchange and interpret images consistently. The standard includes metadata about patients, imaging procedures, and diagnostic information, making it essential for electronic health records and clinical workflows.",
+                        "question": "What is DICOM, and why is it important in medical imaging?"
+                    },
+                    {
+                        "term": "FHIR",
+                        "explanation": "FHIR (Fast Healthcare Interoperability Resources) is a modern standard developed by HL7 for exchanging healthcare information using web technologies. It enables seamless interoperability between healthcare applications by defining structured resources such as Patient, Observation, and MedicationRequest. FHIR supports RESTful APIs, making data accessible via standard HTTP operations. It also allows data representation in JSON and XML formats. FHIR is widely adopted in electronic health records (EHR), telemedicine, and healthcare analytics due to its scalability, ease of implementation, and support for mobile and cloud-based applications.",
+                        "question": "What is FHIR, and how does it improve healthcare data exchange?"
+                    },
+                    { "term": "Citrix Files", "explanation": "", "question": "" },
+                    { "term": "Cisco Jabber", "explanation": "", "question": "" },
+                    { "term": "Power Shell", "explanation": "", "question": "" },
+                    { "term": "Citrix Workspace", "explanation": "", "question": "" },
+                    { "term": "Dolby Access", "explanation": "", "question": "" },
+                    { "term": "FileZilla", "explanation": "", "question": "" },
+                    { "term": "Greenshot", "explanation": "", "question": "" },
+                    { "term": "ImgBurn", "explanation": "", "question": "" },
+                    { "term": "Kaspersky Endpoint Security for Windows", "explanation": "", "question": "" },
+                    { "term": "PolyPoint", "explanation": "", "question": "" },
+                    { "term": "Webex", "explanation": "", "question": "" },
+                    { "term": "XMind", "explanation": "", "question": "" },
+                    { "term": "ARTS", "explanation": "", "question": "" },
+                    { "term": "BIC3", "explanation": "", "question": "" },
+                    { "term": "Ibi-care V6", "explanation": "", "question": "" },
+                    { "term": "Omnitracker 12 client", "explanation": "", "question": "" },
+                    { "term": "Sunet plus", "explanation": "", "question": "" },
+                    { "term": "UKA solutions", "explanation": "", "question": "" },
+                    { "term": "Panopto", "explanation": "", "question": "" },
+                    { "term": "Adobe Acrobat DC", "explanation": "", "question": "" },
+                ]
             },
         ],
     },
