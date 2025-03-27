@@ -45,3 +45,5 @@ Features    (open) = not jet implemented
 
 Bugs & content 
 > Remove git commands like (git add) and keep specified ones like (git add . and git add <filename>)
+> Let train work with only term and explanation...
+> Make identifier when listing in "training" collection the term and explanation so that it isn't double..

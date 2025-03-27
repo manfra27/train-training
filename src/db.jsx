@@ -43,13 +43,6 @@ export const db = [
                     { "term": "", "explanation": "", "question": "" },
 
 
-                    add to protocols: 
-                    { "term": "MQTT", "explanation": "", "question": "" },
-                    { "term": "AMQP", "explanation": "", "question": "" },
-                    { "term": "FTP", "explanation": "", "question": "" },
-                    { "term": "FTPS", "explanation": "", "question": "" },
-                    { "term": "SFTP", "explanation": "", "question": "" },
-                    { "term": "SMB", "explanation": "", "question": "" },
 
                     { "term": "", "explanation": "", "question": "" },
                 
@@ -775,10 +768,139 @@ export const db = [
 
 
 
-
     {
-        category: "API architecture",
+        category: "APIs",
         subcategories: [
+            {
+                topicName: "Protocols",
+                entries: [
+                    {
+                        "term": "MQTT",
+                        "explanation": "Message Queuing Telemetry Transport\nA lightweight publish-subscribe network protocol ideal for IoT and low-bandwidth devices.",
+                        "question": ""
+                    },
+                    {
+                        "term": "AMQP",
+                        "explanation": "Advanced Message Queuing Protocol\nAn open standard application layer protocol for message-oriented middleware, enabling reliable and secure message delivery.",
+                        "question": ""
+                    },
+                    {
+                        "term": "FTP",
+                        "explanation": "File Transfer Protocol\nA standard network protocol used to transfer files between a client and server over a TCP-based network.",
+                        "question": ""
+                    },
+                    {
+                        "term": "FTPS",
+                        "explanation": "FTP Secure\nAn extension of FTP that adds support for the Transport Layer Security (TLS) to encrypt the command and data channels.",
+                        "question": ""
+                    },
+                    {
+                        "term": "SFTP",
+                        "explanation": "SSH File Transfer Protocol\nA secure file transfer protocol that runs over SSH, providing file access, transfer, and management.",
+                        "question": ""
+                    },
+                    {
+                        "term": "SMB",
+                        "explanation": "Server Message Block\nA network file sharing protocol that allows applications to read and write to files and request services from server programs in a computer network.",
+                        "question": ""
+                    },
+                    {
+                        "term": "JMS",
+                        "explanation": "Java Message Service\nEnables asynchronous message-based communication between systems using queues or topics.",
+                        "question": ""
+                    },
+                    {
+                        "term": "HTTP",
+                        "explanation": "Hypertext Transfer Protocol\nA stateless protocol used for transferring web pages and resources over the internet.",
+                        "question": ""
+                    },
+                    {
+                        "term": "HTTPS",
+                        "explanation": "HTTP Secure\nAn extension of HTTP with TLS encryption for secure communication over a network.",
+                        "question": ""
+                    },
+                    {
+                        "term": "SOAP",
+                        "explanation": "Simple Object Access Protocol\nA protocol for exchanging structured information in web services using XML.",
+                        "question": ""
+                    },
+                    {
+                        "term": "REST",
+                        "explanation": "Representational State Transfer\nAn architectural style for designing stateless web APIs using standard HTTP methods.",
+                        "question": ""
+                    },
+                    {
+                        "term": "WebSocket",
+                        "explanation": "A protocol providing full-duplex communication channels over a single TCP connection for real-time data exchange.",
+                        "question": ""
+                    },
+                    {
+                        "term": "GraphQL",
+                        "explanation": "A query language for APIs that enables clients to request only the data they need, reducing over-fetching.",
+                        "question": ""
+                    },
+                    {
+                        "term": "TCP",
+                        "explanation": "Transmission Control Protocol\nA connection-oriented protocol that ensures reliable, ordered, and error-checked delivery of data.",
+                        "question": ""
+                    },
+                    {
+                        "term": "SMTP",
+                        "explanation": "Simple Mail Transfer Protocol\nUsed to send and relay outgoing email between mail servers.",
+                        "question": ""
+                    },
+                    {
+                        "term": "POP3",
+                        "explanation": "Post Office Protocol v3\nA protocol for retrieving emails from a mail server and downloading them to a local client.",
+                        "question": ""
+                    },
+                    {
+                        "term": "IMAP",
+                        "explanation": "Internet Message Access Protocol\nAllows clients to access and manage email messages on a mail server in real time.",
+                        "question": ""
+                    },
+                    {
+                        "term": "HL7",
+                        "explanation": "Health Level 7\nA set of international standards for transferring clinical and administrative data in healthcare systems.",
+                        "question": ""
+                    },
+                    {
+                        "term": "FHIR",
+                        "explanation": "Fast Healthcare Interoperability Resources\nA standard describing data formats and elements for exchanging electronic health records via APIs.",
+                        "question": ""
+                    },
+                    {
+                        "term": "CORBA",
+                        "explanation": "Common Object Request Broker Architecture\nA standard for distributed objects communication across different programming languages and systems.",
+                        "question": ""
+                    },
+                    {
+                        "term": "RMI",
+                        "explanation": "Remote Method Invocation\nA Java API that allows objects to invoke methods on remote Java objects.",
+                        "question": ""
+                    },
+                    {
+                        "term": "JSON-RPC",
+                        "explanation": "A remote procedure call protocol encoded in JSON, enabling communication between a client and server.",
+                        "question": ""
+                    },
+                    {
+                        "term": "XML-RPC",
+                        "explanation": "A remote procedure call protocol that uses XML to encode calls and HTTP as a transport mechanism.",
+                        "question": ""
+                    },
+                    {
+                        "term": "CoAP",
+                        "explanation": "Constrained Application Protocol\nA lightweight protocol for constrained devices, designed for machine-to-machine communication in IoT.",
+                        "question": ""
+                    },
+                    {
+                        "term": "gRPC",
+                        "explanation": "A high-performance RPC framework by Google that uses HTTP/2 and Protocol Buffers for communication between services.",
+                        "question": ""
+                    }
+                ]
+            },
             {
                 topicName: "Basics",
                 entries: [
@@ -1416,7 +1538,6 @@ export const db = [
             },
         ],
     },
-
 
 
     {
