@@ -394,8 +394,6 @@ export const db = [
                         "explanation": "VM states such as Running, Paused, Stopped, or Saved.",
                         "question": "What are power states in virtualization?"
                     }
-
-
                 ]
             },
         ],
