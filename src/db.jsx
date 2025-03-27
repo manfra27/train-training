@@ -2,6 +2,63 @@
 export const db = [
 
     {
+        category: "WSO2",
+        subcategories: [
+            {
+                topicName: "Micro Integrator Fundamentals",
+                entries: [
+                    { "term": "centralized integration architecure", "explanation": "All communication flows through a central hub like ESB, Message broker...", "question": "" },
+                    { "term": "decentralized integration architecture", "explanation": "Systems communicate directly or via distributetd components like \nmicroservices with APIs, \nevent driven systems..", "question": "" },
+                    /*
+                    { "term": "WSO2 Micro Integrator", "explanation": "> vent-driven, \n> standards-based messaging engine (the Bus), which supports \n> message routing, \n> message transformations, and other  types  of  messaging  use  cases.", "question": "" },
+                    { "term": "Content based routing", "explanation": "When the Micro Integrator processes individual messages from clients, it can route messages based on the content of the message.", "question": "" },
+                    { "term": "Micro Integrator message transformation", "explanation": "1 adding/removing content from messages,\n2 converting a message to a completely different message format,\3 validating messages based on the available validation mechanisms of the message format. ", "question": "" },
+                    { "term": "A single coarse-grained service", "explanation": "An interface for broad exposed high level functionalities.", "question": "" },
+                    { "term": "Synchronous service orchestration", "explanation": "Services execute in sequence.", "question": "" },
+                    { "term": "Asynchronous service orchestration", "explanation": "Services are invoked without waiting.", "question": "" },
+                    { "term": "Service chaining", "explanation": "Multiple services are orchestrated in a sequence. The input of one service is dependent of the output of another one.", "question": "" },
+                    { "term": "Parallel service invocations", "explanation": "Multiple services are invoked simultaneously without any blocking until a response is received from another service.", "question": "" },
+                    { "term": "Hybrid-Cloud Integration", "explanation": "Enablse to connect apps and data among cloud environments and on prem.", "question": "" },
+                    { "term": "Business domain", "explanation": "An area of an organizations operations and expertise.", "question": "" },
+                    { "term": "Message filtering", "explanation": "1 Sent to different mediation flows\n2 Wether a message is sent out by the MI.", "question": "" },
+                    { "term": "Building Block Sequences", "explanation": "Sequences are the configuration component for mediators. Sequences allow you to organize the mediators for implementing pipes and filter patterns.", "question": "" },
+                    { "term": "Building Block Mediators", "explanation": "Mediators are individual processing units that perform a specific function such as sending  or  filtering  messages.  The  Micro  Integrator  includes  a  comprehensive mediator library that provides functionality for implementing widely used enterprise integration patterns (EIPs). You can also easily write a custom mediator to provide additional  functionality  using  various  technologies  such  as  Java,  scripting,  and Spring.", "question": "" },
+                    { "term": "Building Block Endpoints", "explanation": "An endpoint defines an external destination (such as a service) for a message. An endpoint can be specified as an address endpoint, WSDL endpoint, a load balancing endpoint, etc. An endpoint is defined independently of transports, allowing you to use the same endpoint  with  multiple  transports.  When  you  configure  a  message  mediation sequence  or  a  proxy  service  to  handle  the  incoming  message,  you  specify  the transport to use and the endpoint where the message will be sent.", "question": "" },
+                    { "term": "Building Block Transports", "explanation": "Carry messages in a specific format.18Sequences are the configuration component for mediators. Sequences allow you to organize the mediators for implementing pipes and filter patterns.Mediators are individual processing units that perform a specific function such as sending  or  filtering  messages.  The  Micro  Integrator  includes  a  comprehensive mediator library that provides functionality for implementing widely used enterprise integration patterns (EIPs). You can also easily write a custom mediator to provide additional  functionality  using  various  technologies  such  as  Java,  scripting,  and Spring.An endpoint defines an external destination (such as a service) for a message. An endpoint can be specified as an address endpoint, WSDL endpoint, a load balancing endpoint, etc. An endpoint is defined independently of transports, allowing you to use the same endpoint  with  multiple  transports.  When  you  configure  a  message  mediation sequence  or  a  proxy  service  to  handle  the  incoming  message,  you  specify  the transport to use and the endpoint where the message will be sent.Transports - Carry messages in a specific format.The Micro Integrator supports all the widely used transports including HTTP/s, JMS, and VFS, and domain-specific transports like FIX. All WSO2 transports are directly or indirectly based on the Apache Axis2 transports framework.", "question": "" },
+
+
+                    { "term": "Synapse Message Receiver", "explanation": "", "question": "" },
+                    { "term": "Proxy Message Receiver", "explanation": "", "question": "" },
+                    { "term": "Synapse environment", "explanation": "", "question": "" },
+                    { "term": "Callback receiver", "explanation": "", "question": "" },
+
+                    { "term": "Content based Router", "explanation": "", "question": "" },
+                    { "term": "Message Filter", "explanation": "", "question": "" },
+                    { "term": "Message Splitter", "explanation": "", "question": "" },
+                    { "term": "Message Aggregator", "explanation": "", "question": "" },
+
+                    { "term": "", "explanation": "", "question": "" },
+                    { "term": "", "explanation": "", "question": "" },
+                    { "term": "", "explanation": "", "question": "" },
+                    { "term": "", "explanation": "", "question": "" },
+
+
+                    add to protocols: 
+                    { "term": "MQTT", "explanation": "", "question": "" },
+                    { "term": "AMQP", "explanation": "", "question": "" },
+                    { "term": "FTP", "explanation": "", "question": "" },
+                    { "term": "FTPS", "explanation": "", "question": "" },
+                    { "term": "SFTP", "explanation": "", "question": "" },
+                    { "term": "SMB", "explanation": "", "question": "" },
+
+                    { "term": "", "explanation": "", "question": "" },
+                
+                    */
+                ]
+            },
+        ],
+    },
+    {
         category: "General tech knowledge",
         subcategories: [
             {
@@ -1735,7 +1792,7 @@ export const db = [
             },
         ],
     },
-*/
+    */
 
 
     {
