@@ -85,7 +85,7 @@ export const db = [
                     { "term": "centralized integration architecure", "explanation": "All communication flows through a central hub like ESB, Message broker...", "question": "" },
                     { "term": "decentralized integration architecture", "explanation": "Systems communicate directly or via distributetd components like \nmicroservices with APIs, \nevent driven systems..", "question": "" },
 
-                    { "term": "WSO2 Micro Integrator", "explanation": "> vent-driven, \n> standards-based messaging engine (the Bus), which supports \n> message routing, \n> message transformations, and other  types  of  messaging  use  cases.", "question": "" },
+                    { "term": "WSO2 Micro Integrator", "explanation": "event-driven, \n standards-based messaging engine (the Bus), which supports \n message routing, \n message transformations, and other  types  of  messaging  use  cases.", "question": "" },
                     { "term": "Content based routing", "explanation": "When the Micro Integrator processes individual messages from clients, it can route messages based on the content of the message.", "question": "" },
                     { "term": "Micro Integrator message transformation", "explanation": "1 adding/removing content from messages,\n2 converting a message to a completely different message format,\3 validating messages based on the available validation mechanisms of the message format. ", "question": "" },
                     { "term": "A single coarse-grained service", "explanation": "An interface for broad exposed high level functionalities.", "question": "" },
@@ -1135,7 +1135,7 @@ export const db = [
 
 
     /*
-                    xsl 
+                    xsl s
                     xmlns
                     
                     lean power shell... 
